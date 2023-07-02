@@ -1,32 +1,38 @@
-#include "javascript/V8Engine.h"
-#include "html/HTMLParser.h"
-#include "raylib.h"
+#include <QApplication>
+#include <QWidget>
+#include <QTextBrowser>
+#include <tidy/tidy.h>
+#include <tidy/tidybuffio.h>
 
-#include <string>
+int main(int argc, char *argv[])
+{
+    QApplication app(argc, argv);
 
-int main(int argc, char **argv) {
-    const int screenWidth = 800;
-    const int screenHeight = 450;
+    // Read the HTML content from a file or a string
+    const char* htmlContent = "<html><body><h1>Hello, World!</h1></body></html>";
 
-    InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
+    // Initialize Tidy
+    TidyDoc tidyDoc = tidyCreate();
+    TidyBuffer tidyBuffer;
+    tidyBufInit(&tidyBuffer);
 
-    SetTargetFPS(60);
+    // Parse the HTML content with Tidy
+    tidyParseString(tidyDoc, htmlContent);
 
+    // Clean up and repair the HTML
+    tidyCleanAndRepair(tidyDoc);
 
+    // Convert the parsed HTML tree to a plain text representation
+    tidySaveBuffer(tidyDoc, &tidyBuffer);
 
-    HTMLParser parser(std::string("<html><head><title>Test</title></head><body><h1>Hello World!</h1></body></html>"), std::string(""));
+    // Create a Qt widget for displaying the HTML content
+    QWidget widget;
+    QTextBrowser textBrowser(&widget);
+    textBrowser.setHtml(tidyBuffer.bp);
 
-    parser.parse();
+    // Show the widget
+    widget.show();
 
-    while (!WindowShouldClose())
-    {
-        BeginDrawing();
-
-
-        EndDrawing();
-    }
-
-
-
-    return 0;
+    // Enter the main event loop
+    return app.exec();
 }

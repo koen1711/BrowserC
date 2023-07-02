@@ -14,17 +14,266 @@
 # EXTERNAL cache entries
 ########################
 
+//Set ON to include system runtime DLLS in distribution
+ADD_SYSTEM_RUNTIMES:BOOL=OFF
+
+//The ALSA (asound) include directory
+ALSA_INCLUDE_DIR:PATH=/usr/include
+
+//The ALSA (asound) library
+ALSA_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libasound.so
+
+//Enable ALSA backend
+ALSOFT_BACKEND_ALSA:BOOL=ON
+
+//Enable CoreAudio backend
+ALSOFT_BACKEND_COREAUDIO:BOOL=ON
+
+//Enable JACK backend
+ALSOFT_BACKEND_JACK:BOOL=ON
+
+//Enable Oboe backend
+ALSOFT_BACKEND_OBOE:BOOL=ON
+
+//Enable OpenSL backend
+ALSOFT_BACKEND_OPENSL:BOOL=ON
+
+//Enable OSS backend
+ALSOFT_BACKEND_OSS:BOOL=ON
+
+//Enable PipeWire backend
+ALSOFT_BACKEND_PIPEWIRE:BOOL=ON
+
+//Enable PortAudio backend
+ALSOFT_BACKEND_PORTAUDIO:BOOL=ON
+
+//Enable PulseAudio backend
+ALSOFT_BACKEND_PULSEAUDIO:BOOL=ON
+
+//Enable SDL2 backend
+ALSOFT_BACKEND_SDL2:BOOL=OFF
+
+//Enable SndIO backend
+ALSOFT_BACKEND_SNDIO:BOOL=ON
+
+//Enable Solaris backend
+ALSOFT_BACKEND_SOLARIS:BOOL=ON
+
+//Enable Wave Writer backend
+ALSOFT_BACKEND_WAVE:BOOL=ON
+
+//Enable ARM NEON support
+ALSOFT_CPUEXT_NEON:BOOL=ON
+
+//Enable SSE support
+ALSOFT_CPUEXT_SSE:BOOL=ON
+
+//Enable SSE2 support
+ALSOFT_CPUEXT_SSE2:BOOL=ON
+
+//Enable SSE3 support
+ALSOFT_CPUEXT_SSE3:BOOL=ON
+
+//Enable SSE4.1 support
+ALSOFT_CPUEXT_SSE4_1:BOOL=ON
+
+//Check for the dlopen API for loading optional libs
+ALSOFT_DLOPEN:BOOL=ON
+
+//Enable legacy EAX extensions
+ALSOFT_EAX:BOOL=OFF
+
+//Embed the HRTF data files (increases library footprint)
+ALSOFT_EMBED_HRTF_DATA:BOOL=ON
+
+//Build example programs
+ALSOFT_EXAMPLES:BOOL=ON
+
+//Install main library
+ALSOFT_INSTALL:BOOL=ON
+
+//Install AmbDec preset files
+ALSOFT_INSTALL_AMBDEC_PRESETS:BOOL=ON
+
+//Install alsoft.conf sample configuration file
+ALSOFT_INSTALL_CONFIG:BOOL=ON
+
+//Install example programs (alplay, alstream, ...)
+ALSOFT_INSTALL_EXAMPLES:BOOL=ON
+
+//Install HRTF data files
+ALSOFT_INSTALL_HRTF_DATA:BOOL=ON
+
+//Install utility programs (openal-info, alsoft-config, ...)
+ALSOFT_INSTALL_UTILS:BOOL=ON
+
+//Disable building the alsoft-config utility
+ALSOFT_NO_CONFIG_UTIL:BOOL=OFF
+
+//Require ALSA backend
+ALSOFT_REQUIRE_ALSA:BOOL=OFF
+
+//Require CoreAudio backend
+ALSOFT_REQUIRE_COREAUDIO:BOOL=OFF
+
+//Require JACK backend
+ALSOFT_REQUIRE_JACK:BOOL=OFF
+
+//Require ARM NEON support
+ALSOFT_REQUIRE_NEON:BOOL=OFF
+
+//Require Oboe backend
+ALSOFT_REQUIRE_OBOE:BOOL=OFF
+
+//Require OpenSL backend
+ALSOFT_REQUIRE_OPENSL:BOOL=OFF
+
+//Require OSS backend
+ALSOFT_REQUIRE_OSS:BOOL=OFF
+
+//Require PipeWire backend
+ALSOFT_REQUIRE_PIPEWIRE:BOOL=OFF
+
+//Require PortAudio backend
+ALSOFT_REQUIRE_PORTAUDIO:BOOL=OFF
+
+//Require PulseAudio backend
+ALSOFT_REQUIRE_PULSEAUDIO:BOOL=OFF
+
+//Require RTKit/D-Bus support
+ALSOFT_REQUIRE_RTKIT:BOOL=OFF
+
+//Require SDL2 backend
+ALSOFT_REQUIRE_SDL2:BOOL=OFF
+
+//Require SndIO backend
+ALSOFT_REQUIRE_SNDIO:BOOL=OFF
+
+//Require Solaris backend
+ALSOFT_REQUIRE_SOLARIS:BOOL=OFF
+
+//Require SSE support
+ALSOFT_REQUIRE_SSE:BOOL=OFF
+
+//Require SSE2 support
+ALSOFT_REQUIRE_SSE2:BOOL=OFF
+
+//Require SSE3 support
+ALSOFT_REQUIRE_SSE3:BOOL=OFF
+
+//Require SSE4.1 support
+ALSOFT_REQUIRE_SSE4_1:BOOL=OFF
+
+//Enable RTKit support
+ALSOFT_RTKIT:BOOL=ON
+
+//Search the installation data directory
+ALSOFT_SEARCH_INSTALL_DATADIR:BOOL=OFF
+
+//Force -static-libgcc for static GCC runtimes
+ALSOFT_STATIC_LIBGCC:BOOL=OFF
+
+//Static link libstdc++
+ALSOFT_STATIC_STDCXX:BOOL=OFF
+
+//Build test programs
+ALSOFT_TESTS:BOOL=OFF
+
+//Update git build version info
+ALSOFT_UPDATE_BUILD_VERSION:BOOL=ON
+
+//Build utility programs
+ALSOFT_UTILS:BOOL=ON
+
+//Treat compile warnings as errors
+ALSOFT_WERROR:BOOL=OFF
+
+//The AudioIO include directory
+AUDIOIO_INCLUDE_DIR:PATH=AUDIOIO_INCLUDE_DIR-NOTFOUND
+
+//Path to a file.
+AUDIOUNIT_INCLUDE_DIR:PATH=AUDIOUNIT_INCLUDE_DIR-NOTFOUND
+
+//The AVCODEC CFLAGS.
+AVCODEC_DEFINITIONS:STRING=
+
+//Path to a file.
+AVCODEC_INCLUDE_DIRS:PATH=AVCODEC_INCLUDE_DIRS-NOTFOUND
+
+//Path to a library.
+AVCODEC_LIBRARIES:FILEPATH=AVCODEC_LIBRARIES-NOTFOUND
+
+//The AVCODEC version number.
+AVCODEC_VERSION:STRING=
+
+//The AVDEVICE CFLAGS.
+AVDEVICE_DEFINITIONS:STRING=
+
+//Path to a file.
+AVDEVICE_INCLUDE_DIRS:PATH=AVDEVICE_INCLUDE_DIRS-NOTFOUND
+
+//Path to a library.
+AVDEVICE_LIBRARIES:FILEPATH=AVDEVICE_LIBRARIES-NOTFOUND
+
+//The AVDEVICE version number.
+AVDEVICE_VERSION:STRING=
+
+//The AVFORMAT CFLAGS.
+AVFORMAT_DEFINITIONS:STRING=
+
+//Path to a file.
+AVFORMAT_INCLUDE_DIRS:PATH=AVFORMAT_INCLUDE_DIRS-NOTFOUND
+
+//Path to a library.
+AVFORMAT_LIBRARIES:FILEPATH=AVFORMAT_LIBRARIES-NOTFOUND
+
+//The AVFORMAT version number.
+AVFORMAT_VERSION:STRING=
+
+//The AVUTIL CFLAGS.
+AVUTIL_DEFINITIONS:STRING=
+
+//Path to a file.
+AVUTIL_INCLUDE_DIRS:PATH=AVUTIL_INCLUDE_DIRS-NOTFOUND
+
+//Path to a library.
+AVUTIL_LIBRARIES:FILEPATH=AVUTIL_LIBRARIES-NOTFOUND
+
+//The AVUTIL version number.
+AVUTIL_VERSION:STRING=
+
 //Build the examples.
 BUILD_EXAMPLES:BOOL=OFF
 
 //Build Lua bindings
 BUILD_LUA_BINDINGS:BOOL=OFF
 
+//Build python bindings
+BUILD_PYTHON_BINDINGS:BOOL=OFF
+
 //Build samples
 BUILD_SAMPLES:BOOL=OFF
 
-//Build shared (dynamic) libraries
+//Set ON to build the sample code
+BUILD_SAMPLE_CODE:BOOL=OFF
+
+//Set OFF to NOT build shared library
+BUILD_SHARED_LIB:BOOL=ON
+
+//Build Qt statically or dynamically
 BUILD_SHARED_LIBS:BOOL=OFF
+
+//Set ON to build utility app, tab2space
+BUILD_TAB2SPACE:BOOL=OFF
+
+//Build Qt using precompiled headers?
+BUILD_WITH_PCH:BOOL=ON
+
+//Build directory qtbase
+BUILD_qtbase:BOOL=ON
+
+//Path to a program.
+CCACHE_PROGRAM:FILEPATH=CCACHE_PROGRAM-NOTFOUND
 
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
@@ -33,7 +282,7 @@ CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
 //ASM compiler
-CMAKE_ASM_COMPILER:FILEPATH=/usr/bin/cc
+CMAKE_ASM_COMPILER:STRING=/usr/bin/cc
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -58,15 +307,14 @@ CMAKE_ASM_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the ASM compiler during RELWITHDEBINFO builds.
 CMAKE_ASM_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//Choose the type of build, options are: None Debug Release RelWithDebInfo
-// MinSizeRel.
+//Choose the type of build (Debug or Release)
 CMAKE_BUILD_TYPE:STRING=Release
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
+CMAKE_CXX_COMPILER:STRING=/usr/bin/c++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -92,7 +340,7 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
-CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
+CMAKE_C_COMPILER:STRING=/usr/bin/cc
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -116,6 +364,9 @@ CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 
 //Flags used by the C compiler during RELWITHDEBINFO builds.
 CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
+
+//Library postfix for debug builds. Normally left blank.
+CMAKE_DEBUG_POSTFIX:STRING=
 
 //Path to a program.
 CMAKE_DLLTOOL:FILEPATH=CMAKE_DLLTOOL-NOTFOUND
@@ -180,6 +431,9 @@ CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
 
+//RPATH for installed binaries
+CMAKE_INSTALL_RPATH:STRING=
+
 //Run-time variable data (LOCALSTATEDIR/run)
 CMAKE_INSTALL_RUNSTATEDIR:PATH=
 
@@ -226,6 +480,10 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 
 //Path to a program.
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
+
+//The minimal iOS version that will be able to run the built binaries.
+// Cannot be lower than 13.0
+CMAKE_OSX_DEPLOYMENT_TARGET:STRING=13.0
 
 //Value Computed by CMake
 CMAKE_PROJECT_DESCRIPTION:STATIC=
@@ -316,6 +574,39 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Path to a library.
+COREAUDIO_FRAMEWORK:FILEPATH=COREAUDIO_FRAMEWORK-NOTFOUND
+
+//Enable to build Debian packages
+CPACK_BINARY_DEB:BOOL=OFF
+
+//Enable to build FreeBSD packages
+CPACK_BINARY_FREEBSD:BOOL=OFF
+
+//Enable to build IFW packages
+CPACK_BINARY_IFW:BOOL=OFF
+
+//Enable to build NSIS packages
+CPACK_BINARY_NSIS:BOOL=OFF
+
+//Enable to build RPM packages
+CPACK_BINARY_RPM:BOOL=OFF
+
+//Enable to build STGZ packages
+CPACK_BINARY_STGZ:BOOL=ON
+
+//Enable to build TBZ2 packages
+CPACK_BINARY_TBZ2:BOOL=OFF
+
+//Enable to build TGZ packages
+CPACK_BINARY_TGZ:BOOL=ON
+
+//Enable to build TXZ packages
+CPACK_BINARY_TXZ:BOOL=OFF
+
+//Enable to build TZ packages
+CPACK_BINARY_TZ:BOOL=ON
+
 //Enable to build RPM source packages
 CPACK_SOURCE_RPM:BOOL=OFF
 
@@ -350,14 +641,89 @@ CUSTOM_INCLUDE_DIRS:STRING=
 //Extra link libraries (use with CUSTOM_CONFIGURATION_FILE).
 CUSTOM_LINK_LIBRARIES:STRING=
 
+//Path to a file.
+DBus1_ARCH_INCLUDE_DIR:PATH=/usr/lib/x86_64-linux-gnu/dbus-1.0/include
+
+//The directory containing a CMake configuration file for DBus1.
+DBus1_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/DBus1
+
+//Path to a file.
+DBus1_INCLUDE_DIR:PATH=/usr/include/dbus-1.0
+
+//Path to a library.
+DBus1_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libdbus-1.so
+
+//Disable cache beckend
+DISABLE_CACHE:BOOL=OFF
+
+//Disable fastcgi web server api
+DISABLE_FCGI:BOOL=OFF
+
+//Disable usage of gcrypt library
+DISABLE_GCRYPT:BOOL=OFF
+
+//Disable support of gzip output compression
+DISABLE_GZIP:BOOL=OFF
+
+//Disable http web server
+DISABLE_HTTP:BOOL=OFF
+
+//Disable iconv library (default On on Windows)
+DISABLE_ICONV:BOOL=OFF
+
+//Disable icu locale backend
+DISABLE_ICU_LOCALE:BOOL=OFF
+
+//Disable usage of openssl library
+DISABLE_OPENSSL:BOOL=OFF
+
+//Disable PCRE support
+DISABLE_PCRE:BOOL=OFF
+
+//Disable POSIX locale backend
+DISABLE_POSIX_LOCALE:BOOL=OFF
+
+//Disable prefork-cache beckend
+DISABLE_PREFORK_CACHE:BOOL=OFF
+
 //Build with rtti and exceptions disabled.
 DISABLE_RTTI_AND_EXCEPTIONS:BOOL=OFF
+
+//Disable scgi web server api
+DISABLE_SCGI:BOOL=OFF
+
+//Disable shared libraries build
+DISABLE_SHARED:BOOL=OFF
+
+//Disable static libraries build
+DISABLE_STATIC:BOOL=OFF
+
+//Disable std locale backend
+DISABLE_STD_LOCALE:BOOL=OFF
+
+//Disable distributed cache beckend
+DISABLE_TCPCACHE:BOOL=OFF
+
+//Disable Win32API locale backend
+DISABLE_WINAPI_LOCALE:BOOL=ON
+
+//Set ON to output node allocation diagnostics.
+ENABLE_ALLOC_DEBUG:BOOL=OFF
 
 //Enable AddressSanitizer (ASAN) for debugging (degrades performance)
 ENABLE_ASAN:BOOL=OFF
 
+//Set to OFF to disable Tidy runtime configuration file support
+ENABLE_CONFIG_FILES:BOOL=ON
+
+//Set ON to output debugging messages.
+ENABLE_DEBUG_LOG:BOOL=OFF
+
 //Enable plugin for Lottie animations. Requires the rlottie library.
 ENABLE_LOTTIE_PLUGIN:BOOL=OFF
+
+//Set ON to output some memory diagnostics.
+ENABLE_MEMORY_DEBUG:BOOL=OFF
 
 //Enable MemorySanitizer (MSan) for debugging (not recommended
 // to run with ASAN)
@@ -375,6 +741,24 @@ ENABLE_TRACY_PROFILING:BOOL=OFF
 //Enable UndefinedBehaviorSanitizer (UBSan) for debugging
 ENABLE_UBSAN:BOOL=OFF
 
+//Using pkg-config
+FEATURE_pkg_config:STRING=ON
+
+//The FFmpeg cflags.
+FFMPEG_DEFINITIONS:STRING=
+
+//The FFmpeg include directories.
+FFMPEG_INCLUDE_DIRS:STRING=
+
+//The FFmpeg libraries.
+FFMPEG_LIBRARIES:STRING=/usr/lib/x86_64-linux-gnu/libz.so
+
+//Path to a file.
+FLAC_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+FLAC_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libFLAC.so
+
 //Path to a file.
 FREETYPE_INCLUDE_DIR_freetype2:PATH=/usr/include/freetype2
 
@@ -382,13 +766,22 @@ FREETYPE_INCLUDE_DIR_freetype2:PATH=/usr/include/freetype2
 FREETYPE_INCLUDE_DIR_ft2build:PATH=/usr/include/freetype2
 
 //Path to a library.
+FREETYPE_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libfreetype.so
+
+//Path to a library.
 FREETYPE_LIBRARY_DEBUG:FILEPATH=FREETYPE_LIBRARY_DEBUG-NOTFOUND
 
 //Path to a library.
 FREETYPE_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libfreetype.so
 
+//Path to a file.
+GCRYPT_INCLUDE_DIR:PATH=GCRYPT_INCLUDE_DIR-NOTFOUND
+
+//Git command line client
+GIT_EXECUTABLE:FILEPATH=/usr/bin/git
+
 //Value Computed by CMake
-GLFW_BINARY_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/raylib/raylib/external/glfw
+GLFW_BINARY_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/glfw
 
 //Build the GLFW documentation
 GLFW_BUILD_DOCS:BOOL=OFF
@@ -416,12 +809,91 @@ GLFW_IS_TOP_LEVEL:STATIC=OFF
 GLFW_LIBRARY_TYPE:STRING=
 
 //Value Computed by CMake
-GLFW_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/raylib/src/external/glfw
+GLFW_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/glfw
 
 GLFW_USE_WAYLAND:BOOL=OFF
 
+//Path to a library.
+ICU_DATA:FILEPATH=/usr/lib/x86_64-linux-gnu/libicudata.so
+
+//Path to a library.
+ICU_I18N:FILEPATH=/usr/lib/x86_64-linux-gnu/libicui18n.so
+
+//Path to a file.
+ICU_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+ICU_UC:FILEPATH=/usr/lib/x86_64-linux-gnu/libicuuc.so
+
 //Include everything disabled by default (for CI usage
 INCLUDE_EVERYTHING:BOOL=OFF
+
+//Arch-dependent data [PREFIX]
+INSTALL_ARCHDATADIR:STRING=.
+
+//Executables [PREFIX/bin]
+INSTALL_BINDIR:STRING=bin
+
+//CMake namespace [Qt6]
+INSTALL_CMAKE_NAMESPACE:STRING=Qt6
+
+//Arch-independent data [PREFIX]
+INSTALL_DATADIR:STRING=.
+
+//Module description files directory
+INSTALL_DESCRIPTIONSDIR:STRING=modules
+
+//Documentation [DATADIR/doc]
+INSTALL_DOCDIR:STRING=doc
+
+//Examples [PREFIX/examples]
+INSTALL_EXAMPLESDIR:STRING=examples
+
+//Header files [PREFIX/include]
+INSTALL_INCLUDEDIR:STRING=include
+
+//Libraries [PREFIX/lib]
+INSTALL_LIBDIR:STRING=lib
+
+//Helper programs [ARCHDATADIR/bin on Windows, ARCHDATADIR/libexec
+// otherwise]
+INSTALL_LIBEXECDIR:STRING=libexec
+
+//Mkspecs files [PREFIX/mkspecs]
+INSTALL_MKSPECSDIR:STRING=mkspecs
+
+//Plugins [ARCHDATADIR/plugins]
+INSTALL_PLUGINSDIR:STRING=plugins
+
+//QML imports [ARCHDATADIR/qml]
+INSTALL_QMLDIR:STRING=qml
+
+//Settings used by Qt programs [PREFIX/etc/xdg]/[/Library/Preferences/Qt]
+INSTALL_SYSCONFDIR:STRING=etc/xdg
+
+//Tests [PREFIX/tests]
+INSTALL_TESTSDIR:STRING=tests
+
+//Translations [DATADIR/translations]
+INSTALL_TRANSLATIONSDIR:STRING=translations
+
+//The JACK include directory
+JACK_INCLUDE_DIR:PATH=JACK_INCLUDE_DIR-NOTFOUND
+
+//The JACK library
+JACK_LIBRARY:FILEPATH=JACK_LIBRARY-NOTFOUND
+
+//Library installation directory
+LIBDIR:STRING=lib
+
+//Path to a library.
+LIB_GCRYPT:FILEPATH=LIB_GCRYPT-NOTFOUND
+
+//Path to a library.
+LIB_OPENSSL:FILEPATH=LIB_OPENSSL-NOTFOUND
+
+//Path to a library.
+LIB_PTHREAD:FILEPATH=/usr/lib/x86_64-linux-gnu/libpthread.a
 
 //Build fat library for both i386 and x86_64 on macOS
 MACOS_FATLIB:BOOL=OFF
@@ -432,6 +904,15 @@ MATH_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libm.so
 //Use row-major matrices. Column-major matrices are used by default.
 MATRIX_ROW_MAJOR:BOOL=OFF
 
+//The MySOFA include directory
+MYSOFA_INCLUDE_DIR:PATH=MYSOFA_INCLUDE_DIR-NOTFOUND
+
+//The MySOFA library
+MYSOFA_LIBRARY:FILEPATH=MYSOFA_LIBRARY-NOTFOUND
+
+//The math library for MySOFA
+MYSOFA_M_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libm.so
+
 //Do not include the default font engine in the build. Allows building
 // without the FreeType dependency, but a custom font engine must
 // be created and set.
@@ -439,6 +920,18 @@ NO_FONT_INTERFACE_DEFAULT:BOOL=OFF
 
 //Only use standard library containers.
 NO_THIRDPARTY_CONTAINERS:BOOL=OFF
+
+//Path to a file.
+OGG_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+OGG_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libogg.so
+
+//Path to a file.
+OPENAL_INCLUDE_DIR:PATH=/usr/include/AL
+
+//Path to a library.
+OPENAL_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libopenal.so
 
 //Path to a file.
 OPENGL_EGL_INCLUDE_DIR:PATH=/usr/include
@@ -462,6 +955,9 @@ OPENGL_VERSION:STRING=OFF
 OPENGL_egl_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libEGL.so
 
 //Path to a library.
+OPENGL_gl_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libGL.so
+
+//Path to a library.
 OPENGL_gles2_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libGLESv2.so
 
 //Path to a library.
@@ -479,14 +975,212 @@ OPENGL_opengl_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libOpenGL.so
 //Path to a file.
 OPENGL_xmesa_INCLUDE_DIR:PATH=OPENGL_xmesa_INCLUDE_DIR-NOTFOUND
 
+//The OpenSL Android include directory
+OPENSL_ANDROID_INCLUDE_DIR:PATH=OPENSL_ANDROID_INCLUDE_DIR-NOTFOUND
+
+//The OpenSL include directory
+OPENSL_INCLUDE_DIR:PATH=OPENSL_INCLUDE_DIR-NOTFOUND
+
+//The OpenSL library
+OPENSL_LIBRARY:FILEPATH=OPENSL_LIBRARY-NOTFOUND
+
+//Path to a file.
+OPENSSL_INCLUDE_DIR:PATH=OPENSSL_INCLUDE_DIR-NOTFOUND
+
+//The OSS include directory
+OSS_INCLUDE_DIR:PATH=/usr/include/x86_64-linux-gnu
+
+//Optional OSS library
+OSS_LIBRARY:FILEPATH=OSS_LIBRARY-NOTFOUND
+
+//Value Computed by CMake
+OpenAL_BINARY_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/openal-soft
+
+//Value Computed by CMake
+OpenAL_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+OpenAL_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/openal-soft
+
+//Path to a file.
+PCRE_INCLUDE:PATH=/usr/include
+
+//Path to a library.
+PCRE_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libpcre.so
+
+//Arguments to supply to pkg-config
+PKG_CONFIG_ARGN:STRING=
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
+
 //Platform to build for.
 PLATFORM:STRING=Desktop
+
+//The PortAudio include directory
+PORTAUDIO_INCLUDE_DIR:PATH=PORTAUDIO_INCLUDE_DIR-NOTFOUND
+
+//The PortAudio library
+PORTAUDIO_LIBRARY:FILEPATH=PORTAUDIO_LIBRARY-NOTFOUND
+
+//The POSTPROC CFLAGS.
+POSTPROC_DEFINITIONS:STRING=
+
+//Path to a file.
+POSTPROC_INCLUDE_DIRS:PATH=POSTPROC_INCLUDE_DIRS-NOTFOUND
+
+//Path to a library.
+POSTPROC_LIBRARIES:FILEPATH=POSTPROC_LIBRARIES-NOTFOUND
+
+//The POSTPROC version number.
+POSTPROC_VERSION:STRING=
+
+//Path to a file.
+PTHREAD_INC:PATH=/usr/include
+
+//The PulseAudio include directory
+PULSEAUDIO_INCLUDE_DIR:PATH=/usr/include
+
+//The PulseAudio library
+PULSEAUDIO_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpulse.so
+
+//Path to a program.
+PYTHON:FILEPATH=/usr/bin/python
 
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3
 
 //Python Executable
 Python_EXECUTABLE:FILEPATH=/usr/bin/python3
+
+//Allows files to be downloaded when building Qt.
+QT_ALLOW_DOWNLOAD:BOOL=OFF
+
+//Allows symlinks in paths.
+QT_ALLOW_SYMLINK_IN_PATHS:BOOL=OFF
+
+//When this is present and set to true, it signals that we are
+// building Qt from source.
+QT_BUILDING_QT:BOOL=TRUE
+
+//Build Qt Benchmarks
+QT_BUILD_BENCHMARKS:BOOL=OFF
+
+//Build Qt examples
+QT_BUILD_EXAMPLES:BOOL=OFF
+
+//Should examples be built as ExternalProjects.
+QT_BUILD_EXAMPLES_AS_EXTERNAL:BOOL=OFF
+
+//Should examples be built as part of the default 'all' target.
+QT_BUILD_EXAMPLES_BY_DEFAULT:BOOL=ON
+
+//Build Qt manual tests
+QT_BUILD_MANUAL_TESTS:BOOL=OFF
+
+//Build minimal subset of tests for Android multi-ABI Qt builds
+QT_BUILD_MINIMAL_ANDROID_MULTI_ABI_TESTS:BOOL=OFF
+
+//Build minimal subset of tests for static Qt builds
+QT_BUILD_MINIMAL_STATIC_TESTS:BOOL=OFF
+
+//Submodules to build
+QT_BUILD_SUBMODULES:STRING=qt3d;qt5compat;qtactiveqt;qtbase;qtcharts;qtcoap;qtconnectivity;qtdatavis3d;qtdeclarative;qtdoc;qtgraphs;qtgrpc;qthttpserver;qtimageformats;qtlanguageserver;qtlocation;qtlottie;qtmqtt;qtmultimedia;qtnetworkauth;qtopcua;qtpositioning;qtqa;qtquick3d;qtquick3dphysics;qtquickeffectmaker;qtquicktimeline;qtremoteobjects;qtscxml;qtsensors;qtserialbus;qtserialport;qtshadertools;qtspeech;qtsvg;qttools;qttranslations;qtvirtualkeyboard;qtwayland;qtwebchannel;qtwebengine
+
+//Build the testing tree.
+QT_BUILD_TESTS:BOOL=OFF
+
+//Link all tests into a single binary.
+QT_BUILD_TESTS_BATCHED:BOOL=OFF
+
+//Should tests be built as part of the default 'all' target.
+QT_BUILD_TESTS_BY_DEFAULT:BOOL=ON
+
+//Should tools be built as part of the default 'all' target.
+QT_BUILD_TOOLS_BY_DEFAULT:BOOL=ON
+
+//Debug extend_target calls in Qt's build system
+QT_CMAKE_DEBUG_EXTEND_TARGET:BOOL=OFF
+
+//CMake namespace used when exporting targets [Qt6]
+QT_CMAKE_EXPORT_NAMESPACE:STRING=Qt6
+
+//Type of qreal
+QT_COORD_TYPE:STRING=double
+
+//Enable the use of versioned hard link
+QT_CREATE_VERSIONED_HARD_LINK:BOOL=ON
+
+//Installed Qt host directory path, used for cross compiling.
+QT_HOST_PATH:PATH=
+
+//Qt Namespace
+QT_NAMESPACE:STRING=
+
+//Qt platform specific pre-processor defines
+QT_PLATFORM_DEFINITIONS:STRING=
+
+//QMake target mkspec
+QT_QMAKE_TARGET_MKSPEC:STRING=linux-g++
+
+//A path to the source tree of the previously configured QtBase
+// project.
+QT_SOURCE_TREE:PATH=/home/koen/Documents/GitHub/BrowserC/extern/qt5/qtbase
+
+//Run syncqt at configure time already
+QT_SYNC_HEADERS_AT_CONFIGURE_TIME:BOOL=OFF
+
+//Enable unity (jumbo) build
+QT_UNITY_BUILD:BOOL=OFF
+
+//Unity build batch size
+QT_UNITY_BUILD_BATCH_SIZE:STRING=32
+
+//Enable the use of ccache
+QT_USE_CCACHE:BOOL=OFF
+
+//Enable the use of vcpkg
+QT_USE_VCPKG:BOOL=ON
+
+//Boolean indicating if doing a Qt prefix build (vs non-prefix
+// build).
+QT_WILL_INSTALL:BOOL=ON
+
+//The directory containing a CMake configuration file for Qt5Widgets.
+Qt5Widgets_DIR:PATH=Qt5Widgets_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for Qt6.
+Qt6_DIR:PATH=Qt6_DIR-NOTFOUND
+
+//Value Computed by CMake
+QtBase_BINARY_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/qt5/qtbase
+
+//Value Computed by CMake
+QtBase_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+QtBase_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/qt5/qtbase
+
+//The directory containing a CMake configuration file for QtBuildInternals.
+QtBuildInternals_DIR:PATH=/home/koen/Documents/GitHub/BrowserC/extern/qt5/qtbase/cmake/QtBuildInternals
+
+//Value Computed by CMake
+QtWebEngineDummy_BINARY_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/qtwebengine
+
+//Value Computed by CMake
+QtWebEngineDummy_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+QtWebEngineDummy_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/qtwebengine
+
+//Value Computed by CMake
+Qt_BINARY_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/qt5
+
+//Value Computed by CMake
+Qt_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+Qt_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/qt5
 
 //Path to a library.
 RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.a
@@ -506,14 +1200,141 @@ RmlUi_IS_TOP_LEVEL:STATIC=OFF
 //Value Computed by CMake
 RmlUi_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/RmlUi
 
+//Dependencies for the target
+RocketControls_LIB_DEPENDS:STATIC=general;RocketCore;
+
+//Dependencies for the target
+RocketCore_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libfreetype.so;
+
+//Dependencies for the target
+RocketDebugger_LIB_DEPENDS:STATIC=general;RocketCore;
+
 //Backend platform and renderer used for the samples.
 SAMPLES_BACKEND:STRING=auto
+
+//The directory containing a CMake configuration file for SDL2.
+SDL2_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/SDL2
+
+//The directory containing a CMake configuration file for SDL2_image.
+SDL2_image_DIR:PATH=SDL2_image_DIR-NOTFOUND
+
+//Value Computed by CMake
+SFML_BINARY_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/sfml
+
+//TRUE to build SFML's Audio module.
+SFML_BUILD_AUDIO:BOOL=TRUE
+
+//TRUE to build SFML's Graphics module.
+SFML_BUILD_GRAPHICS:BOOL=TRUE
+
+//TRUE to build SFML's Network module.
+SFML_BUILD_NETWORK:BOOL=TRUE
+
+//TRUE to build SFML's Window module. This setting is ignored,
+// if the graphics module is built.
+SFML_BUILD_WINDOW:BOOL=TRUE
+
+//TRUE to configure extras, FALSE to ignore them
+SFML_CONFIGURE_EXTRAS:BOOL=OFF
+
+//TRUE to enable precompiled headers for SFML builds -- only supported
+// on Windows/Linux and for static library builds
+SFML_ENABLE_PCH:BOOL=FALSE
+
+//TRUE to automatically install pkg-config files so other projects
+// can find SFML
+SFML_INSTALL_PKGCONFIG_FILES:BOOL=TRUE
+
+//Value Computed by CMake
+SFML_IS_TOP_LEVEL:STATIC=OFF
+
+//TRUE to use an OpenGL ES implementation, FALSE to use a desktop
+// OpenGL implementation
+SFML_OPENGL_ES:BOOL=0
+
+//Install directory for SFML's pkg-config .pc files
+SFML_PKGCONFIG_INSTALL_PREFIX:PATH=/usr/local/lib/pkgconfig
+
+//Value Computed by CMake
+SFML_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/sfml
+
+//TRUE to use DRM windowing backend
+SFML_USE_DRM:BOOL=FALSE
+
+//TRUE to use system dependencies, FALSE to use the bundled ones.
+SFML_USE_SYSTEM_DEPS:BOOL=FALSE
+
+//Path to a file.
+SNDFILE_INCLUDE_DIR:PATH=SNDFILE_INCLUDE_DIR-NOTFOUND
+
+//Path to a library.
+SNDFILE_LIBRARY:FILEPATH=SNDFILE_LIBRARY-NOTFOUND
+
+//The SoundIO include directory
+SOUNDIO_INCLUDE_DIR:PATH=/usr/include
+
+//The SoundIO library
+SOUNDIO_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libsndio.so
+
+//Set OFF to build libraries only without console application support.
+SUPPORT_CONSOLE_APP:BOOL=ON
+
+//Set OFF to build without additional languages.
+SUPPORT_LOCALIZATIONS:BOOL=ON
+
+//The SWRESAMPLE CFLAGS.
+SWRESAMPLE_DEFINITIONS:STRING=
+
+//Path to a file.
+SWRESAMPLE_INCLUDE_DIRS:PATH=SWRESAMPLE_INCLUDE_DIRS-NOTFOUND
+
+//Path to a library.
+SWRESAMPLE_LIBRARIES:FILEPATH=SWRESAMPLE_LIBRARIES-NOTFOUND
+
+//The SWRESAMPLE version number.
+SWRESAMPLE_VERSION:STRING=
+
+//The SWSCALE CFLAGS.
+SWSCALE_DEFINITIONS:STRING=
+
+//Path to a file.
+SWSCALE_INCLUDE_DIRS:PATH=SWSCALE_INCLUDE_DIRS-NOTFOUND
+
+//Path to a library.
+SWSCALE_LIBRARIES:FILEPATH=SWSCALE_LIBRARIES-NOTFOUND
+
+//The SWSCALE version number.
+SWSCALE_VERSION:STRING=
+
+//Set ON to include compatibility headers
+TIDY_COMPAT_HEADERS:BOOL=OFF
+
+//Set ON to link with shared(DLL) lib.
+TIDY_CONSOLE_SHARED:BOOL=OFF
+
+//Path to a file.
+UDEV_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+UDEV_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libudev.so
 
 //Link raylib against system GLFW instead of embedded one
 USE_EXTERNAL_GLFW:STRING=OFF
 
+//Build with CXX library
+USE_LIBCXX:BOOL=OFF
+
+//Use pthreads API on windows
+USE_PTHREAD:BOOL=OFF
+
+//Build with STLPort library
+USE_STLPORT:BOOL=OFF
+
 //Use Wayland for window creation
 USE_WAYLAND:BOOL=OFF
+
+//Use Windows 6 API (Vista, 7)
+USE_WINDOWS6_API:BOOL=ON
 
 //Enable finding python
 V8CMAKE_FIND_PYTHON:BOOL=ON
@@ -533,23 +1354,47 @@ V8_IS_TOP_LEVEL:STATIC=OFF
 //Value Computed by CMake
 V8_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/v8
 
-//Treat compiler warnings as errors.
+//Path to a library.
+VORBISENC_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libvorbisenc.so
+
+//Path to a library.
+VORBISFILE_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libvorbisfile.so
+
+//Path to a file.
+VORBIS_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+VORBIS_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libvorbis.so
+
+//Build Qt with warnings as errors
+WARNINGS_ARE_ERRORS:BOOL=OFF
+
+//Treat compiler warnings as errors
 WARNINGS_AS_ERRORS:BOOL=OFF
 
 //Compile static library as position-independent code
 WITH_PIC:BOOL=OFF
 
+//Value Computed by CMake
+WebKit_BINARY_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/webkit
+
+//Value Computed by CMake
+WebKit_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+WebKit_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/webkit
+
 //Path to a file.
-X11_ICE_INCLUDE_PATH:PATH=X11_ICE_INCLUDE_PATH-NOTFOUND
+X11_ICE_INCLUDE_PATH:PATH=/usr/include
 
 //Path to a library.
-X11_ICE_LIB:FILEPATH=X11_ICE_LIB-NOTFOUND
+X11_ICE_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libICE.so
 
 //Path to a file.
-X11_SM_INCLUDE_PATH:PATH=X11_SM_INCLUDE_PATH-NOTFOUND
+X11_SM_INCLUDE_PATH:PATH=/usr/include
 
 //Path to a library.
-X11_SM_LIB:FILEPATH=X11_SM_LIB-NOTFOUND
+X11_SM_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libSM.so
 
 //Path to a file.
 X11_X11_INCLUDE_PATH:PATH=/usr/include
@@ -657,10 +1502,10 @@ X11_Xkblib_INCLUDE_PATH:PATH=/usr/include
 X11_Xlib_INCLUDE_PATH:PATH=/usr/include
 
 //Path to a file.
-X11_Xmu_INCLUDE_PATH:PATH=X11_Xmu_INCLUDE_PATH-NOTFOUND
+X11_Xmu_INCLUDE_PATH:PATH=/usr/include
 
 //Path to a library.
-X11_Xmu_LIB:FILEPATH=X11_Xmu_LIB-NOTFOUND
+X11_Xmu_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libXmu.so
 
 //Path to a file.
 X11_Xpm_INCLUDE_PATH:PATH=X11_Xpm_INCLUDE_PATH-NOTFOUND
@@ -684,16 +1529,16 @@ X11_Xrender_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libXrender.so
 X11_Xshape_INCLUDE_PATH:PATH=/usr/include
 
 //Path to a file.
-X11_Xss_INCLUDE_PATH:PATH=X11_Xss_INCLUDE_PATH-NOTFOUND
+X11_Xss_INCLUDE_PATH:PATH=/usr/include
 
 //Path to a library.
-X11_Xss_LIB:FILEPATH=X11_Xss_LIB-NOTFOUND
+X11_Xss_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libXss.so
 
 //Path to a file.
-X11_Xt_INCLUDE_PATH:PATH=X11_Xt_INCLUDE_PATH-NOTFOUND
+X11_Xt_INCLUDE_PATH:PATH=/usr/include
 
 //Path to a library.
-X11_Xt_LIB:FILEPATH=X11_Xt_LIB-NOTFOUND
+X11_Xt_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libXt.so
 
 //Path to a file.
 X11_Xtst_INCLUDE_PATH:PATH=X11_Xtst_INCLUDE_PATH-NOTFOUND
@@ -705,10 +1550,10 @@ X11_Xtst_LIB:FILEPATH=X11_Xtst_LIB-NOTFOUND
 X11_Xutil_INCLUDE_PATH:PATH=/usr/include
 
 //Path to a file.
-X11_Xv_INCLUDE_PATH:PATH=X11_Xv_INCLUDE_PATH-NOTFOUND
+X11_Xv_INCLUDE_PATH:PATH=/usr/include
 
 //Path to a library.
-X11_Xv_LIB:FILEPATH=X11_Xv_LIB-NOTFOUND
+X11_Xv_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libXv.so
 
 //Path to a file.
 X11_Xxf86misc_INCLUDE_PATH:PATH=X11_Xxf86misc_INCLUDE_PATH-NOTFOUND
@@ -924,10 +1769,10 @@ X11_xcb_xvmc_INCLUDE_PATH:PATH=X11_xcb_xvmc_INCLUDE_PATH-NOTFOUND
 X11_xcb_xvmc_LIB:FILEPATH=X11_xcb_xvmc_LIB-NOTFOUND
 
 //Path to a file.
-X11_xkbcommon_INCLUDE_PATH:PATH=X11_xkbcommon_INCLUDE_PATH-NOTFOUND
+X11_xkbcommon_INCLUDE_PATH:PATH=/usr/include
 
 //Path to a library.
-X11_xkbcommon_LIB:FILEPATH=X11_xkbcommon_LIB-NOTFOUND
+X11_xkbcommon_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libxkbcommon.so
 
 //Path to a file.
 X11_xkbcommon_X11_INCLUDE_PATH:PATH=X11_xkbcommon_X11_INCLUDE_PATH-NOTFOUND
@@ -941,6 +1786,48 @@ X11_xkbfile_INCLUDE_PATH:PATH=X11_xkbfile_INCLUDE_PATH-NOTFOUND
 //Path to a library.
 X11_xkbfile_LIB:FILEPATH=X11_xkbfile_LIB-NOTFOUND
 
+//Path to a program.
+XSLTPROC_FOUND:FILEPATH=XSLTPROC_FOUND-NOTFOUND
+
+//Path to a library.
+ZLIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libz.so
+
+//Path to a file.
+ZLIB_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+ZLIB_LIBRARY_DEBUG:FILEPATH=ZLIB_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+ZLIB_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libz.so
+
+//Path to a library.
+_FFmpeg_HAVE_LIBZ:FILEPATH=/usr/lib/x86_64-linux-gnu/libz.so
+
+//Value Computed by CMake
+alsoft-config_BINARY_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/openal-soft/utils/alsoft-config
+
+//Value Computed by CMake
+alsoft-config_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+alsoft-config_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/openal-soft/utils/alsoft-config
+
+//Dependencies for the target
+booster-static_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libpthread.a;general;/usr/lib/x86_64-linux-gnu/libpcre.so;general;/usr/lib/x86_64-linux-gnu/libicuuc.so;general;/usr/lib/x86_64-linux-gnu/libicui18n.so;general;/usr/lib/x86_64-linux-gnu/libicudata.so;
+
+//Value Computed by CMake
+booster_BINARY_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/cppcms/booster
+
+//Value Computed by CMake
+booster_IS_TOP_LEVEL:STATIC=OFF
+
+//Dependencies for the target
+booster_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libpthread.a;general;/usr/lib/x86_64-linux-gnu/libpcre.so;general;/usr/lib/x86_64-linux-gnu/libicuuc.so;general;/usr/lib/x86_64-linux-gnu/libicui18n.so;general;/usr/lib/x86_64-linux-gnu/libicudata.so;
+
+//Value Computed by CMake
+booster_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/cppcms/booster
+
 //Value Computed by CMake
 browser_BINARY_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC
 
@@ -949,6 +1836,48 @@ browser_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 browser_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC
+
+//Dependencies for the target
+cppcms-static_LIB_DEPENDS:STATIC=general;booster;general;/usr/lib/x86_64-linux-gnu/libz.so;
+
+//Value Computed by CMake
+cppcms_BINARY_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/cppcms
+
+//Value Computed by CMake
+cppcms_IS_TOP_LEVEL:STATIC=OFF
+
+//Dependencies for the target
+cppcms_LIB_DEPENDS:STATIC=general;booster;general;/usr/lib/x86_64-linux-gnu/libz.so;
+
+//Value Computed by CMake
+cppcms_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/cppcms
+
+//Dependencies for the target
+ex-common_LIB_DEPENDS:STATIC=general;OpenAL;general;rt;
+
+//Path to a file.
+glob:FILEPATH=glob-NOTFOUND
+
+//Value Computed by CMake
+libRocket_BINARY_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/rocket/Build
+
+//The directory containing a CMake configuration file for libRocket.
+libRocket_DIR:PATH=/home/koen/Documents/GitHub/BrowserC/extern/rocket/Build
+
+//Value Computed by CMake
+libRocket_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+libRocket_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/rocket/Build
+
+//Dependencies for the target
+loadable_storage_LIB_DEPENDS:STATIC=general;cppcms;
+
+//Path to a library.
+pkgcfg_lib_PC_DBUS1_dbus-1:FILEPATH=/usr/lib/x86_64-linux-gnu/libdbus-1.so
+
+//Dependencies for the target
+plugin_LIB_DEPENDS:STATIC=general;cppcms;
 
 //Path to a library.
 pthread:FILEPATH=/usr/lib/x86_64-linux-gnu/libpthread.a
@@ -964,6 +1893,42 @@ raylib_LIB_DEPENDS:STATIC=general;m;pthread;/usr/lib/x86_64-linux-gnu/libOpenGL.
 
 //Value Computed by CMake
 raylib_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/raylib/src
+
+//Dependencies for the target
+skin3_LIB_DEPENDS:STATIC=general;cppcms;
+
+//Dependencies for the target
+tc_plugin2_LIB_DEPENDS:STATIC=general;cppcms;general;tc_sep_skin;
+
+//Dependencies for the target
+tc_plugin_LIB_DEPENDS:STATIC=general;cppcms;
+
+//Dependencies for the target
+tc_sep_skin_LIB_DEPENDS:STATIC=general;cppcms;
+
+//Dependencies for the target
+tc_sep_skin_a_LIB_DEPENDS:STATIC=general;cppcms;
+
+//Dependencies for the target
+tc_sep_skin_b_LIB_DEPENDS:STATIC=general;cppcms;
+
+//Dependencies for the target
+tc_skin_LIB_DEPENDS:STATIC=general;cppcms;
+
+//Dependencies for the target
+tc_skin_a_LIB_DEPENDS:STATIC=general;cppcms;
+
+//Dependencies for the target
+tc_skin_b_LIB_DEPENDS:STATIC=general;cppcms;
+
+//Value Computed by CMake
+tidy_BINARY_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/libtidy
+
+//Value Computed by CMake
+tidy_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+tidy_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/libtidy
 
 //Dependencies for the target
 v8_base_without_compiler_LIB_DEPENDS:STATIC=general;v8_libbase;general;v8_libsampler;general;v8_torque_generated;general;v8-bytecodes-builtin-list;
@@ -991,6 +1956,66 @@ v8_snapshot_LIB_DEPENDS:STATIC=general;v8_torque_generated;general;v8-bytecodes-
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: ALSA_INCLUDE_DIR
+ALSA_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ALSA_LIBRARY
+ALSA_LIBRARY-ADVANCED:INTERNAL=1
+//Test ATOMIC_TEST
+ATOMIC_TEST:INTERNAL=1
+//ADVANCED property for variable: AUDIOIO_INCLUDE_DIR
+AUDIOIO_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVCODEC_DEFINITIONS
+AVCODEC_DEFINITIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVCODEC_INCLUDE_DIRS
+AVCODEC_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVCODEC_LIBRARIES
+AVCODEC_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVCODEC_VERSION
+AVCODEC_VERSION-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVDEVICE_DEFINITIONS
+AVDEVICE_DEFINITIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVDEVICE_INCLUDE_DIRS
+AVDEVICE_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVDEVICE_LIBRARIES
+AVDEVICE_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVDEVICE_VERSION
+AVDEVICE_VERSION-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVFORMAT_DEFINITIONS
+AVFORMAT_DEFINITIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVFORMAT_INCLUDE_DIRS
+AVFORMAT_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVFORMAT_LIBRARIES
+AVFORMAT_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVFORMAT_VERSION
+AVFORMAT_VERSION-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVUTIL_DEFINITIONS
+AVUTIL_DEFINITIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVUTIL_INCLUDE_DIRS
+AVUTIL_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVUTIL_LIBRARIES
+AVUTIL_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVUTIL_VERSION
+AVUTIL_VERSION-ADVANCED:INTERNAL=1
+//Test BOOSTER_AIO_HAVE_PF_INET6
+BOOSTER_AIO_HAVE_PF_INET6:INTERNAL=1
+//Have function newlocale
+BOOSTER_HAS_XLOCALE:INTERNAL=1
+//Have function dlopen
+BOOSTER_HAVE_DLOPEN:INTERNAL=1
+//Test BOOSTER_HAVE_EXECINFO
+BOOSTER_HAVE_EXECINFO:INTERNAL=1
+//Test BOOSTER_HAVE_INTTYPES_H
+BOOSTER_HAVE_INTTYPES_H:INTERNAL=1
+//Test BOOSTER_HAVE_STDINT_H
+BOOSTER_HAVE_STDINT_H:INTERNAL=1
+//Test BOOSTER_HAVE_STD_ATOMIC
+BOOSTER_HAVE_STD_ATOMIC:INTERNAL=1
+//Test BOOSTER_HAVE_UNWIND_BACKTRACE
+BOOSTER_HAVE_UNWIND_BACKTRACE:INTERNAL=1
+//Test BOOSTER_HAVE_UNWIND_BACKTRACE_BUILTIN
+BOOSTER_HAVE_UNWIND_BACKTRACE_BUILTIN:INTERNAL=
+//Build the testing tree.
+BUILD_TESTING:INTERNAL=OFF
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //Result of TRY_COMPILE
@@ -1050,6 +2075,10 @@ CMAKE_CXX_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_RELWITHDEBINFO
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//Test CMAKE_CXX_LINK_NO_PIE_SUPPORTED
+CMAKE_CXX_LINK_NO_PIE_SUPPORTED:INTERNAL=1
+//Test CMAKE_CXX_LINK_PIE_SUPPORTED
+CMAKE_CXX_LINK_PIE_SUPPORTED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER
 CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER_AR
@@ -1066,6 +2095,10 @@ CMAKE_C_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_C_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_RELWITHDEBINFO
 CMAKE_C_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//Test CMAKE_C_LINK_NO_PIE_SUPPORTED
+CMAKE_C_LINK_NO_PIE_SUPPORTED:INTERNAL=1
+//Test CMAKE_C_LINK_PIE_SUPPORTED
+CMAKE_C_LINK_PIE_SUPPORTED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_DLLTOOL
 CMAKE_DLLTOOL-ADVANCED:INTERNAL=1
 //Path to cache edit program executable.
@@ -1141,6 +2174,8 @@ CMAKE_INSTALL_SHAREDSTATEDIR-ADVANCED:INTERNAL=1
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_INSTALL_SYSCONFDIR
 CMAKE_INSTALL_SYSCONFDIR-ADVANCED:INTERNAL=1
+//Have library ICE
+CMAKE_LIB_ICE_HAS_ICECONNECTIONNUMBER:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER
 CMAKE_LINKER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MAKE_PROGRAM
@@ -1159,14 +2194,12 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 CMAKE_NM-ADVANCED:INTERNAL=1
 //Does the compiler support ansi for scope.
 CMAKE_NO_ANSI_FOR_SCOPE:INTERNAL=0
-//ADVANCED property for variable: CMAKE_NO_ANSI_STREAM_HEADERS
-CMAKE_NO_ANSI_STREAM_HEADERS-ADVANCED:INTERNAL=1
 //Does the compiler support headers like iostream.
 CMAKE_NO_ANSI_STREAM_HEADERS:INTERNAL=0
 //Does the compiler support std::.
 CMAKE_NO_STD_NAMESPACE:INTERNAL=0
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1215,6 +2248,26 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Test COMPILER_HAS_THOSE_TOGGLES
 COMPILER_HAS_THOSE_TOGGLES:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_DEB
+CPACK_BINARY_DEB-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_FREEBSD
+CPACK_BINARY_FREEBSD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_IFW
+CPACK_BINARY_IFW-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_NSIS
+CPACK_BINARY_NSIS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_RPM
+CPACK_BINARY_RPM-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_STGZ
+CPACK_BINARY_STGZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_TBZ2
+CPACK_BINARY_TBZ2-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_TGZ
+CPACK_BINARY_TGZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_TXZ
+CPACK_BINARY_TXZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_TZ
+CPACK_BINARY_TZ-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CPACK_SOURCE_RPM
 CPACK_SOURCE_RPM-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CPACK_SOURCE_TBZ2
@@ -1227,35 +2280,209 @@ CPACK_SOURCE_TXZ-ADVANCED:INTERNAL=1
 CPACK_SOURCE_TZ-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CPACK_SOURCE_ZIP
 CPACK_SOURCE_ZIP-ADVANCED:INTERNAL=1
+//Have function pthread_mutexattr_setpshared
+CPPCMS_HAS_THREAD_PSHARED_LIBC:INTERNAL=1
+//Have function _atoi64
+CPPCMS_HAVE_ATOI64:INTERNAL=
+//Have function atoll
+CPPCMS_HAVE_ATOLL:INTERNAL=1
+//Test CPPCMS_HAVE_BSD_TM
+CPPCMS_HAVE_BSD_TM:INTERNAL=1
+//Have function canonicalize_file_name
+CPPCMS_HAVE_CANONICALIZE_FILE_NAME:INTERNAL=1
+//Test CPPCMS_HAVE_CPP0X_UXSTRING
+CPPCMS_HAVE_CPP0X_UXSTRING:INTERNAL=1
+//Test CPPCMS_HAVE_CPP_0X_AUTO
+CPPCMS_HAVE_CPP_0X_AUTO:INTERNAL=1
+//Test CPPCMS_HAVE_CPP_0X_DECLTYPE
+CPPCMS_HAVE_CPP_0X_DECLTYPE:INTERNAL=1
+//Have function dlopen
+CPPCMS_HAVE_DLOPEN:INTERNAL=1
+//Test CPPCMS_HAVE_FSEEKI64
+CPPCMS_HAVE_FSEEKI64:INTERNAL=
+//Test CPPCMS_HAVE_FSEEKO
+CPPCMS_HAVE_FSEEKO:INTERNAL=1
+//Test CPPCMS_HAVE_GCC_TYPEOF
+CPPCMS_HAVE_GCC_TYPEOF:INTERNAL=
+//Have function gethostbyname
+CPPCMS_HAVE_GETHOSTBYNAME:INTERNAL=1
+//Test CPPCMS_HAVE_INTTYPES_H
+CPPCMS_HAVE_INTTYPES_H:INTERNAL=1
+//Have function snprintf
+CPPCMS_HAVE_SNPRINTF:INTERNAL=1
+//Have function socket
+CPPCMS_HAVE_SOCKET:INTERNAL=1
+//Have function stat
+CPPCMS_HAVE_STAT:INTERNAL=1
+//Test CPPCMS_HAVE_STDINT_H
+CPPCMS_HAVE_STDINT_H:INTERNAL=1
+//Test CPPCMS_HAVE_STD_WSTRING
+CPPCMS_HAVE_STD_WSTRING:INTERNAL=1
+//Test CPPCMS_HAVE_UNDERSCORE_TYPEOF
+CPPCMS_HAVE_UNDERSCORE_TYPEOF:INTERNAL=1
+//Have function _stat
+CPPCMS_HAVE__STAT:INTERNAL=
 //ADVANCED property for variable: CUSTOM_CONFIGURATION_FILE
 CUSTOM_CONFIGURATION_FILE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUSTOM_INCLUDE_DIRS
 CUSTOM_INCLUDE_DIRS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUSTOM_LINK_LIBRARIES
 CUSTOM_LINK_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DBus1_INCLUDE_DIR
+DBus1_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DBus1_LIBRARY
+DBus1_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: FFMPEG_DEFINITIONS
+FFMPEG_DEFINITIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: FFMPEG_INCLUDE_DIRS
+FFMPEG_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: FFMPEG_LIBRARIES
+FFMPEG_LIBRARIES-ADVANCED:INTERNAL=1
+//Details about finding ALSA
+FIND_PACKAGE_MESSAGE_DETAILS_ALSA:INTERNAL=[/usr/lib/x86_64-linux-gnu/libasound.so][/usr/include][v1.2.6.1()]
+//Details about finding FLAC
+FIND_PACKAGE_MESSAGE_DETAILS_FLAC:INTERNAL=[/usr/lib/x86_64-linux-gnu/libFLAC.so][/usr/include][v()]
 //Details about finding Freetype
 FIND_PACKAGE_MESSAGE_DETAILS_Freetype:INTERNAL=[/usr/lib/x86_64-linux-gnu/libfreetype.so][/usr/include/freetype2][v2.11.1()]
+//Details about finding Git
+FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/bin/git][v2.34.1()]
+//Details about finding OSS
+FIND_PACKAGE_MESSAGE_DETAILS_OSS:INTERNAL=[/usr/include/x86_64-linux-gnu][v()]
+//Details about finding OpenAL
+FIND_PACKAGE_MESSAGE_DETAILS_OpenAL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libopenal.so][/usr/include/AL][v()]
+//Details about finding OpenGL
+FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libOpenGL.so][/usr/lib/x86_64-linux-gnu/libGLX.so][/usr/include][c ][v()]
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.2()]
+//Details about finding PulseAudio
+FIND_PACKAGE_MESSAGE_DETAILS_PulseAudio:INTERNAL=[/usr/lib/x86_64-linux-gnu/libpulse.so][/usr/include][v15.99.0()]
+//Details about finding SoundIO
+FIND_PACKAGE_MESSAGE_DETAILS_SoundIO:INTERNAL=[/usr/lib/x86_64-linux-gnu/libsndio.so][/usr/include][v()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//Details about finding VORBIS
+FIND_PACKAGE_MESSAGE_DETAILS_VORBIS:INTERNAL=[/usr/lib/x86_64-linux-gnu/libvorbisenc.so;/usr/lib/x86_64-linux-gnu/libvorbisfile.so;/usr/lib/x86_64-linux-gnu/libvorbis.so;/usr/lib/x86_64-linux-gnu/libogg.so][/usr/include][/usr/include][v()]
 //Details about finding X11
-FIND_PACKAGE_MESSAGE_DETAILS_X11:INTERNAL=[/usr/include][/usr/lib/x86_64-linux-gnu/libX11.so][c ][v()]
+FIND_PACKAGE_MESSAGE_DETAILS_X11:INTERNAL=[/usr/include][/usr/lib/x86_64-linux-gnu/libX11.so][cfound components: Xrandr Xcursor ][v()]
+//Details about finding ZLIB
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[/usr/lib/x86_64-linux-gnu/libz.so][/usr/include][c ][v1.2.11()]
+//ADVANCED property for variable: FLAC_INCLUDE_DIR
+FLAC_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: FLAC_LIBRARY
+FLAC_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: FREETYPE_INCLUDE_DIR_freetype2
 FREETYPE_INCLUDE_DIR_freetype2-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: FREETYPE_INCLUDE_DIR_ft2build
 FREETYPE_INCLUDE_DIR_ft2build-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: FREETYPE_LIBRARY
+FREETYPE_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: FREETYPE_LIBRARY_DEBUG
 FREETYPE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: FREETYPE_LIBRARY_RELEASE
 FREETYPE_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GIT_EXECUTABLE
+GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //GLFW pkg-config Libs.private
 GLFW_PKG_CONFIG_LIBS_PRIVATE:INTERNAL= -lrt -lm -ldl
 //GLFW pkg-config Requires.private
 GLFW_PKG_CONFIG_REQUIRES_PRIVATE:INTERNAL=
+//Have include arm_neon.h
+HAVE_ARM_NEON_H:INTERNAL=
+//Have include cpuid.h
+HAVE_CPUID_H:INTERNAL=1
+//Have include dlfcn.h
+HAVE_DLFCN_H:INTERNAL=1
+//Have include emmintrin.h
+HAVE_EMMINTRIN_H:INTERNAL=1
+//Test HAVE_FNO_MATH_ERRNO
+HAVE_FNO_MATH_ERRNO:INTERNAL=1
+//Test HAVE_GCC_GET_CPUID
+HAVE_GCC_GET_CPUID:INTERNAL=1
+//Test HAVE_GCC_PROTECTED_VISIBILITY
+HAVE_GCC_PROTECTED_VISIBILITY:INTERNAL=1
+//Have function gethostbyname
+HAVE_GETHOSTBYNAME:INTERNAL=1
+//Have symbol getopt
+HAVE_GETOPT:INTERNAL=1
+//Have include guiddef.h
+HAVE_GUIDDEF_H:INTERNAL=
+//Have include initguid.h
+HAVE_INITGUID_H:INTERNAL=
+//Have include intrin.h
+HAVE_INTRIN_H:INTERNAL=
+//Test HAVE_LIBATOMIC
+HAVE_LIBATOMIC:INTERNAL=1
+//Have library dl
+HAVE_LIBDL:INTERNAL=1
+//Have library m
+HAVE_LIBM:INTERNAL=1
+//Have library rt
+HAVE_LIBRT:INTERNAL=1
+//Have include malloc.h
+HAVE_MALLOC_H:INTERNAL=1
+//Test HAVE_MSSE2_SWITCH
+HAVE_MSSE2_SWITCH:INTERNAL=1
+//Have include pmmintrin.h
+HAVE_PMMINTRIN_H:INTERNAL=1
+//Have symbol posix_memalign
+HAVE_POSIX_MEMALIGN:INTERNAL=1
+//Have symbol posix_memalign
+HAVE_POSIX_MEMALIGN_DEFAULT:INTERNAL=1
+//Have symbol proc_pidpath
+HAVE_PROC_PIDPATH:INTERNAL=
+//Test HAVE_PTHREAD
+HAVE_PTHREAD:INTERNAL=1
+//Have include pthread.h
+HAVE_PTHREAD_H:INTERNAL=1
+//Have includes pthread.h;pthread_np.h
+HAVE_PTHREAD_NP_H:INTERNAL=
+//Have symbol pthread_setname_np
+HAVE_PTHREAD_SETNAME_NP:INTERNAL=
+//Have symbol pthread_setschedparam
+HAVE_PTHREAD_SETSCHEDPARAM:INTERNAL=1
+//Have symbol pthread_set_name_np
+HAVE_PTHREAD_SET_NAME_NP:INTERNAL=
+//Have include smmintrin.h
+HAVE_SMMINTRIN_H:INTERNAL=1
+//Have function socket
+HAVE_SOCKET:INTERNAL=1
+//Test HAVE_SSE_INTRINSICS
+HAVE_SSE_INTRINSICS:INTERNAL=1
+//Test HAVE_STDC_FORMAT_MACROS
+HAVE_STDC_FORMAT_MACROS:INTERNAL=1
+//Test HAVE_WINDOWS6_API
+HAVE_WINDOWS6_API:INTERNAL=
+//Test HAVE_WNO_CXX20_ATTR_EXT
+HAVE_WNO_CXX20_ATTR_EXT:INTERNAL=1
+//Have include xmmintrin.h
+HAVE_XMMINTRIN_H:INTERNAL=1
+//Have symbol _aligned_malloc
+HAVE__ALIGNED_MALLOC:INTERNAL=
+//Test HAVE___RESTRICT
+HAVE___RESTRICT:INTERNAL=1
+//ADVANCED property for variable: JACK_INCLUDE_DIR
+JACK_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: JACK_LIBRARY
+JACK_LIBRARY-ADVANCED:INTERNAL=1
+//Test LIBC_ICONV
+LIBC_ICONV:INTERNAL=1
 //ADVANCED property for variable: MATH_LIBRARY
 MATH_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MYSOFA_INCLUDE_DIR
+MYSOFA_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MYSOFA_LIBRARY
+MYSOFA_LIBRARY-ADVANCED:INTERNAL=1
 //Replace any OFF by default with ${OFF} to have it covered by
 // this option
 OFF:INTERNAL=OFF
+//ADVANCED property for variable: OGG_INCLUDE_DIR
+OGG_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OGG_LIBRARY
+OGG_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENAL_INCLUDE_DIR
+OPENAL_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENAL_LIBRARY
+OPENAL_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_EGL_INCLUDE_DIR
 OPENGL_EGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_GLES2_INCLUDE_DIR
@@ -1270,6 +2497,8 @@ OPENGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
 OPENGL_VERSION-STRINGS:INTERNAL=OFF;4.3;3.3;2.1;1.1;ES 2.0
 //ADVANCED property for variable: OPENGL_egl_LIBRARY
 OPENGL_egl_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_gl_LIBRARY
+OPENGL_gl_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_gles2_LIBRARY
 OPENGL_gles2_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_gles3_LIBRARY
@@ -1282,18 +2511,333 @@ OPENGL_glx_LIBRARY-ADVANCED:INTERNAL=1
 OPENGL_opengl_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_xmesa_INCLUDE_DIR
 OPENGL_xmesa_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENSL_ANDROID_INCLUDE_DIR
+OPENSL_ANDROID_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENSL_INCLUDE_DIR
+OPENSL_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENSL_LIBRARY
+OPENSL_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OSS_INCLUDE_DIR
+OSS_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OSS_LIBRARY
+OSS_LIBRARY-ADVANCED:INTERNAL=1
+PC_AVCODEC_CFLAGS:INTERNAL=
+PC_AVCODEC_CFLAGS_I:INTERNAL=
+PC_AVCODEC_CFLAGS_OTHER:INTERNAL=
+PC_AVCODEC_FOUND:INTERNAL=
+PC_AVCODEC_INCLUDEDIR:INTERNAL=
+PC_AVCODEC_LIBDIR:INTERNAL=
+PC_AVCODEC_LIBS:INTERNAL=
+PC_AVCODEC_LIBS_L:INTERNAL=
+PC_AVCODEC_LIBS_OTHER:INTERNAL=
+PC_AVCODEC_LIBS_PATHS:INTERNAL=
+PC_AVCODEC_MODULE_NAME:INTERNAL=
+PC_AVCODEC_PREFIX:INTERNAL=
+PC_AVCODEC_STATIC_CFLAGS:INTERNAL=
+PC_AVCODEC_STATIC_CFLAGS_I:INTERNAL=
+PC_AVCODEC_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_AVCODEC_STATIC_LIBDIR:INTERNAL=
+PC_AVCODEC_STATIC_LIBS:INTERNAL=
+PC_AVCODEC_STATIC_LIBS_L:INTERNAL=
+PC_AVCODEC_STATIC_LIBS_OTHER:INTERNAL=
+PC_AVCODEC_STATIC_LIBS_PATHS:INTERNAL=
+PC_AVCODEC_VERSION:INTERNAL=
+PC_AVCODEC_libavcodec_INCLUDEDIR:INTERNAL=
+PC_AVCODEC_libavcodec_LIBDIR:INTERNAL=
+PC_AVCODEC_libavcodec_PREFIX:INTERNAL=
+PC_AVCODEC_libavcodec_VERSION:INTERNAL=
+PC_AVDEVICE_CFLAGS:INTERNAL=
+PC_AVDEVICE_CFLAGS_I:INTERNAL=
+PC_AVDEVICE_CFLAGS_OTHER:INTERNAL=
+PC_AVDEVICE_FOUND:INTERNAL=
+PC_AVDEVICE_INCLUDEDIR:INTERNAL=
+PC_AVDEVICE_LIBDIR:INTERNAL=
+PC_AVDEVICE_LIBS:INTERNAL=
+PC_AVDEVICE_LIBS_L:INTERNAL=
+PC_AVDEVICE_LIBS_OTHER:INTERNAL=
+PC_AVDEVICE_LIBS_PATHS:INTERNAL=
+PC_AVDEVICE_MODULE_NAME:INTERNAL=
+PC_AVDEVICE_PREFIX:INTERNAL=
+PC_AVDEVICE_STATIC_CFLAGS:INTERNAL=
+PC_AVDEVICE_STATIC_CFLAGS_I:INTERNAL=
+PC_AVDEVICE_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_AVDEVICE_STATIC_LIBDIR:INTERNAL=
+PC_AVDEVICE_STATIC_LIBS:INTERNAL=
+PC_AVDEVICE_STATIC_LIBS_L:INTERNAL=
+PC_AVDEVICE_STATIC_LIBS_OTHER:INTERNAL=
+PC_AVDEVICE_STATIC_LIBS_PATHS:INTERNAL=
+PC_AVDEVICE_VERSION:INTERNAL=
+PC_AVDEVICE_libavdevice_INCLUDEDIR:INTERNAL=
+PC_AVDEVICE_libavdevice_LIBDIR:INTERNAL=
+PC_AVDEVICE_libavdevice_PREFIX:INTERNAL=
+PC_AVDEVICE_libavdevice_VERSION:INTERNAL=
+PC_AVFORMAT_CFLAGS:INTERNAL=
+PC_AVFORMAT_CFLAGS_I:INTERNAL=
+PC_AVFORMAT_CFLAGS_OTHER:INTERNAL=
+PC_AVFORMAT_FOUND:INTERNAL=
+PC_AVFORMAT_INCLUDEDIR:INTERNAL=
+PC_AVFORMAT_LIBDIR:INTERNAL=
+PC_AVFORMAT_LIBS:INTERNAL=
+PC_AVFORMAT_LIBS_L:INTERNAL=
+PC_AVFORMAT_LIBS_OTHER:INTERNAL=
+PC_AVFORMAT_LIBS_PATHS:INTERNAL=
+PC_AVFORMAT_MODULE_NAME:INTERNAL=
+PC_AVFORMAT_PREFIX:INTERNAL=
+PC_AVFORMAT_STATIC_CFLAGS:INTERNAL=
+PC_AVFORMAT_STATIC_CFLAGS_I:INTERNAL=
+PC_AVFORMAT_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_AVFORMAT_STATIC_LIBDIR:INTERNAL=
+PC_AVFORMAT_STATIC_LIBS:INTERNAL=
+PC_AVFORMAT_STATIC_LIBS_L:INTERNAL=
+PC_AVFORMAT_STATIC_LIBS_OTHER:INTERNAL=
+PC_AVFORMAT_STATIC_LIBS_PATHS:INTERNAL=
+PC_AVFORMAT_VERSION:INTERNAL=
+PC_AVFORMAT_libavformat_INCLUDEDIR:INTERNAL=
+PC_AVFORMAT_libavformat_LIBDIR:INTERNAL=
+PC_AVFORMAT_libavformat_PREFIX:INTERNAL=
+PC_AVFORMAT_libavformat_VERSION:INTERNAL=
+PC_AVUTIL_CFLAGS:INTERNAL=
+PC_AVUTIL_CFLAGS_I:INTERNAL=
+PC_AVUTIL_CFLAGS_OTHER:INTERNAL=
+PC_AVUTIL_FOUND:INTERNAL=
+PC_AVUTIL_INCLUDEDIR:INTERNAL=
+PC_AVUTIL_LIBDIR:INTERNAL=
+PC_AVUTIL_LIBS:INTERNAL=
+PC_AVUTIL_LIBS_L:INTERNAL=
+PC_AVUTIL_LIBS_OTHER:INTERNAL=
+PC_AVUTIL_LIBS_PATHS:INTERNAL=
+PC_AVUTIL_MODULE_NAME:INTERNAL=
+PC_AVUTIL_PREFIX:INTERNAL=
+PC_AVUTIL_STATIC_CFLAGS:INTERNAL=
+PC_AVUTIL_STATIC_CFLAGS_I:INTERNAL=
+PC_AVUTIL_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_AVUTIL_STATIC_LIBDIR:INTERNAL=
+PC_AVUTIL_STATIC_LIBS:INTERNAL=
+PC_AVUTIL_STATIC_LIBS_L:INTERNAL=
+PC_AVUTIL_STATIC_LIBS_OTHER:INTERNAL=
+PC_AVUTIL_STATIC_LIBS_PATHS:INTERNAL=
+PC_AVUTIL_VERSION:INTERNAL=
+PC_AVUTIL_libavutil_INCLUDEDIR:INTERNAL=
+PC_AVUTIL_libavutil_LIBDIR:INTERNAL=
+PC_AVUTIL_libavutil_PREFIX:INTERNAL=
+PC_AVUTIL_libavutil_VERSION:INTERNAL=
+PC_DBUS1_CFLAGS:INTERNAL=-I/usr/include/dbus-1.0;-I/usr/lib/x86_64-linux-gnu/dbus-1.0/include
+PC_DBUS1_CFLAGS_I:INTERNAL=
+PC_DBUS1_CFLAGS_OTHER:INTERNAL=
+PC_DBUS1_FOUND:INTERNAL=1
+PC_DBUS1_INCLUDEDIR:INTERNAL=/usr/include
+PC_DBUS1_INCLUDE_DIRS:INTERNAL=/usr/include/dbus-1.0;/usr/lib/x86_64-linux-gnu/dbus-1.0/include
+PC_DBUS1_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-ldbus-1
+PC_DBUS1_LDFLAGS_OTHER:INTERNAL=
+PC_DBUS1_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+PC_DBUS1_LIBRARIES:INTERNAL=dbus-1
+PC_DBUS1_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+PC_DBUS1_LIBS:INTERNAL=
+PC_DBUS1_LIBS_L:INTERNAL=
+PC_DBUS1_LIBS_OTHER:INTERNAL=
+PC_DBUS1_LIBS_PATHS:INTERNAL=
+PC_DBUS1_MODULE_NAME:INTERNAL=dbus-1
+PC_DBUS1_PREFIX:INTERNAL=/usr
+PC_DBUS1_STATIC_CFLAGS:INTERNAL=-I/usr/include/dbus-1.0;-I/usr/lib/x86_64-linux-gnu/dbus-1.0/include
+PC_DBUS1_STATIC_CFLAGS_I:INTERNAL=
+PC_DBUS1_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_DBUS1_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/dbus-1.0;/usr/lib/x86_64-linux-gnu/dbus-1.0/include
+PC_DBUS1_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-ldbus-1;-lsystemd
+PC_DBUS1_STATIC_LDFLAGS_OTHER:INTERNAL=
+PC_DBUS1_STATIC_LIBDIR:INTERNAL=
+PC_DBUS1_STATIC_LIBRARIES:INTERNAL=dbus-1;systemd
+PC_DBUS1_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+PC_DBUS1_STATIC_LIBS:INTERNAL=
+PC_DBUS1_STATIC_LIBS_L:INTERNAL=
+PC_DBUS1_STATIC_LIBS_OTHER:INTERNAL=
+PC_DBUS1_STATIC_LIBS_PATHS:INTERNAL=
+PC_DBUS1_VERSION:INTERNAL=1.12.20
+PC_DBUS1_dbus-1_INCLUDEDIR:INTERNAL=
+PC_DBUS1_dbus-1_LIBDIR:INTERNAL=
+PC_DBUS1_dbus-1_PREFIX:INTERNAL=
+PC_DBUS1_dbus-1_VERSION:INTERNAL=
+PC_POSTPROC_CFLAGS:INTERNAL=
+PC_POSTPROC_CFLAGS_I:INTERNAL=
+PC_POSTPROC_CFLAGS_OTHER:INTERNAL=
+PC_POSTPROC_FOUND:INTERNAL=
+PC_POSTPROC_INCLUDEDIR:INTERNAL=
+PC_POSTPROC_LIBDIR:INTERNAL=
+PC_POSTPROC_LIBS:INTERNAL=
+PC_POSTPROC_LIBS_L:INTERNAL=
+PC_POSTPROC_LIBS_OTHER:INTERNAL=
+PC_POSTPROC_LIBS_PATHS:INTERNAL=
+PC_POSTPROC_MODULE_NAME:INTERNAL=
+PC_POSTPROC_PREFIX:INTERNAL=
+PC_POSTPROC_STATIC_CFLAGS:INTERNAL=
+PC_POSTPROC_STATIC_CFLAGS_I:INTERNAL=
+PC_POSTPROC_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_POSTPROC_STATIC_LIBDIR:INTERNAL=
+PC_POSTPROC_STATIC_LIBS:INTERNAL=
+PC_POSTPROC_STATIC_LIBS_L:INTERNAL=
+PC_POSTPROC_STATIC_LIBS_OTHER:INTERNAL=
+PC_POSTPROC_STATIC_LIBS_PATHS:INTERNAL=
+PC_POSTPROC_VERSION:INTERNAL=
+PC_POSTPROC_libpostproc_INCLUDEDIR:INTERNAL=
+PC_POSTPROC_libpostproc_LIBDIR:INTERNAL=
+PC_POSTPROC_libpostproc_PREFIX:INTERNAL=
+PC_POSTPROC_libpostproc_VERSION:INTERNAL=
+PC_SWRESAMPLE_CFLAGS:INTERNAL=
+PC_SWRESAMPLE_CFLAGS_I:INTERNAL=
+PC_SWRESAMPLE_CFLAGS_OTHER:INTERNAL=
+PC_SWRESAMPLE_FOUND:INTERNAL=
+PC_SWRESAMPLE_INCLUDEDIR:INTERNAL=
+PC_SWRESAMPLE_LIBDIR:INTERNAL=
+PC_SWRESAMPLE_LIBS:INTERNAL=
+PC_SWRESAMPLE_LIBS_L:INTERNAL=
+PC_SWRESAMPLE_LIBS_OTHER:INTERNAL=
+PC_SWRESAMPLE_LIBS_PATHS:INTERNAL=
+PC_SWRESAMPLE_MODULE_NAME:INTERNAL=
+PC_SWRESAMPLE_PREFIX:INTERNAL=
+PC_SWRESAMPLE_STATIC_CFLAGS:INTERNAL=
+PC_SWRESAMPLE_STATIC_CFLAGS_I:INTERNAL=
+PC_SWRESAMPLE_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_SWRESAMPLE_STATIC_LIBDIR:INTERNAL=
+PC_SWRESAMPLE_STATIC_LIBS:INTERNAL=
+PC_SWRESAMPLE_STATIC_LIBS_L:INTERNAL=
+PC_SWRESAMPLE_STATIC_LIBS_OTHER:INTERNAL=
+PC_SWRESAMPLE_STATIC_LIBS_PATHS:INTERNAL=
+PC_SWRESAMPLE_VERSION:INTERNAL=
+PC_SWRESAMPLE_libswresample_INCLUDEDIR:INTERNAL=
+PC_SWRESAMPLE_libswresample_LIBDIR:INTERNAL=
+PC_SWRESAMPLE_libswresample_PREFIX:INTERNAL=
+PC_SWRESAMPLE_libswresample_VERSION:INTERNAL=
+PC_SWSCALE_CFLAGS:INTERNAL=
+PC_SWSCALE_CFLAGS_I:INTERNAL=
+PC_SWSCALE_CFLAGS_OTHER:INTERNAL=
+PC_SWSCALE_FOUND:INTERNAL=
+PC_SWSCALE_INCLUDEDIR:INTERNAL=
+PC_SWSCALE_LIBDIR:INTERNAL=
+PC_SWSCALE_LIBS:INTERNAL=
+PC_SWSCALE_LIBS_L:INTERNAL=
+PC_SWSCALE_LIBS_OTHER:INTERNAL=
+PC_SWSCALE_LIBS_PATHS:INTERNAL=
+PC_SWSCALE_MODULE_NAME:INTERNAL=
+PC_SWSCALE_PREFIX:INTERNAL=
+PC_SWSCALE_STATIC_CFLAGS:INTERNAL=
+PC_SWSCALE_STATIC_CFLAGS_I:INTERNAL=
+PC_SWSCALE_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_SWSCALE_STATIC_LIBDIR:INTERNAL=
+PC_SWSCALE_STATIC_LIBS:INTERNAL=
+PC_SWSCALE_STATIC_LIBS_L:INTERNAL=
+PC_SWSCALE_STATIC_LIBS_OTHER:INTERNAL=
+PC_SWSCALE_STATIC_LIBS_PATHS:INTERNAL=
+PC_SWSCALE_VERSION:INTERNAL=
+PC_SWSCALE_libswscale_INCLUDEDIR:INTERNAL=
+PC_SWSCALE_libswscale_LIBDIR:INTERNAL=
+PC_SWSCALE_libswscale_PREFIX:INTERNAL=
+PC_SWSCALE_libswscale_VERSION:INTERNAL=
+PIPEWIRE_CFLAGS:INTERNAL=
+PIPEWIRE_CFLAGS_I:INTERNAL=
+PIPEWIRE_CFLAGS_OTHER:INTERNAL=
+PIPEWIRE_FOUND:INTERNAL=
+PIPEWIRE_INCLUDEDIR:INTERNAL=
+PIPEWIRE_LIBDIR:INTERNAL=
+PIPEWIRE_LIBS:INTERNAL=
+PIPEWIRE_LIBS_L:INTERNAL=
+PIPEWIRE_LIBS_OTHER:INTERNAL=
+PIPEWIRE_LIBS_PATHS:INTERNAL=
+PIPEWIRE_MODULE_NAME:INTERNAL=
+PIPEWIRE_PREFIX:INTERNAL=
+PIPEWIRE_STATIC_CFLAGS:INTERNAL=
+PIPEWIRE_STATIC_CFLAGS_I:INTERNAL=
+PIPEWIRE_STATIC_CFLAGS_OTHER:INTERNAL=
+PIPEWIRE_STATIC_LIBDIR:INTERNAL=
+PIPEWIRE_STATIC_LIBS:INTERNAL=
+PIPEWIRE_STATIC_LIBS_L:INTERNAL=
+PIPEWIRE_STATIC_LIBS_OTHER:INTERNAL=
+PIPEWIRE_STATIC_LIBS_PATHS:INTERNAL=
+PIPEWIRE_VERSION:INTERNAL=
+PIPEWIRE_libpipewire-0.3_INCLUDEDIR:INTERNAL=
+PIPEWIRE_libpipewire-0.3_LIBDIR:INTERNAL=
+PIPEWIRE_libpipewire-0.3_PREFIX:INTERNAL=
+PIPEWIRE_libpipewire-0.3_VERSION:INTERNAL=
+//ADVANCED property for variable: PKG_CONFIG_ARGN
+PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //STRINGS property for variable: PLATFORM
 PLATFORM-STRINGS:INTERNAL=Desktop;Web;Android;Raspberry Pi;DRM
+//ADVANCED property for variable: PORTAUDIO_INCLUDE_DIR
+PORTAUDIO_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PORTAUDIO_LIBRARY
+PORTAUDIO_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: POSTPROC_DEFINITIONS
+POSTPROC_DEFINITIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: POSTPROC_INCLUDE_DIRS
+POSTPROC_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: POSTPROC_LIBRARIES
+POSTPROC_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: POSTPROC_VERSION
+POSTPROC_VERSION-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //Does python module 'markupsafe' exist
 PYTHON_HAVE_MARKUPSAFE:INTERNAL=ON
+//Test variables that should be exported
+QT_BASE_CONFIGURE_TESTS_VARS_TO_EXPORT:INTERNAL=
+//Configuring Qt Project from IDE
+QT_INTERNAL_CONFIGURE_FROM_IDE:INTERNAL=FALSE
+QT_KNOWN_FEATURES:INTERNAL=
+//Known Qt modules with tools
+QT_KNOWN_MODULES_WITH_TOOLS:INTERNAL=
+//Known Qt plugins
+QT_KNOWN_PLUGINS:INTERNAL=
+QT_MKSPECS_DIR:INTERNAL=/home/koen/Documents/GitHub/BrowserC/extern/qt5/qtbase/mkspecs
+//Known current repo Qt modules
+QT_REPO_KNOWN_MODULES:INTERNAL=
+//Known current repo Qt plug-in types
+QT_REPO_KNOWN_PLUGIN_TYPES:INTERNAL=
+//Are tools going to be built
+QT_WILL_BUILD_TOOLS:INTERNAL=TRUE
+//Do tool targets need to be renamed
+QT_WILL_RENAME_TOOL_TARGETS:INTERNAL=FALSE
 //ADVANCED property for variable: RT_LIBRARY
 RT_LIBRARY-ADVANCED:INTERNAL=1
 //STRINGS property for variable: SAMPLES_BACKEND
 SAMPLES_BACKEND-STRINGS:INTERNAL=auto;Win32_GL2;Win32_VK;X11_GL2;SDL_GL2;SDL_GL3;SDL_VK;SDL_SDLrenderer;SFML_GL2;GLFW_GL2;GLFW_GL3;GLFW_VK
+//ADVANCED property for variable: SNDFILE_INCLUDE_DIR
+SNDFILE_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SNDFILE_LIBRARY
+SNDFILE_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SOUNDIO_INCLUDE_DIR
+SOUNDIO_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SOUNDIO_LIBRARY
+SOUNDIO_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SWRESAMPLE_DEFINITIONS
+SWRESAMPLE_DEFINITIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SWRESAMPLE_INCLUDE_DIRS
+SWRESAMPLE_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SWRESAMPLE_LIBRARIES
+SWRESAMPLE_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SWRESAMPLE_VERSION
+SWRESAMPLE_VERSION-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SWSCALE_DEFINITIONS
+SWSCALE_DEFINITIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SWSCALE_INCLUDE_DIRS
+SWSCALE_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SWSCALE_LIBRARIES
+SWSCALE_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SWSCALE_VERSION
+SWSCALE_VERSION-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: UDEV_INCLUDE_DIR
+UDEV_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: UDEV_LIBRARIES
+UDEV_LIBRARIES-ADVANCED:INTERNAL=1
 //STRINGS property for variable: USE_EXTERNAL_GLFW
 USE_EXTERNAL_GLFW-STRINGS:INTERNAL=OFF;IF_POSSIBLE;ON
+//ADVANCED property for variable: VORBISENC_LIBRARY
+VORBISENC_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: VORBISFILE_LIBRARY
+VORBISFILE_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: VORBIS_INCLUDE_DIR
+VORBIS_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: VORBIS_LIBRARY
+VORBIS_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: WARNINGS_AS_ERRORS
 WARNINGS_AS_ERRORS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_ICE_INCLUDE_PATH
@@ -1564,8 +3108,29 @@ X11_xkbcommon_X11_LIB-ADVANCED:INTERNAL=1
 X11_xkbfile_INCLUDE_PATH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_xkbfile_LIB
 X11_xkbfile_LIB-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_INCLUDE_DIR
+ZLIB_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_DEBUG
+ZLIB_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_RELEASE
+ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
+__pkg_config_arguments_PC_DBUS1:INTERNAL=QUIET;dbus-1
+__pkg_config_checked_PC_AVCODEC:INTERNAL=1
+__pkg_config_checked_PC_AVDEVICE:INTERNAL=1
+__pkg_config_checked_PC_AVFORMAT:INTERNAL=1
+__pkg_config_checked_PC_AVUTIL:INTERNAL=1
+__pkg_config_checked_PC_DBUS1:INTERNAL=1
+__pkg_config_checked_PC_POSTPROC:INTERNAL=1
+__pkg_config_checked_PC_SWRESAMPLE:INTERNAL=1
+__pkg_config_checked_PC_SWSCALE:INTERNAL=1
+__pkg_config_checked_PIPEWIRE:INTERNAL=1
+//Result of TRY_COMPILE
+_arch_result:INTERNAL=FALSE
+//ADVANCED property for variable: pkgcfg_lib_PC_DBUS1_dbus-1
+pkgcfg_lib_PC_DBUS1_dbus-1-ADVANCED:INTERNAL=1
+prefix_result:INTERNAL=/usr/lib/x86_64-linux-gnu
 

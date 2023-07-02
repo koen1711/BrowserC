@@ -1,12 +1,9 @@
 [submodule "extern/v8"]
 	path = extern/v8
 	url = https://github.com/bnoordhuis/v8-cmake.git
-[submodule "extern/raylib"]
-	path = extern/raylib
-	url = https://github.com/raysan5/raylib.git
-[submodule "extern/RmlUi"]
-	path = extern/RmlUi
-	url = https://github.com/mikke89/RmlUi.git
-[submodule "extern/freetype"]
-	path = extern/freetype
-	url = https://github.com/freetype/freetype.git
+[submodule "extern/libtidy"]
+	path = extern/html5
+	url = https://github.com/htacg/tidy-html5.git
+[submodule "extern/qt5"]
+	path = extern/qt5
+	url = https://code.qt.io/qt/qt5.git

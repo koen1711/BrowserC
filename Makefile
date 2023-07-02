@@ -183,19 +183,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named HTMLParser
-
-# Build rule for target.
-HTMLParser: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HTMLParser
-.PHONY : HTMLParser
-
-# fast build rule for target.
-HTMLParser/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HTMLParser.dir/build.make CMakeFiles/HTMLParser.dir/build
-.PHONY : HTMLParser/fast
-
-#=============================================================================
 # Target rules for targets named MyApp
 
 # Build rule for target.
@@ -207,6 +194,45 @@ MyApp: cmake_check_build_system
 MyApp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/build
 .PHONY : MyApp/fast
+
+#=============================================================================
+# Target rules for targets named tidy-static
+
+# Build rule for target.
+tidy-static: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tidy-static
+.PHONY : tidy-static
+
+# fast build rule for target.
+tidy-static/fast:
+	$(MAKE) $(MAKESILENT) -f extern/libtidy/CMakeFiles/tidy-static.dir/build.make extern/libtidy/CMakeFiles/tidy-static.dir/build
+.PHONY : tidy-static/fast
+
+#=============================================================================
+# Target rules for targets named tidy-share
+
+# Build rule for target.
+tidy-share: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tidy-share
+.PHONY : tidy-share
+
+# fast build rule for target.
+tidy-share/fast:
+	$(MAKE) $(MAKESILENT) -f extern/libtidy/CMakeFiles/tidy-share.dir/build.make extern/libtidy/CMakeFiles/tidy-share.dir/build
+.PHONY : tidy-share/fast
+
+#=============================================================================
+# Target rules for targets named tidy
+
+# Build rule for target.
+tidy: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tidy
+.PHONY : tidy
+
+# fast build rule for target.
+tidy/fast:
+	$(MAKE) $(MAKESILENT) -f extern/libtidy/CMakeFiles/tidy.dir/build.make extern/libtidy/CMakeFiles/tidy.dir/build
+.PHONY : tidy/fast
 
 #=============================================================================
 # Target rules for targets named d8
@@ -430,93 +456,17 @@ v8-adler32/fast:
 .PHONY : v8-adler32/fast
 
 #=============================================================================
-# Target rules for targets named raylib
+# Target rules for targets named HTML
 
 # Build rule for target.
-raylib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 raylib
-.PHONY : raylib
+HTML: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HTML
+.PHONY : HTML
 
 # fast build rule for target.
-raylib/fast:
-	$(MAKE) $(MAKESILENT) -f extern/raylib/raylib/CMakeFiles/raylib.dir/build.make extern/raylib/raylib/CMakeFiles/raylib.dir/build
-.PHONY : raylib/fast
-
-#=============================================================================
-# Target rules for targets named glfw
-
-# Build rule for target.
-glfw: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glfw
-.PHONY : glfw
-
-# fast build rule for target.
-glfw/fast:
-	$(MAKE) $(MAKESILENT) -f extern/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/build.make extern/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/build
-.PHONY : glfw/fast
-
-#=============================================================================
-# Target rules for targets named update_mappings
-
-# Build rule for target.
-update_mappings: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 update_mappings
-.PHONY : update_mappings
-
-# fast build rule for target.
-update_mappings/fast:
-	$(MAKE) $(MAKESILENT) -f extern/raylib/raylib/external/glfw/src/CMakeFiles/update_mappings.dir/build.make extern/raylib/raylib/external/glfw/src/CMakeFiles/update_mappings.dir/build
-.PHONY : update_mappings/fast
-
-#=============================================================================
-# Target rules for targets named RmlCore
-
-# Build rule for target.
-RmlCore: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 RmlCore
-.PHONY : RmlCore
-
-# fast build rule for target.
-RmlCore/fast:
-	$(MAKE) $(MAKESILENT) -f extern/RmlUi/CMakeFiles/RmlCore.dir/build.make extern/RmlUi/CMakeFiles/RmlCore.dir/build
-.PHONY : RmlCore/fast
-
-#=============================================================================
-# Target rules for targets named RmlDebugger
-
-# Build rule for target.
-RmlDebugger: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 RmlDebugger
-.PHONY : RmlDebugger
-
-# fast build rule for target.
-RmlDebugger/fast:
-	$(MAKE) $(MAKESILENT) -f extern/RmlUi/CMakeFiles/RmlDebugger.dir/build.make extern/RmlUi/CMakeFiles/RmlDebugger.dir/build
-.PHONY : RmlDebugger/fast
-
-src/html/HTMLParser.o: src/html/HTMLParser.cpp.o
-.PHONY : src/html/HTMLParser.o
-
-# target to build an object file
-src/html/HTMLParser.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HTMLParser.dir/build.make CMakeFiles/HTMLParser.dir/src/html/HTMLParser.cpp.o
-.PHONY : src/html/HTMLParser.cpp.o
-
-src/html/HTMLParser.i: src/html/HTMLParser.cpp.i
-.PHONY : src/html/HTMLParser.i
-
-# target to preprocess a source file
-src/html/HTMLParser.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HTMLParser.dir/build.make CMakeFiles/HTMLParser.dir/src/html/HTMLParser.cpp.i
-.PHONY : src/html/HTMLParser.cpp.i
-
-src/html/HTMLParser.s: src/html/HTMLParser.cpp.s
-.PHONY : src/html/HTMLParser.s
-
-# target to generate assembly for a file
-src/html/HTMLParser.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HTMLParser.dir/build.make CMakeFiles/HTMLParser.dir/src/html/HTMLParser.cpp.s
-.PHONY : src/html/HTMLParser.cpp.s
+HTML/fast:
+	$(MAKE) $(MAKESILENT) -f src/html/CMakeFiles/HTML.dir/build.make src/html/CMakeFiles/HTML.dir/build
+.PHONY : HTML/fast
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -556,18 +506,16 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
-	@echo "... update_mappings"
-	@echo "... HTMLParser"
+	@echo "... HTML"
 	@echo "... MyApp"
-	@echo "... RmlCore"
-	@echo "... RmlDebugger"
 	@echo "... bytecode_builtins_list_generator"
 	@echo "... d8"
-	@echo "... glfw"
 	@echo "... hello-world"
 	@echo "... mksnapshot"
-	@echo "... raylib"
 	@echo "... shell"
+	@echo "... tidy"
+	@echo "... tidy-share"
+	@echo "... tidy-static"
 	@echo "... torque"
 	@echo "... v8-adler32"
 	@echo "... v8-i18n-support"
@@ -580,9 +528,6 @@ help:
 	@echo "... v8_libsampler"
 	@echo "... v8_snapshot"
 	@echo "... v8_torque_generated"
-	@echo "... src/html/HTMLParser.o"
-	@echo "... src/html/HTMLParser.i"
-	@echo "... src/html/HTMLParser.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

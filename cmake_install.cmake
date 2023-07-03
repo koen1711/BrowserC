@@ -45,7 +45,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/koen/Documents/GitHub/BrowserC/extern/libtidy/cmake_install.cmake")
-  include("/home/koen/Documents/GitHub/BrowserC/extern/v8/cmake_install.cmake")
   include("/home/koen/Documents/GitHub/BrowserC/src/cmake_install.cmake")
 
 endif()

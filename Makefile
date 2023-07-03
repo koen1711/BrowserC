@@ -178,7 +178,6 @@ preinstall/fast:
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -P /home/koen/Documents/GitHub/BrowserC/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
@@ -235,227 +234,6 @@ tidy/fast:
 .PHONY : tidy/fast
 
 #=============================================================================
-# Target rules for targets named d8
-
-# Build rule for target.
-d8: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 d8
-.PHONY : d8
-
-# fast build rule for target.
-d8/fast:
-	$(MAKE) $(MAKESILENT) -f extern/v8/CMakeFiles/d8.dir/build.make extern/v8/CMakeFiles/d8.dir/build
-.PHONY : d8/fast
-
-#=============================================================================
-# Target rules for targets named shell
-
-# Build rule for target.
-shell: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shell
-.PHONY : shell
-
-# fast build rule for target.
-shell/fast:
-	$(MAKE) $(MAKESILENT) -f extern/v8/CMakeFiles/shell.dir/build.make extern/v8/CMakeFiles/shell.dir/build
-.PHONY : shell/fast
-
-#=============================================================================
-# Target rules for targets named hello-world
-
-# Build rule for target.
-hello-world: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hello-world
-.PHONY : hello-world
-
-# fast build rule for target.
-hello-world/fast:
-	$(MAKE) $(MAKESILENT) -f extern/v8/CMakeFiles/hello-world.dir/build.make extern/v8/CMakeFiles/hello-world.dir/build
-.PHONY : hello-world/fast
-
-#=============================================================================
-# Target rules for targets named v8-i18n-support
-
-# Build rule for target.
-v8-i18n-support: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 v8-i18n-support
-.PHONY : v8-i18n-support
-
-# fast build rule for target.
-v8-i18n-support/fast:
-	$(MAKE) $(MAKESILENT) -f extern/v8/CMakeFiles/v8-i18n-support.dir/build.make extern/v8/CMakeFiles/v8-i18n-support.dir/build
-.PHONY : v8-i18n-support/fast
-
-#=============================================================================
-# Target rules for targets named v8_base_without_compiler
-
-# Build rule for target.
-v8_base_without_compiler: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 v8_base_without_compiler
-.PHONY : v8_base_without_compiler
-
-# fast build rule for target.
-v8_base_without_compiler/fast:
-	$(MAKE) $(MAKESILENT) -f extern/v8/CMakeFiles/v8_base_without_compiler.dir/build.make extern/v8/CMakeFiles/v8_base_without_compiler.dir/build
-.PHONY : v8_base_without_compiler/fast
-
-#=============================================================================
-# Target rules for targets named v8_compiler
-
-# Build rule for target.
-v8_compiler: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 v8_compiler
-.PHONY : v8_compiler
-
-# fast build rule for target.
-v8_compiler/fast:
-	$(MAKE) $(MAKESILENT) -f extern/v8/CMakeFiles/v8_compiler.dir/build.make extern/v8/CMakeFiles/v8_compiler.dir/build
-.PHONY : v8_compiler/fast
-
-#=============================================================================
-# Target rules for targets named v8_initializers
-
-# Build rule for target.
-v8_initializers: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 v8_initializers
-.PHONY : v8_initializers
-
-# fast build rule for target.
-v8_initializers/fast:
-	$(MAKE) $(MAKESILENT) -f extern/v8/CMakeFiles/v8_initializers.dir/build.make extern/v8/CMakeFiles/v8_initializers.dir/build
-.PHONY : v8_initializers/fast
-
-#=============================================================================
-# Target rules for targets named v8_snapshot
-
-# Build rule for target.
-v8_snapshot: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 v8_snapshot
-.PHONY : v8_snapshot
-
-# fast build rule for target.
-v8_snapshot/fast:
-	$(MAKE) $(MAKESILENT) -f extern/v8/CMakeFiles/v8_snapshot.dir/build.make extern/v8/CMakeFiles/v8_snapshot.dir/build
-.PHONY : v8_snapshot/fast
-
-#=============================================================================
-# Target rules for targets named v8_inspector
-
-# Build rule for target.
-v8_inspector: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 v8_inspector
-.PHONY : v8_inspector
-
-# fast build rule for target.
-v8_inspector/fast:
-	$(MAKE) $(MAKESILENT) -f extern/v8/CMakeFiles/v8_inspector.dir/build.make extern/v8/CMakeFiles/v8_inspector.dir/build
-.PHONY : v8_inspector/fast
-
-#=============================================================================
-# Target rules for targets named v8_libplatform
-
-# Build rule for target.
-v8_libplatform: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 v8_libplatform
-.PHONY : v8_libplatform
-
-# fast build rule for target.
-v8_libplatform/fast:
-	$(MAKE) $(MAKESILENT) -f extern/v8/CMakeFiles/v8_libplatform.dir/build.make extern/v8/CMakeFiles/v8_libplatform.dir/build
-.PHONY : v8_libplatform/fast
-
-#=============================================================================
-# Target rules for targets named v8_libsampler
-
-# Build rule for target.
-v8_libsampler: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 v8_libsampler
-.PHONY : v8_libsampler
-
-# fast build rule for target.
-v8_libsampler/fast:
-	$(MAKE) $(MAKESILENT) -f extern/v8/CMakeFiles/v8_libsampler.dir/build.make extern/v8/CMakeFiles/v8_libsampler.dir/build
-.PHONY : v8_libsampler/fast
-
-#=============================================================================
-# Target rules for targets named v8_libbase
-
-# Build rule for target.
-v8_libbase: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 v8_libbase
-.PHONY : v8_libbase
-
-# fast build rule for target.
-v8_libbase/fast:
-	$(MAKE) $(MAKESILENT) -f extern/v8/CMakeFiles/v8_libbase.dir/build.make extern/v8/CMakeFiles/v8_libbase.dir/build
-.PHONY : v8_libbase/fast
-
-#=============================================================================
-# Target rules for targets named bytecode_builtins_list_generator
-
-# Build rule for target.
-bytecode_builtins_list_generator: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bytecode_builtins_list_generator
-.PHONY : bytecode_builtins_list_generator
-
-# fast build rule for target.
-bytecode_builtins_list_generator/fast:
-	$(MAKE) $(MAKESILENT) -f extern/v8/CMakeFiles/bytecode_builtins_list_generator.dir/build.make extern/v8/CMakeFiles/bytecode_builtins_list_generator.dir/build
-.PHONY : bytecode_builtins_list_generator/fast
-
-#=============================================================================
-# Target rules for targets named v8_torque_generated
-
-# Build rule for target.
-v8_torque_generated: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 v8_torque_generated
-.PHONY : v8_torque_generated
-
-# fast build rule for target.
-v8_torque_generated/fast:
-	$(MAKE) $(MAKESILENT) -f extern/v8/CMakeFiles/v8_torque_generated.dir/build.make extern/v8/CMakeFiles/v8_torque_generated.dir/build
-.PHONY : v8_torque_generated/fast
-
-#=============================================================================
-# Target rules for targets named torque
-
-# Build rule for target.
-torque: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 torque
-.PHONY : torque
-
-# fast build rule for target.
-torque/fast:
-	$(MAKE) $(MAKESILENT) -f extern/v8/CMakeFiles/torque.dir/build.make extern/v8/CMakeFiles/torque.dir/build
-.PHONY : torque/fast
-
-#=============================================================================
-# Target rules for targets named mksnapshot
-
-# Build rule for target.
-mksnapshot: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mksnapshot
-.PHONY : mksnapshot
-
-# fast build rule for target.
-mksnapshot/fast:
-	$(MAKE) $(MAKESILENT) -f extern/v8/CMakeFiles/mksnapshot.dir/build.make extern/v8/CMakeFiles/mksnapshot.dir/build
-.PHONY : mksnapshot/fast
-
-#=============================================================================
-# Target rules for targets named v8-adler32
-
-# Build rule for target.
-v8-adler32: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 v8-adler32
-.PHONY : v8-adler32
-
-# fast build rule for target.
-v8-adler32/fast:
-	$(MAKE) $(MAKESILENT) -f extern/v8/CMakeFiles/v8-adler32.dir/build.make extern/v8/CMakeFiles/v8-adler32.dir/build
-.PHONY : v8-adler32/fast
-
-#=============================================================================
 # Target rules for targets named HTML
 
 # Build rule for target.
@@ -508,26 +286,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... HTML"
 	@echo "... MyApp"
-	@echo "... bytecode_builtins_list_generator"
-	@echo "... d8"
-	@echo "... hello-world"
-	@echo "... mksnapshot"
-	@echo "... shell"
 	@echo "... tidy"
 	@echo "... tidy-share"
 	@echo "... tidy-static"
-	@echo "... torque"
-	@echo "... v8-adler32"
-	@echo "... v8-i18n-support"
-	@echo "... v8_base_without_compiler"
-	@echo "... v8_compiler"
-	@echo "... v8_initializers"
-	@echo "... v8_inspector"
-	@echo "... v8_libbase"
-	@echo "... v8_libplatform"
-	@echo "... v8_libsampler"
-	@echo "... v8_snapshot"
-	@echo "... v8_torque_generated"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -542,7 +303,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -P /home/koen/Documents/GitHub/BrowserC/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

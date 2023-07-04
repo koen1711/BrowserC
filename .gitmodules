@@ -4,15 +4,9 @@
 [submodule "extern/libtidy"]
 	path = extern/html5
 	url = https://github.com/htacg/tidy-html5.git
-[submodule "extern/blink"]
-	path = extern/blink
-	url = https://chromium.googlesource.com/chromium/blink.git
 [submodule "extern/sciter"]
 	path = extern/sciter
 	url = https://github.com/c-smile/sciter-sdk.git
-[submodule "extern/gtk"]
-	path = extern/gtk
-	url = https://gitlab.gnome.org/GNOME/gtk.git
 [submodule "extern/ultralight"]
 	path = extern/ultralight
 	url = https://github.com/ultralight-ux/Ultralight.git

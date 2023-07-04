@@ -195,6 +195,32 @@ MyApp/fast:
 .PHONY : MyApp/fast
 
 #=============================================================================
+# Target rules for targets named browser_build
+
+# Build rule for target.
+browser_build: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 browser_build
+.PHONY : browser_build
+
+# fast build rule for target.
+browser_build/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/browser_build.dir/build.make CMakeFiles/browser_build.dir/build
+.PHONY : browser_build/fast
+
+#=============================================================================
+# Target rules for targets named resourcesrenderer_build
+
+# Build rule for target.
+resourcesrenderer_build: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 resourcesrenderer_build
+.PHONY : resourcesrenderer_build
+
+# fast build rule for target.
+resourcesrenderer_build/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/resourcesrenderer_build.dir/build.make CMakeFiles/resourcesrenderer_build.dir/build
+.PHONY : resourcesrenderer_build/fast
+
+#=============================================================================
 # Target rules for targets named tidy-static
 
 # Build rule for target.
@@ -284,6 +310,8 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
+	@echo "... browser_build"
+	@echo "... resourcesrenderer_build"
 	@echo "... HTML"
 	@echo "... MyApp"
 	@echo "... tidy"

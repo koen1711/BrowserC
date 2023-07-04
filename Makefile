@@ -195,32 +195,6 @@ MyApp/fast:
 .PHONY : MyApp/fast
 
 #=============================================================================
-# Target rules for targets named browser_build
-
-# Build rule for target.
-browser_build: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 browser_build
-.PHONY : browser_build
-
-# fast build rule for target.
-browser_build/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/browser_build.dir/build.make CMakeFiles/browser_build.dir/build
-.PHONY : browser_build/fast
-
-#=============================================================================
-# Target rules for targets named resourcesrenderer_build
-
-# Build rule for target.
-resourcesrenderer_build: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 resourcesrenderer_build
-.PHONY : resourcesrenderer_build
-
-# fast build rule for target.
-resourcesrenderer_build/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/resourcesrenderer_build.dir/build.make CMakeFiles/resourcesrenderer_build.dir/build
-.PHONY : resourcesrenderer_build/fast
-
-#=============================================================================
 # Target rules for targets named tidy-static
 
 # Build rule for target.
@@ -260,17 +234,108 @@ tidy/fast:
 .PHONY : tidy/fast
 
 #=============================================================================
-# Target rules for targets named HTML
+# Target rules for targets named curl_uninstall
 
 # Build rule for target.
-HTML: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HTML
-.PHONY : HTML
+curl_uninstall: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 curl_uninstall
+.PHONY : curl_uninstall
 
 # fast build rule for target.
-HTML/fast:
-	$(MAKE) $(MAKESILENT) -f src/html/CMakeFiles/HTML.dir/build.make src/html/CMakeFiles/HTML.dir/build
-.PHONY : HTML/fast
+curl_uninstall/fast:
+	$(MAKE) $(MAKESILENT) -f extern/curl/CMakeFiles/curl_uninstall.dir/build.make extern/curl/CMakeFiles/curl_uninstall.dir/build
+.PHONY : curl_uninstall/fast
+
+#=============================================================================
+# Target rules for targets named libcurl
+
+# Build rule for target.
+libcurl: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libcurl
+.PHONY : libcurl
+
+# fast build rule for target.
+libcurl/fast:
+	$(MAKE) $(MAKESILENT) -f extern/curl/lib/CMakeFiles/libcurl.dir/build.make extern/curl/lib/CMakeFiles/libcurl.dir/build
+.PHONY : libcurl/fast
+
+#=============================================================================
+# Target rules for targets named curl
+
+# Build rule for target.
+curl: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 curl
+.PHONY : curl
+
+# fast build rule for target.
+curl/fast:
+	$(MAKE) $(MAKESILENT) -f extern/curl/src/CMakeFiles/curl.dir/build.make extern/curl/src/CMakeFiles/curl.dir/build
+.PHONY : curl/fast
+
+#=============================================================================
+# Target rules for targets named EVENTS
+
+# Build rule for target.
+EVENTS: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 EVENTS
+.PHONY : EVENTS
+
+# fast build rule for target.
+EVENTS/fast:
+	$(MAKE) $(MAKESILENT) -f src/render/CMakeFiles/EVENTS.dir/build.make src/render/CMakeFiles/EVENTS.dir/build
+.PHONY : EVENTS/fast
+
+#=============================================================================
+# Target rules for targets named RENDER
+
+# Build rule for target.
+RENDER: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 RENDER
+.PHONY : RENDER
+
+# fast build rule for target.
+RENDER/fast:
+	$(MAKE) $(MAKESILENT) -f src/render/CMakeFiles/RENDER.dir/build.make src/render/CMakeFiles/RENDER.dir/build
+.PHONY : RENDER/fast
+
+#=============================================================================
+# Target rules for targets named AppData
+
+# Build rule for target.
+AppData: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AppData
+.PHONY : AppData
+
+# fast build rule for target.
+AppData/fast:
+	$(MAKE) $(MAKESILENT) -f src/datamanager/CMakeFiles/AppData.dir/build.make src/datamanager/CMakeFiles/AppData.dir/build
+.PHONY : AppData/fast
+
+#=============================================================================
+# Target rules for targets named TABMANAGER
+
+# Build rule for target.
+TABMANAGER: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TABMANAGER
+.PHONY : TABMANAGER
+
+# fast build rule for target.
+TABMANAGER/fast:
+	$(MAKE) $(MAKESILENT) -f src/tabs/CMakeFiles/TABMANAGER.dir/build.make src/tabs/CMakeFiles/TABMANAGER.dir/build
+.PHONY : TABMANAGER/fast
+
+#=============================================================================
+# Target rules for targets named TAB
+
+# Build rule for target.
+TAB: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TAB
+.PHONY : TAB
+
+# fast build rule for target.
+TAB/fast:
+	$(MAKE) $(MAKESILENT) -f src/tabs/tab/CMakeFiles/TAB.dir/build.make src/tabs/tab/CMakeFiles/TAB.dir/build
+.PHONY : TAB/fast
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -310,10 +375,15 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
-	@echo "... browser_build"
-	@echo "... resourcesrenderer_build"
-	@echo "... HTML"
+	@echo "... curl_uninstall"
+	@echo "... AppData"
+	@echo "... EVENTS"
 	@echo "... MyApp"
+	@echo "... RENDER"
+	@echo "... TAB"
+	@echo "... TABMANAGER"
+	@echo "... curl"
+	@echo "... libcurl"
 	@echo "... tidy"
 	@echo "... tidy-share"
 	@echo "... tidy-static"

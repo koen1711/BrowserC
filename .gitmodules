@@ -2,11 +2,11 @@
 	path = extern/v8
 	url = https://github.com/bnoordhuis/v8-cmake.git
 [submodule "extern/libtidy"]
-	path = extern/html5
+	path = extern/libtidy
 	url = https://github.com/htacg/tidy-html5.git
-[submodule "extern/sciter"]
-	path = extern/sciter
-	url = https://github.com/c-smile/sciter-sdk.git
 [submodule "extern/ultralight"]
 	path = extern/ultralight
 	url = https://github.com/ultralight-ux/Ultralight.git
+[submodule "extern/curl"]
+	path = extern/curl
+	url = https://github.com/curl/curl.git

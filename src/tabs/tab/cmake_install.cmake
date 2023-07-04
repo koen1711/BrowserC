@@ -1,4 +1,4 @@
-# Install script for directory: /home/koen/Documents/GitHub/BrowserC/src
+# Install script for directory: /home/koen/Documents/GitHub/BrowserC/src/tabs/tab
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,13 +40,5 @@ endif()
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/home/koen/Documents/GitHub/BrowserC/src/render/cmake_install.cmake")
-  include("/home/koen/Documents/GitHub/BrowserC/src/datamanager/cmake_install.cmake")
-  include("/home/koen/Documents/GitHub/BrowserC/src/tabs/cmake_install.cmake")
-
 endif()
 

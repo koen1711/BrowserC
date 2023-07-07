@@ -22,8 +22,6 @@ class Renderer
         void renderFile(std::string path) {
             std::cout << path << std::endl;
             std::string exactPath = this->fileSystem_->getExactPath(path);
-            std::string fileContents = this->fileSystem_->getFileContents(exactPath);
-            std::cout << exactPath << std::endl;
-            webkit_web_view_load_html(this->webView_, fileContents.c_str(), NULL);
+            webkit_web_view_load_uri(this->webView_, (std::string("file://") + exactPath).c_str());
         }
 };

@@ -2,3 +2,4 @@ CMakeFiles/
 MyApp
 .vscode/
 build/
+src/browser/node_modules/

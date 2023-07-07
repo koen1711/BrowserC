@@ -182,20 +182,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/render/CMakeFiles/EVENTS.dir/rule:
-	cd /home/koen/Documents/GitHub/BrowserC && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/render/CMakeFiles/EVENTS.dir/rule
-.PHONY : src/render/CMakeFiles/EVENTS.dir/rule
-
-# Convenience name for target.
-EVENTS: src/render/CMakeFiles/EVENTS.dir/rule
-.PHONY : EVENTS
-
-# fast build rule for target.
-EVENTS/fast:
-	cd /home/koen/Documents/GitHub/BrowserC && $(MAKE) $(MAKESILENT) -f src/render/CMakeFiles/EVENTS.dir/build.make src/render/CMakeFiles/EVENTS.dir/build
-.PHONY : EVENTS/fast
-
-# Convenience name for target.
 src/render/CMakeFiles/RENDER.dir/rule:
 	cd /home/koen/Documents/GitHub/BrowserC && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/render/CMakeFiles/RENDER.dir/rule
 .PHONY : src/render/CMakeFiles/RENDER.dir/rule
@@ -233,30 +219,6 @@ App.cpp.s:
 	cd /home/koen/Documents/GitHub/BrowserC && $(MAKE) $(MAKESILENT) -f src/render/CMakeFiles/RENDER.dir/build.make src/render/CMakeFiles/RENDER.dir/App.cpp.s
 .PHONY : App.cpp.s
 
-Events/JavaScript.o: Events/JavaScript.cpp.o
-.PHONY : Events/JavaScript.o
-
-# target to build an object file
-Events/JavaScript.cpp.o:
-	cd /home/koen/Documents/GitHub/BrowserC && $(MAKE) $(MAKESILENT) -f src/render/CMakeFiles/EVENTS.dir/build.make src/render/CMakeFiles/EVENTS.dir/Events/JavaScript.cpp.o
-.PHONY : Events/JavaScript.cpp.o
-
-Events/JavaScript.i: Events/JavaScript.cpp.i
-.PHONY : Events/JavaScript.i
-
-# target to preprocess a source file
-Events/JavaScript.cpp.i:
-	cd /home/koen/Documents/GitHub/BrowserC && $(MAKE) $(MAKESILENT) -f src/render/CMakeFiles/EVENTS.dir/build.make src/render/CMakeFiles/EVENTS.dir/Events/JavaScript.cpp.i
-.PHONY : Events/JavaScript.cpp.i
-
-Events/JavaScript.s: Events/JavaScript.cpp.s
-.PHONY : Events/JavaScript.s
-
-# target to generate assembly for a file
-Events/JavaScript.cpp.s:
-	cd /home/koen/Documents/GitHub/BrowserC && $(MAKE) $(MAKESILENT) -f src/render/CMakeFiles/EVENTS.dir/build.make src/render/CMakeFiles/EVENTS.dir/Events/JavaScript.cpp.s
-.PHONY : Events/JavaScript.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -271,14 +233,10 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
-	@echo "... EVENTS"
 	@echo "... RENDER"
 	@echo "... App.o"
 	@echo "... App.i"
 	@echo "... App.s"
-	@echo "... Events/JavaScript.o"
-	@echo "... Events/JavaScript.i"
-	@echo "... Events/JavaScript.s"
 .PHONY : help
 
 

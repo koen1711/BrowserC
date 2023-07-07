@@ -1,45 +1,41 @@
+#include <gtk/gtk.h>
+#include <webkit2/webkit2.h>
 #include "App.h"
+#include "Loader/Renderer.h"
+#include "EventHandler/EventHandler.h"
 
-#include <Ultralight/Ultralight.h>
-#include <AppCore/App.h>
-#include <AppCore/Window.h>
-#include <AppCore/Overlay.h>
-#include <AppCore/JSHelpers.h>
-#include <iostream>
-#include "../tabs/TabManager.h"
-#include "../datamanager/AppData.h"
-#include "Events/JavaScript.h"
+App::App(int argc, char** argv) {
 
+    gtk_init(&argc, &argv);
 
-MainApp::MainApp() {
-  js_event_handler_ = new JavaScriptEventHandler();
-  app_data_ = new AppData();
-  // copy the /assets folder to the appdata folder
-  // this is where we will store all of our data
-  const char* assets = "assets/";
-  Settings settings;
-  Config config;
+    GtkWidget* webView = webkit_web_view_new();
+    WebKitSettings* settings = webkit_web_view_get_settings(WEBKIT_WEB_VIEW(webView));
+    g_object_set(G_OBJECT(settings), "enable-scripts", TRUE, NULL);
+    g_object_set(G_OBJECT(settings), "enable-web-security", FALSE, NULL);
+    webkit_settings_set_enable_javascript(settings, TRUE);
+    webkit_settings_set_allow_file_access_from_file_urls(settings, TRUE);
+    webkit_settings_set_allow_universal_access_from_file_urls(settings, TRUE);
+    webkit_settings_set_allow_modal_dialogs(settings, TRUE);
+    webkit_web_view_set_settings(WEBKIT_WEB_VIEW(webView), settings);
 
-  settings.file_system_path = String(assets);
+    this->renderer_ = new Renderer(this->window_, WEBKIT_WEB_VIEW(webView));
+    this->eventHandler_ = new EventHandler(WEBKIT_WEB_VIEW(webView));
 
+    this->window_ = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+    gtk_window_set_default_size(GTK_WINDOW(window_), 800, 600);
+    gtk_container_add(GTK_CONTAINER(window_), webView);
 
+    g_signal_connect(window_, "destroy", G_CALLBACK(gtk_main_quit), NULL);
 
-  config.resource_path_prefix = String("/resources/");
-
-  app_ = App::Create(settings, config);
-
-
-  window_ = Window::Create(app_->main_monitor(), 900, 600, false, kWindowFlags_Titled);
-  window_->SetTitle("AA");
-
-  overlay_ = Overlay::Create(window_, window_->width(), window_->height(), 0, 0);
-  overlay_->view()->LoadURL("file:///index.html");
-  window_->set_listener(this);
-
-  window_->set_listener(js_event_handler_);
-  overlay_->view()->set_load_listener(js_event_handler_);
-
-  overlay_->view()->set_view_listener(this);
+    this->renderer_->renderFile("ui://index.html");
 }
 
+App::~App() {
+    // Clean up
+}
 
+void App::Run() {
+    // Run the GTK main loop
+    gtk_widget_show_all(window_);
+    gtk_main();
+}

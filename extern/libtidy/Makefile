@@ -223,6 +223,20 @@ tidy/fast:
 	cd /home/koen/Documents/GitHub/BrowserC && $(MAKE) $(MAKESILENT) -f extern/libtidy/CMakeFiles/tidy.dir/build.make extern/libtidy/CMakeFiles/tidy.dir/build
 .PHONY : tidy/fast
 
+# Convenience name for target.
+extern/libtidy/CMakeFiles/man.dir/rule:
+	cd /home/koen/Documents/GitHub/BrowserC && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/libtidy/CMakeFiles/man.dir/rule
+.PHONY : extern/libtidy/CMakeFiles/man.dir/rule
+
+# Convenience name for target.
+man: extern/libtidy/CMakeFiles/man.dir/rule
+.PHONY : man
+
+# fast build rule for target.
+man/fast:
+	cd /home/koen/Documents/GitHub/BrowserC && $(MAKE) $(MAKESILENT) -f extern/libtidy/CMakeFiles/man.dir/build.make extern/libtidy/CMakeFiles/man.dir/build
+.PHONY : man/fast
+
 console/tidy.o: console/tidy.c.o
 .PHONY : console/tidy.o
 
@@ -963,6 +977,7 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
+	@echo "... man"
 	@echo "... tidy"
 	@echo "... tidy-share"
 	@echo "... tidy-static"

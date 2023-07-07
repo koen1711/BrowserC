@@ -1,45 +1,21 @@
-#include <AppCore/App.h>
-#include <AppCore/Window.h>
-#include <AppCore/Overlay.h>
+#include <gtk/gtk.h>
+#include <webkit2/webkit2.h>
+#include "Loader/Renderer.h"
+#include "EventHandler/EventHandler.h"
 
-#include <iostream>
-#include "../datamanager/AppData.h"
-#include "Events/JavaScript.h"
+class App {
 
-using namespace ultralight;
+    public:
+        App(int argc, char** argv);
+        ~App();
 
+        void Run();
 
-class MainApp : public WindowListener,
-              public ViewListener, public LoadListener {
-  AppData* app_data_;
-  JavaScriptEventHandler* js_event_handler_;
-  RefPtr<App> app_;
-  RefPtr<Window> window_;
-  RefPtr<Overlay> overlay_;
-  RefPtr<Overlay> inspector_overlay_;
-
-
-public:
+    private:
+        GtkWidget* webiew_;
+        GtkWidget* window_;
+        Renderer* renderer_;
+        EventHandler* eventHandler_;
+};  
 
 
-
-
-  MainApp();
-
-  virtual ~MainApp() {}
-
-  virtual void OnClose(ultralight::Window* window) override {
-    app_->Quit();
-  }
-  virtual void OnResize(ultralight::Window* window, uint32_t width, uint32_t height) override {}
-
-  virtual void OnChangeCursor(ultralight::View* caller, ultralight::Cursor cursor) override {
-    window_->SetCursor(cursor);
-  }
-
-
-
-  void Run() {
-    app_->Run();
-  }
-};

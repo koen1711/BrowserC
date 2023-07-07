@@ -1,19 +1,35 @@
-#include <AppCore/App.h>
-#include <AppCore/Window.h>
-#include <AppCore/Overlay.h>
 #include "render/App.h"
-#include "datamanager/AppData.h"
+#include <fstream>
 
-AppData app_data = AppData();
+int main(int argc, char* argv[]) {
+    
+    std::string firstRun;
 
-int main() {
-  // copy the contents of /assets folder to the appdata folder
-  // this is where we will store all of our data
-  system(("cp -r ./assets " + app_data.getPath()).c_str());
+    firstRun = "true";
 
-  MainApp app;
-  app.Run();
+    // check if first run
+    FILE* file = fopen("FIRSTRUN.txt", "r");
+    if (file == NULL) {
+        firstRun = "true";
+    } else {
+        firstRun = "false";
+        fclose(file);
+    }
 
-  return 0;
+    if (firstRun == "true") {
+        std::ofstream file("FIRSTRUN.txt");
+        file << "false";
+        file.close();
+        // copy assets directory to appdata
+        // get current user
+        std::string user = getenv("USER");
+        std::string command = "cp -r assets /home/" + user + "/.cache/browserc/";
+        system(command.c_str());
+    }
+
+
+    App app(argc, argv);
+    app.Run();
+
+    return 0;
 }
-

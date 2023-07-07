@@ -188,6 +188,9 @@ ALSOFT_UTILS:BOOL=ON
 //Treat compile warnings as errors
 ALSOFT_WERROR:BOOL=OFF
 
+//Path to a program.
+ASCIIDOC:FILEPATH=ASCIIDOC-NOTFOUND
+
 //The AudioIO include directory
 AUDIOIO_INCLUDE_DIR:PATH=AUDIOIO_INCLUDE_DIR-NOTFOUND
 
@@ -241,6 +244,21 @@ AVUTIL_LIBRARIES:FILEPATH=AVUTIL_LIBRARIES-NOTFOUND
 
 //The AVUTIL version number.
 AVUTIL_VERSION:STRING=
+
+//Path to a library.
+BROTLICOMMON_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libbrotlicommon.so
+
+//Path to a library.
+BROTLIDEC_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libbrotlidec.so
+
+//Path to a library.
+BROTLIENC_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libbrotlienc.so
+
+//Disable Brotli tests
+BROTLI_DISABLE_TESTS:STRING=ON
+
+//Path to a file.
+BROTLI_INCLUDE_DIR:PATH=/usr/include
 
 //Build tests for the Qt build system
 BUILD_CMAKE_TESTING:BOOL=OFF
@@ -938,6 +956,12 @@ DOUBLE_CONVERSION_LIBRARY_DEBUG:FILEPATH=DOUBLE_CONVERSION_LIBRARY_DEBUG-NOTFOUN
 
 //Path to a library.
 DOUBLE_CONVERSION_LIBRARY_RELEASE:FILEPATH=DOUBLE_CONVERSION_LIBRARY_RELEASE-NOTFOUND
+
+//Dot tool for use with Doxygen
+DOXYGEN_DOT_EXECUTABLE:FILEPATH=/usr/bin/dot
+
+//Doxygen documentation generation tool (https://www.doxygen.nl)
+DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
 
 //Enable sanitizers
 ECM_ENABLE_SANITIZERS:STRING=
@@ -2276,6 +2300,12 @@ Freetype_DIR:PATH=Freetype_DIR-NOTFOUND
 //Path to a file.
 GCRYPT_INCLUDE_DIR:PATH=GCRYPT_INCLUDE_DIR-NOTFOUND
 
+//Path to a file.
+GIF_INCLUDE_DIR:PATH=GIF_INCLUDE_DIR-NOTFOUND
+
+//Path to a library.
+GIF_LIBRARY:FILEPATH=GIF_LIBRARY-NOTFOUND
+
 //Git command line client
 GIT_EXECUTABLE:FILEPATH=/usr/bin/git
 
@@ -2353,6 +2383,18 @@ GLIB2_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libglib-2.0.so
 GLOB:FILEPATH=GLOB-NOTFOUND
 
 //Path to a file.
+GLUT_INCLUDE_DIR:PATH=GLUT_INCLUDE_DIR-NOTFOUND
+
+//Path to a library.
+GLUT_Xi_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libXi.so
+
+//Path to a library.
+GLUT_Xmu_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libXmu.so
+
+//Path to a library.
+GLUT_glut_LIBRARY:FILEPATH=GLUT_glut_LIBRARY-NOTFOUND
+
+//Path to a file.
 GSSAPI_INCLUDE_DIRS:PATH=GSSAPI_INCLUDE_DIRS-NOTFOUND
 
 //Path to a library.
@@ -2370,6 +2412,21 @@ HARFBUZZ_LIBRARIES:FILEPATH=HARFBUZZ_LIBRARIES-NOTFOUND
 //disables all protocols except HTTP (This overrides all CURL_DISABLE_*
 // options)
 HTTP_ONLY:BOOL=OFF
+
+//Set copts for Armv7 with NEON (requires vfpv4)?
+HWY_CMAKE_ARM7:BOOL=OFF
+
+//Install library
+HWY_ENABLE_INSTALL:BOOL=ON
+
+//Path to a file.
+HWY_INCLUDE_DIR:PATH=HWY_INCLUDE_DIR-NOTFOUND
+
+//Path to a library.
+HWY_LIBRARY:FILEPATH=HWY_LIBRARY-NOTFOUND
+
+//Add -Werror flag?
+HWY_WARNINGS_ARE_ERRORS:BOOL=OFF
 
 //Path to a library.
 ICU_DATA:FILEPATH=/usr/lib/x86_64-linux-gnu/libicudata.so
@@ -2527,14 +2584,172 @@ JACK_INCLUDE_DIR:PATH=JACK_INCLUDE_DIR-NOTFOUND
 //The JACK library
 JACK_LIBRARY:FILEPATH=JACK_LIBRARY-NOTFOUND
 
+//Java AWT Native Interface include directory
+JAVA_AWT_INCLUDE_PATH:PATH=JAVA_AWT_INCLUDE_PATH-NOTFOUND
+
+//Java AWT Native Interface library
+JAVA_AWT_LIBRARY:FILEPATH=/usr/lib/jvm/default-java/lib/libjawt.so
+
+//JNI include directory
+JAVA_INCLUDE_PATH:PATH=JAVA_INCLUDE_PATH-NOTFOUND
+
+//jni_md.h jniport.h include directory
+JAVA_INCLUDE_PATH2:PATH=JAVA_INCLUDE_PATH2-NOTFOUND
+
+//Java Virtual Machine library
+JAVA_JVM_LIBRARY:FILEPATH=/usr/lib/jvm/default-java/lib/server/libjvm.so
+
+//Library so-version of the libjpeg.so shared library that we build.
+JPEGLI_LIBJPEG_LIBRARY_SOVERSION:STRING=62
+
+//Library version of the libjpeg.so shared library that we build.
+JPEGLI_LIBJPEG_LIBRARY_VERSION:STRING=62.3.0
+
+//Build libpng from source and link it statically.
+JPEGXL_BUNDLE_LIBPNG:BOOL=NO
+
+//When building with skcms, bundle it into libjxl.a.
+JPEGXL_BUNDLE_SKCMS:BOOL=true
+
+//Directory where to search for system dependencies "copyright"
+// files.
+JPEGXL_DEP_LICENSE_DIR:STRING=
+
+//Build with AVX512 support (faster on CPUs that support it, but
+// larger binary size).
+JPEGXL_ENABLE_AVX512:BOOL=false
+
+//Build with Zen4-optimized AVX512 support (faster on CPUs that
+// support it, but larger binary size).
+JPEGXL_ENABLE_AVX512_ZEN4:BOOL=false
+
+//Build JPEGXL benchmark tools.
+JPEGXL_ENABLE_BENCHMARK:BOOL=true
+
+//Builds in support for decoding boxes in JXL files, disabling
+// it makes the decoder reject JXL_DEC_BOX events, (default enabled)
+JPEGXL_ENABLE_BOXES:BOOL=true
+
+//Enable code coverage tracking for libjxl. This also enables debug
+// and disables optimizations.
+JPEGXL_ENABLE_COVERAGE:BOOL=false
+
+//Build JPEGXL developer tools.
+JPEGXL_ENABLE_DEVTOOLS:BOOL=false
+
+//Generate C API documentation using Doxygen.
+JPEGXL_ENABLE_DOXYGEN:BOOL=true
+
+//Build JPEGXL library usage examples.
+JPEGXL_ENABLE_EXAMPLES:BOOL=true
+
+//Build JPEGXL fuzzer targets.
+JPEGXL_ENABLE_FUZZERS:BOOL=
+
+//Build JPEGXL JNI Java wrapper, if Java dependencies are installed.
+JPEGXL_ENABLE_JNI:BOOL=true
+
+//Build jpegli library.
+JPEGXL_ENABLE_JPEGLI:BOOL=true
+
+//Build libjpeg.so shared library based on jpegli.
+JPEGXL_ENABLE_JPEGLI_LIBJPEG:BOOL=true
+
+//Build and install man pages for the command-line tools.
+JPEGXL_ENABLE_MANPAGES:BOOL=true
+
+//Build JPEGXL with support for OpenEXR if available.
+JPEGXL_ENABLE_OPENEXR:BOOL=true
+
+//Build third-party plugins to support JPEG XL in other applications.
+JPEGXL_ENABLE_PLUGINS:BOOL=false
+
+//Builds in support for SVE/RVV vectorization
+JPEGXL_ENABLE_SIZELESS_VECTORS:BOOL=false
+
+//Build JPEGXL with support for encoding with sjpeg.
+JPEGXL_ENABLE_SJPEG:BOOL=true
+
+//Build with skcms instead of lcms2.
+JPEGXL_ENABLE_SKCMS:BOOL=true
+
+//Build JPEGXL using gperftools (tcmalloc) allocator.
+JPEGXL_ENABLE_TCMALLOC:BOOL=
+
+//Build JPEGXL user tools: cjxl and djxl.
+JPEGXL_ENABLE_TOOLS:BOOL=true
+
+//Builds in support for decoding transcoded JXL files back to JPEG,
+// disabling it makes the decoder reject JXL_DEC_JPEG_RECONSTRUCTION
+// events, (default enabled)
+JPEGXL_ENABLE_TRANSCODE_JPEG:BOOL=true
+
+//Build JPEGXL viewer tools for evaluation.
+JPEGXL_ENABLE_VIEWERS:BOOL=false
+
+//Set flags to enable NEON in arm if not enabled by your toolchain.
+JPEGXL_FORCE_NEON:BOOL=false
+
+//Force using system installed brotli instead of third_party/brotli
+// source.
+JPEGXL_FORCE_SYSTEM_BROTLI:BOOL=false
+
+//Force using system installed googletest (gtest/gmock) instead
+// of third_party/googletest source.
+JPEGXL_FORCE_SYSTEM_GTEST:BOOL=false
+
+//Force using system installed highway (libhwy-dev) instead of
+// third_party/highway source.
+JPEGXL_FORCE_SYSTEM_HWY:BOOL=false
+
+//Force using system installed lcms2 instead of third_party/lcms
+// source.
+JPEGXL_FORCE_SYSTEM_LCMS2:BOOL=false
+
+//Install jpegli version of libjpeg.so system-wide.
+JPEGXL_INSTALL_JPEGLI_LIBJPEG:BOOL=false
+
+//Build tools as static binaries.
+JPEGXL_STATIC:BOOL=false
+
+//Run scripts that test the encoding / decoding tools.
+JPEGXL_TEST_TOOLS:BOOL=false
+
+//Treat warnings as errors during compilation.
+JPEGXL_WARNINGS_AS_ERRORS:BOOL=false
+
 //Path to a file.
-JPEG_INCLUDE_DIR:PATH=JPEG_INCLUDE_DIR-NOTFOUND
+JPEG_INCLUDE_DIR:PATH=/usr/include
 
 //Path to a library.
 JPEG_LIBRARY_DEBUG:FILEPATH=JPEG_LIBRARY_DEBUG-NOTFOUND
 
 //Path to a library.
-JPEG_LIBRARY_RELEASE:FILEPATH=JPEG_LIBRARY_RELEASE-NOTFOUND
+JPEG_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libjpeg.so
+
+//The directory containing a CMake configuration file for JavaScriptCoreGTK.
+JavaScriptCoreGTK_DIR:PATH=JavaScriptCoreGTK_DIR-NOTFOUND
+
+//Path to a program.
+Java_IDLJ_EXECUTABLE:FILEPATH=Java_IDLJ_EXECUTABLE-NOTFOUND
+
+//Path to a program.
+Java_JARSIGNER_EXECUTABLE:FILEPATH=Java_JARSIGNER_EXECUTABLE-NOTFOUND
+
+//Path to a program.
+Java_JAR_EXECUTABLE:FILEPATH=Java_JAR_EXECUTABLE-NOTFOUND
+
+//Path to a program.
+Java_JAVAC_EXECUTABLE:FILEPATH=Java_JAVAC_EXECUTABLE-NOTFOUND
+
+//Path to a program.
+Java_JAVADOC_EXECUTABLE:FILEPATH=Java_JAVADOC_EXECUTABLE-NOTFOUND
+
+//Path to a program.
+Java_JAVAH_EXECUTABLE:FILEPATH=Java_JAVAH_EXECUTABLE-NOTFOUND
+
+//Path to a program.
+Java_JAVA_EXECUTABLE:FILEPATH=/usr/bin/java
 
 //Basename of the curl library
 LIBCURL_OUTPUT_NAME:STRING=libcurl
@@ -2542,11 +2757,20 @@ LIBCURL_OUTPUT_NAME:STRING=libcurl
 //Library installation directory
 LIBDIR:STRING=lib
 
+//Value Computed by CMake
+LIBJXL_BINARY_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/libjxl
+
+//Value Computed by CMake
+LIBJXL_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+LIBJXL_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/libjxl
+
 //Path to a file.
-LIBPSL_INCLUDE_DIR:PATH=LIBPSL_INCLUDE_DIR-NOTFOUND
+LIBPSL_INCLUDE_DIR:PATH=/usr/include
 
 //Path to a library.
-LIBPSL_LIBRARY:FILEPATH=LIBPSL_LIBRARY-NOTFOUND
+LIBPSL_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpsl.so
 
 //Path to a library.
 LIBRESOLV:FILEPATH=/usr/lib/x86_64-linux-gnu/libresolv.so
@@ -3014,6 +3238,12 @@ SFML_USE_DRM:BOOL=FALSE
 //TRUE to use system dependencies, FALSE to use the bundled ones.
 SFML_USE_SYSTEM_DEPS:BOOL=FALSE
 
+//Build the sjpeg / vjpeg command line tools.
+SJPEG_BUILD_EXAMPLES:BOOL=NO
+
+//Enable any SIMD optimization.
+SJPEG_ENABLE_SIMD:BOOL=ON
+
 //Path to a file.
 SNDFILE_INCLUDE_DIR:PATH=SNDFILE_INCLUDE_DIR-NOTFOUND
 
@@ -3064,6 +3294,9 @@ Samples_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 Samples_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/ultralight
+
+//Path to a library.
+SharpYuv_STATIC_LINK_LIBRARY:FILEPATH=SharpYuv_STATIC_LINK_LIBRARY-NOTFOUND
 
 //The Slog2 Include path
 Slog2_INCLUDE_DIR:PATH=Slog2_INCLUDE_DIR-NOTFOUND
@@ -3205,6 +3438,9 @@ WebKit_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 WebKit_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/webkit
+
+//Path to a library.
+WebP_STATIC_LINK_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libwebp.a
 
 //Path to a file.
 X11_ICE_INCLUDE_PATH:PATH=/usr/include
@@ -3837,7 +4073,7 @@ XKB_INCLUDE_DIR:PATH=/usr/include
 XKB_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libxkbcommon.so
 
 //Path to a program.
-XSLTPROC_FOUND:FILEPATH=XSLTPROC_FOUND-NOTFOUND
+XSLTPROC_FOUND:FILEPATH=/usr/bin/xsltproc
 
 //Path to a library.
 ZLIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libz.so
@@ -3888,6 +4124,24 @@ booster_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libpthread.a;genera
 booster_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/cppcms/booster
 
 //Value Computed by CMake
+brotli_BINARY_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/libjxl/third_party/brotli
+
+//Value Computed by CMake
+brotli_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+brotli_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/libjxl/third_party/brotli
+
+//Dependencies for the target
+brotlicommon_LIB_DEPENDS:STATIC=general;m;
+
+//Dependencies for the target
+brotlidec_LIB_DEPENDS:STATIC=general;m;general;brotlicommon;
+
+//Dependencies for the target
+brotlienc_LIB_DEPENDS:STATIC=general;m;general;brotlicommon;
+
+//Value Computed by CMake
 browser_BINARY_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC
 
 //Value Computed by CMake
@@ -3933,6 +4187,45 @@ glob:FILEPATH=glob-NOTFOUND
 harfbuzz_DIR:PATH=harfbuzz_DIR-NOTFOUND
 
 //Value Computed by CMake
+hwy_BINARY_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/libjxl/third_party/highway
+
+//Value Computed by CMake
+hwy_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+hwy_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/libjxl/third_party/highway
+
+//Dependencies for the target
+hwy_test_LIB_DEPENDS:STATIC=general;hwy;
+
+//Dependencies for the target
+jpeg_LIB_DEPENDS:STATIC=general;jpegli-static;
+
+//Dependencies for the target
+jpegli-static_LIB_DEPENDS:STATIC=general;hwy;
+
+//Dependencies for the target
+jxl-static_LIB_DEPENDS:STATIC=general;hwy;general;brotlidec;general;brotlicommon;general;brotlienc;
+
+//Dependencies for the target
+jxl_dec-static_LIB_DEPENDS:STATIC=general;hwy;general;brotlidec;general;brotlicommon;
+
+//Dependencies for the target
+jxl_extras-static_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libjpeg.so;general;/usr/lib/x86_64-linux-gnu/libpng.so;general;/usr/lib/x86_64-linux-gnu/libz.so;general;jxl-static;general;jxl_threads-static;general;sjpeg;general;jpegli-static;
+
+//Dependencies for the target
+jxl_extras_codec-static_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libjpeg.so;general;/usr/lib/x86_64-linux-gnu/libpng.so;general;/usr/lib/x86_64-linux-gnu/libz.so;general;jxl;
+
+//Dependencies for the target
+jxl_extras_nocodec-static_LIB_DEPENDS:STATIC=general;jxl-static;general;jxl_threads-static;
+
+//Dependencies for the target
+jxl_testlib-static_LIB_DEPENDS:STATIC=general;hwy;general;jxl_extras_nocodec-static;general;jxl-static;
+
+//Dependencies for the target
+jxl_tool_LIB_DEPENDS:STATIC=general;hwy;
+
+//Value Computed by CMake
 libRocket_BINARY_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/rocket/Build
 
 //The directory containing a CMake configuration file for libRocket.
@@ -3951,7 +4244,37 @@ loadable_storage_LIB_DEPENDS:STATIC=general;cppcms;
 md4c_DIR:PATH=md4c_DIR-NOTFOUND
 
 //Path to a library.
+pkgcfg_lib_AVIF_avif:FILEPATH=/usr/lib/x86_64-linux-gnu/libavif.so
+
+//Path to a library.
 pkgcfg_lib_Libudev_udev:FILEPATH=/usr/lib/x86_64-linux-gnu/libudev.so
+
+//Path to a library.
+pkgcfg_lib_OpenEXR_Half-2_5:FILEPATH=/usr/lib/x86_64-linux-gnu/libHalf-2_5.so
+
+//Path to a library.
+pkgcfg_lib_OpenEXR_Iex-2_5:FILEPATH=/usr/lib/x86_64-linux-gnu/libIex-2_5.so
+
+//Path to a library.
+pkgcfg_lib_OpenEXR_IexMath-2_5:FILEPATH=/usr/lib/x86_64-linux-gnu/libIexMath-2_5.so
+
+//Path to a library.
+pkgcfg_lib_OpenEXR_IlmImf-2_5:FILEPATH=/usr/lib/x86_64-linux-gnu/libIlmImf-2_5.so
+
+//Path to a library.
+pkgcfg_lib_OpenEXR_IlmThread-2_5:FILEPATH=/usr/lib/x86_64-linux-gnu/libIlmThread-2_5.so
+
+//Path to a library.
+pkgcfg_lib_OpenEXR_Imath-2_5:FILEPATH=/usr/lib/x86_64-linux-gnu/libImath-2_5.so
+
+//Path to a library.
+pkgcfg_lib_PC_BROTLICOMMON_brotlicommon:FILEPATH=/usr/lib/x86_64-linux-gnu/libbrotlicommon.so
+
+//Path to a library.
+pkgcfg_lib_PC_BROTLIDEC_brotlidec:FILEPATH=/usr/lib/x86_64-linux-gnu/libbrotlidec.so
+
+//Path to a library.
+pkgcfg_lib_PC_BROTLIENC_brotlienc:FILEPATH=/usr/lib/x86_64-linux-gnu/libbrotlienc.so
 
 //Path to a library.
 pkgcfg_lib_PC_DBUS1_dbus-1:FILEPATH=/usr/lib/x86_64-linux-gnu/libdbus-1.so
@@ -4020,6 +4343,57 @@ pkgcfg_lib_PKG_XKB_xkbcommon:FILEPATH=/usr/lib/x86_64-linux-gnu/libxkbcommon.so
 pkgcfg_lib_PKG_gbm_gbm:FILEPATH=/usr/lib/x86_64-linux-gnu/libgbm.so
 
 //Path to a library.
+pkgcfg_lib_WEBKIT2GTK_atk-1.0:FILEPATH=/usr/lib/x86_64-linux-gnu/libatk-1.0.so
+
+//Path to a library.
+pkgcfg_lib_WEBKIT2GTK_cairo:FILEPATH=/usr/lib/x86_64-linux-gnu/libcairo.so
+
+//Path to a library.
+pkgcfg_lib_WEBKIT2GTK_cairo-gobject:FILEPATH=/usr/lib/x86_64-linux-gnu/libcairo-gobject.so
+
+//Path to a library.
+pkgcfg_lib_WEBKIT2GTK_gdk-3:FILEPATH=/usr/lib/x86_64-linux-gnu/libgdk-3.so
+
+//Path to a library.
+pkgcfg_lib_WEBKIT2GTK_gdk_pixbuf-2.0:FILEPATH=/usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so
+
+//Path to a library.
+pkgcfg_lib_WEBKIT2GTK_gio-2.0:FILEPATH=/usr/lib/x86_64-linux-gnu/libgio-2.0.so
+
+//Path to a library.
+pkgcfg_lib_WEBKIT2GTK_glib-2.0:FILEPATH=/usr/lib/x86_64-linux-gnu/libglib-2.0.so
+
+//Path to a library.
+pkgcfg_lib_WEBKIT2GTK_gmodule-2.0:FILEPATH=/usr/lib/x86_64-linux-gnu/libgmodule-2.0.so
+
+//Path to a library.
+pkgcfg_lib_WEBKIT2GTK_gobject-2.0:FILEPATH=/usr/lib/x86_64-linux-gnu/libgobject-2.0.so
+
+//Path to a library.
+pkgcfg_lib_WEBKIT2GTK_gtk-3:FILEPATH=/usr/lib/x86_64-linux-gnu/libgtk-3.so
+
+//Path to a library.
+pkgcfg_lib_WEBKIT2GTK_harfbuzz:FILEPATH=/usr/lib/x86_64-linux-gnu/libharfbuzz.so
+
+//Path to a library.
+pkgcfg_lib_WEBKIT2GTK_javascriptcoregtk-4.0:FILEPATH=/usr/lib/x86_64-linux-gnu/libjavascriptcoregtk-4.0.so
+
+//Path to a library.
+pkgcfg_lib_WEBKIT2GTK_pango-1.0:FILEPATH=/usr/lib/x86_64-linux-gnu/libpango-1.0.so
+
+//Path to a library.
+pkgcfg_lib_WEBKIT2GTK_pangocairo-1.0:FILEPATH=/usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so
+
+//Path to a library.
+pkgcfg_lib_WEBKIT2GTK_soup-2.4:FILEPATH=/usr/lib/x86_64-linux-gnu/libsoup-2.4.so
+
+//Path to a library.
+pkgcfg_lib_WEBKIT2GTK_webkit2gtk-4.0:FILEPATH=/usr/lib/x86_64-linux-gnu/libwebkit2gtk-4.0.so
+
+//Path to a library.
+pkgcfg_lib_WebP_webp:FILEPATH=/usr/lib/x86_64-linux-gnu/libwebp.so
+
+//Path to a library.
 pkgcfg_lib_XRender_X11:FILEPATH=/usr/lib/x86_64-linux-gnu/libX11.so
 
 //Path to a library.
@@ -4057,6 +4431,18 @@ raylib_LIB_DEPENDS:STATIC=general;m;pthread;/usr/lib/x86_64-linux-gnu/libOpenGL.
 
 //Value Computed by CMake
 raylib_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/raylib/src
+
+//Dependencies for the target
+sjpeg-utils_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libpng.so;general;/usr/lib/x86_64-linux-gnu/libz.so;general;/usr/lib/x86_64-linux-gnu/libjpeg.so;
+
+//Value Computed by CMake
+sjpeg_BINARY_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/libjxl/third_party/sjpeg
+
+//Value Computed by CMake
+sjpeg_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+sjpeg_SOURCE_DIR:STATIC=/home/koen/Documents/GitHub/BrowserC/extern/libjxl/third_party/sjpeg
 
 //Dependencies for the target
 skin3_LIB_DEPENDS:STATIC=general;cppcms;
@@ -4130,6 +4516,8 @@ zstd_DIR:PATH=zstd_DIR-NOTFOUND
 ALSA_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ALSA_LIBRARY
 ALSA_LIBRARY-ADVANCED:INTERNAL=1
+//Test ATOMICS_LOCK_FREE_INSTRUCTIONS
+ATOMICS_LOCK_FREE_INSTRUCTIONS:INTERNAL=1
 //Test ATOMIC_TEST
 ATOMIC_TEST:INTERNAL=1
 ATSPI2_CFLAGS:INTERNAL=
@@ -4183,6 +4571,41 @@ AVFORMAT_INCLUDE_DIRS-ADVANCED:INTERNAL=1
 AVFORMAT_LIBRARIES-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: AVFORMAT_VERSION
 AVFORMAT_VERSION-ADVANCED:INTERNAL=1
+AVIF_CFLAGS:INTERNAL=-DAVIF_DLL
+AVIF_CFLAGS_I:INTERNAL=
+AVIF_CFLAGS_OTHER:INTERNAL=-DAVIF_DLL
+AVIF_FOUND:INTERNAL=1
+AVIF_INCLUDEDIR:INTERNAL=/usr/include
+AVIF_INCLUDE_DIRS:INTERNAL=
+AVIF_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lavif
+AVIF_LDFLAGS_OTHER:INTERNAL=
+AVIF_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+AVIF_LIBRARIES:INTERNAL=avif
+AVIF_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+AVIF_LIBS:INTERNAL=
+AVIF_LIBS_L:INTERNAL=
+AVIF_LIBS_OTHER:INTERNAL=
+AVIF_LIBS_PATHS:INTERNAL=
+AVIF_MODULE_NAME:INTERNAL=libavif
+AVIF_PREFIX:INTERNAL=/usr
+AVIF_STATIC_CFLAGS:INTERNAL=-DAVIF_DLL
+AVIF_STATIC_CFLAGS_I:INTERNAL=
+AVIF_STATIC_CFLAGS_OTHER:INTERNAL=-DAVIF_DLL
+AVIF_STATIC_INCLUDE_DIRS:INTERNAL=
+AVIF_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lavif
+AVIF_STATIC_LDFLAGS_OTHER:INTERNAL=
+AVIF_STATIC_LIBDIR:INTERNAL=
+AVIF_STATIC_LIBRARIES:INTERNAL=avif
+AVIF_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+AVIF_STATIC_LIBS:INTERNAL=
+AVIF_STATIC_LIBS_L:INTERNAL=
+AVIF_STATIC_LIBS_OTHER:INTERNAL=
+AVIF_STATIC_LIBS_PATHS:INTERNAL=
+AVIF_VERSION:INTERNAL=0.9.3
+AVIF_libavif_INCLUDEDIR:INTERNAL=
+AVIF_libavif_LIBDIR:INTERNAL=
+AVIF_libavif_PREFIX:INTERNAL=
+AVIF_libavif_VERSION:INTERNAL=
 //ADVANCED property for variable: AVUTIL_DEFINITIONS
 AVUTIL_DEFINITIONS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: AVUTIL_INCLUDE_DIRS
@@ -4209,8 +4632,21 @@ BOOSTER_HAVE_STD_ATOMIC:INTERNAL=1
 BOOSTER_HAVE_UNWIND_BACKTRACE:INTERNAL=1
 //Test BOOSTER_HAVE_UNWIND_BACKTRACE_BUILTIN
 BOOSTER_HAVE_UNWIND_BACKTRACE_BUILTIN:INTERNAL=
+//ADVANCED property for variable: BROTLICOMMON_LIBRARY
+BROTLICOMMON_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: BROTLIDEC_LIBRARY
+BROTLIDEC_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: BROTLIENC_LIBRARY
+BROTLIENC_LIBRARY-ADVANCED:INTERNAL=1
+BROTLI_BUNDLED_MODE:INTERNAL=OFF
+//Test BROTLI_EMSCRIPTEN
+BROTLI_EMSCRIPTEN:INTERNAL=
+//ADVANCED property for variable: BROTLI_INCLUDE_DIR
+BROTLI_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: BUILD_CMAKE_TESTING
 BUILD_CMAKE_TESTING-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: BUILD_SHARED_LIBS
+BUILD_SHARED_LIBS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Backtrace_HEADER
 Backtrace_HEADER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Backtrace_INCLUDE_DIR
@@ -4447,6 +4883,14 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Compiler support for a deprecated attribute
+COMPILER_HAS_DEPRECATED:INTERNAL=1
+//Test COMPILER_HAS_DEPRECATED_ATTR
+COMPILER_HAS_DEPRECATED_ATTR:INTERNAL=1
+//Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+COMPILER_HAS_HIDDEN_INLINE_VISIBILITY:INTERNAL=1
+//Test COMPILER_HAS_HIDDEN_VISIBILITY
+COMPILER_HAS_HIDDEN_VISIBILITY:INTERNAL=1
 //Test COMPILER_HAS_THOSE_TOGGLES
 COMPILER_HAS_THOSE_TOGGLES:INTERNAL=1
 //ADVANCED property for variable: CPACK_BINARY_DEB
@@ -4613,6 +5057,16 @@ CUSTOM_CONFIGURATION_FILE-ADVANCED:INTERNAL=1
 CUSTOM_INCLUDE_DIRS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUSTOM_LINK_LIBRARIES
 CUSTOM_LINK_LIBRARIES-ADVANCED:INTERNAL=1
+//Test CXX_CONSTRUCTOR_ALIASES_SUPPORTED
+CXX_CONSTRUCTOR_ALIASES_SUPPORTED:INTERNAL=
+//Test CXX_FUZZERS_SUPPORTED
+CXX_FUZZERS_SUPPORTED:INTERNAL=
+//Test CXX_MACRO_PREFIX_MAP
+CXX_MACRO_PREFIX_MAP:INTERNAL=1
+//Test CXX_NO_RTTI_SUPPORTED
+CXX_NO_RTTI_SUPPORTED:INTERNAL=1
+//Test CXX_WPSABI_SUPPORTED
+CXX_WPSABI_SUPPORTED:INTERNAL=1
 //ADVANCED property for variable: DBus1_INCLUDE_DIR
 DBus1_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DBus1_LIBRARY
@@ -4623,6 +5077,10 @@ DOUBLE_CONVERSION_INCLUDE_DIR-ADVANCED:INTERNAL=1
 DOUBLE_CONVERSION_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DOUBLE_CONVERSION_LIBRARY_RELEASE
 DOUBLE_CONVERSION_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DOXYGEN_DOT_EXECUTABLE
+DOXYGEN_DOT_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DOXYGEN_EXECUTABLE
+DOXYGEN_EXECUTABLE-ADVANCED:INTERNAL=1
 DirectFB_CFLAGS:INTERNAL=
 DirectFB_CFLAGS_I:INTERNAL=
 DirectFB_CFLAGS_OTHER:INTERNAL=
@@ -4666,6 +5124,8 @@ FFMPEG_LIBRARIES-ADVANCED:INTERNAL=1
 FIND_PACKAGE_MESSAGE_DETAILS_ALSA:INTERNAL=[/usr/lib/x86_64-linux-gnu/libasound.so][/usr/include][v1.2.6.1()]
 //Details about finding Backtrace
 FIND_PACKAGE_MESSAGE_DETAILS_Backtrace:INTERNAL=[/usr/include][v()]
+//Details about finding Brotli
+FIND_PACKAGE_MESSAGE_DETAILS_Brotli:INTERNAL=[/usr/include][/usr/lib/x86_64-linux-gnu/libbrotlicommon.so][/usr/lib/x86_64-linux-gnu/libbrotlienc.so][/usr/lib/x86_64-linux-gnu/libbrotlidec.so][v()]
 //Details about finding EGL
 FIND_PACKAGE_MESSAGE_DETAILS_EGL:INTERNAL=[/usr/include][1][/usr/lib/x86_64-linux-gnu/libEGL.so][v1.5()]
 //Details about finding FLAC
@@ -4680,6 +5140,10 @@ FIND_PACKAGE_MESSAGE_DETAILS_GLIB2:INTERNAL=[/usr/lib/x86_64-linux-gnu/libglib-2
 FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/bin/git][v2.34.1()]
 //Details about finding ICU
 FIND_PACKAGE_MESSAGE_DETAILS_ICU:INTERNAL=[/usr/include][/usr/lib/x86_64-linux-gnu/libicui18n.so;/usr/lib/x86_64-linux-gnu/libicuuc.so;/usr/lib/x86_64-linux-gnu/libicudata.so][ON][v70.1(50.1)]
+//Details about finding JPEG
+FIND_PACKAGE_MESSAGE_DETAILS_JPEG:INTERNAL=[/usr/lib/x86_64-linux-gnu/libjpeg.so][/usr/include][v80()]
+//Details about finding LibPSL
+FIND_PACKAGE_MESSAGE_DETAILS_LibPSL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libpsl.so][/usr/include][v0.21.0()]
 //Details about finding Libdrm
 FIND_PACKAGE_MESSAGE_DETAILS_Libdrm:INTERNAL=[/usr/lib/x86_64-linux-gnu/libdrm.so][/usr/include][v2.4.113()]
 //Details about finding OSS
@@ -4690,6 +5154,8 @@ FIND_PACKAGE_MESSAGE_DETAILS_OpenAL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libopena
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libOpenGL.so][/usr/lib/x86_64-linux-gnu/libGLX.so][/usr/include][c ][v()]
 //Details about finding OpenSSL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libcrypto.so][/usr/include][c ][v3.0.2()]
+//Details about finding PNG
+FIND_PACKAGE_MESSAGE_DETAILS_PNG:INTERNAL=[/usr/lib/x86_64-linux-gnu/libpng.so][/usr/include][v1.6.37()]
 //Details about finding Perl
 FIND_PACKAGE_MESSAGE_DETAILS_Perl:INTERNAL=[/usr/bin/perl][v5.34.0()]
 //Details about finding PkgConfig
@@ -4770,6 +5236,10 @@ FREETYPE_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 Fontconfig_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Fontconfig_LIBRARY
 Fontconfig_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GIF_INCLUDE_DIR
+GIF_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GIF_LIBRARY
+GIF_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GLESv2_INCLUDE_DIR
@@ -4792,6 +5262,14 @@ GLIB2_GOBJECT_LIBRARIES-ADVANCED:INTERNAL=1
 GLIB2_INCLUDE_DIRS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GLIB2_LIBRARIES
 GLIB2_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GLUT_INCLUDE_DIR
+GLUT_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GLUT_Xi_LIBRARY
+GLUT_Xi_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GLUT_Xmu_LIBRARY
+GLUT_Xmu_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GLUT_glut_LIBRARY
+GLUT_glut_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GSSAPI_INCLUDE_DIRS
 GSSAPI_INCLUDE_DIRS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GSSAPI_LIBRARIES
@@ -4829,6 +5307,8 @@ HAVE_ARM_NEON_H:INTERNAL=
 HAVE_ARPA_INET_H:INTERNAL=1
 //Have include inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/un.h;sys/xattr.h;arpa/inet.h;arpa/tftp.h
 HAVE_ARPA_TFTP_H:INTERNAL=1
+//Have include asm/hwcap.h
+HAVE_ASM_HWCAP_H:INTERNAL=
 //Curl test 
 HAVE_ATOMIC:INTERNAL=1
 //Have symbol OPENSSL_IS_AWSLC
@@ -5151,6 +5631,8 @@ HAVE_STRTOK_R:INTERNAL=1
 HAVE_STRTOLL:INTERNAL=1
 //Test HAVE_STRUCT_TIMEVAL
 HAVE_STRUCT_TIMEVAL:INTERNAL=1
+//Have include sys/auxv.h
+HAVE_SYS_AUXV_H:INTERNAL=1
 //Have includes inttypes.h;sys/filio.h
 HAVE_SYS_FILIO_H:INTERNAL=
 //Have include inttypes.h;sys/ioctl.h
@@ -5351,6 +5833,20 @@ HAVE_x86intrin:INTERNAL=TRUE
 HAVE_xlocalescanprint:INTERNAL=
 //ADVANCED property for variable: HTTP_ONLY
 HTTP_ONLY-ADVANCED:INTERNAL=1
+//Test HWY_EMSCRIPTEN
+HWY_EMSCRIPTEN:INTERNAL=
+HWY_ENABLE_CONTRIB:INTERNAL=OFF
+HWY_ENABLE_EXAMPLES:INTERNAL=OFF
+HWY_ENABLE_TESTS:INTERNAL=OFF
+//Ignore BUILD_SHARED_LIBS
+HWY_FORCE_STATIC_LIBS:INTERNAL=ON
+//ADVANCED property for variable: HWY_INCLUDE_DIR
+HWY_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: HWY_LIBRARY
+HWY_LIBRARY-ADVANCED:INTERNAL=1
+//Test HWY_RISCV
+HWY_RISCV:INTERNAL=
+HWY_SYSTEM_GTEST:INTERNAL=ON
 //ADVANCED property for variable: ICU_DATA_LIBRARY_DEBUG
 ICU_DATA_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ICU_DATA_LIBRARY_RELEASE
@@ -5417,12 +5913,40 @@ INPUT_libpng-STRINGS:INTERNAL=undefined;no;qt;system
 JACK_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: JACK_LIBRARY
 JACK_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: JAVA_AWT_INCLUDE_PATH
+JAVA_AWT_INCLUDE_PATH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: JAVA_AWT_LIBRARY
+JAVA_AWT_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: JAVA_INCLUDE_PATH
+JAVA_INCLUDE_PATH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: JAVA_INCLUDE_PATH2
+JAVA_INCLUDE_PATH2-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: JAVA_JVM_LIBRARY
+JAVA_JVM_LIBRARY-ADVANCED:INTERNAL=1
+//Test JPEGXL_EMSCRIPTEN
+JPEGXL_EMSCRIPTEN:INTERNAL=
 //ADVANCED property for variable: JPEG_INCLUDE_DIR
 JPEG_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: JPEG_LIBRARY_DEBUG
 JPEG_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: JPEG_LIBRARY_RELEASE
 JPEG_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//Test JXL_HWY_DISABLED_TARGETS_FORCED
+JXL_HWY_DISABLED_TARGETS_FORCED:INTERNAL=
+//ADVANCED property for variable: Java_IDLJ_EXECUTABLE
+Java_IDLJ_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Java_JARSIGNER_EXECUTABLE
+Java_JARSIGNER_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Java_JAR_EXECUTABLE
+Java_JAR_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Java_JAVAC_EXECUTABLE
+Java_JAVAC_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Java_JAVADOC_EXECUTABLE
+Java_JAVADOC_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Java_JAVAH_EXECUTABLE
+Java_JAVAH_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Java_JAVA_EXECUTABLE
+Java_JAVA_EXECUTABLE-ADVANCED:INTERNAL=1
 //Test LIBC_ICONV
 LIBC_ICONV:INTERNAL=1
 //ADVANCED property for variable: LIBPSL_INCLUDE_DIR
@@ -5433,6 +5957,10 @@ LIBPSL_LIBRARY-ADVANCED:INTERNAL=1
 LIBSSH2_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: LIBSSH2_LIBRARY
 LIBSSH2_LIBRARY-ADVANCED:INTERNAL=1
+//Have function log2
+LOG2_LIBM_RES:INTERNAL=1
+//Have function log2
+LOG2_RES:INTERNAL=
 //ADVANCED property for variable: LTTNGUST_INCLUDE_DIRS
 LTTNGUST_INCLUDE_DIRS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: LTTNGUST_LIBRARIES
@@ -5647,6 +6175,41 @@ OPT_Wunused_const_variable:INTERNAL=1
 OSS_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OSS_LIBRARY
 OSS_LIBRARY-ADVANCED:INTERNAL=1
+OpenEXR_CFLAGS:INTERNAL=-I/usr/include/OpenEXR
+OpenEXR_CFLAGS_I:INTERNAL=
+OpenEXR_CFLAGS_OTHER:INTERNAL=
+OpenEXR_FOUND:INTERNAL=1
+OpenEXR_INCLUDEDIR:INTERNAL=/usr/include
+OpenEXR_INCLUDE_DIRS:INTERNAL=/usr/include/OpenEXR
+OpenEXR_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lIlmImf-2_5;-lImath-2_5;-lHalf-2_5;-lIex-2_5;-lIexMath-2_5;-lIlmThread-2_5
+OpenEXR_LDFLAGS_OTHER:INTERNAL=
+OpenEXR_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+OpenEXR_LIBRARIES:INTERNAL=IlmImf-2_5;Imath-2_5;Half-2_5;Iex-2_5;IexMath-2_5;IlmThread-2_5
+OpenEXR_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+OpenEXR_LIBS:INTERNAL=
+OpenEXR_LIBS_L:INTERNAL=
+OpenEXR_LIBS_OTHER:INTERNAL=
+OpenEXR_LIBS_PATHS:INTERNAL=
+OpenEXR_MODULE_NAME:INTERNAL=OpenEXR
+OpenEXR_OpenEXR_INCLUDEDIR:INTERNAL=
+OpenEXR_OpenEXR_LIBDIR:INTERNAL=
+OpenEXR_OpenEXR_PREFIX:INTERNAL=
+OpenEXR_OpenEXR_VERSION:INTERNAL=
+OpenEXR_PREFIX:INTERNAL=/usr
+OpenEXR_STATIC_CFLAGS:INTERNAL=-I/usr/include/OpenEXR
+OpenEXR_STATIC_CFLAGS_I:INTERNAL=
+OpenEXR_STATIC_CFLAGS_OTHER:INTERNAL=
+OpenEXR_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/OpenEXR
+OpenEXR_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lIlmImf-2_5;-lz;-lImath-2_5;-lHalf-2_5;-lIex-2_5;-lIexMath-2_5;-lIlmThread-2_5
+OpenEXR_STATIC_LDFLAGS_OTHER:INTERNAL=
+OpenEXR_STATIC_LIBDIR:INTERNAL=
+OpenEXR_STATIC_LIBRARIES:INTERNAL=IlmImf-2_5;z;Imath-2_5;Half-2_5;Iex-2_5;IexMath-2_5;IlmThread-2_5
+OpenEXR_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+OpenEXR_STATIC_LIBS:INTERNAL=
+OpenEXR_STATIC_LIBS_L:INTERNAL=
+OpenEXR_STATIC_LIBS_OTHER:INTERNAL=
+OpenEXR_STATIC_LIBS_PATHS:INTERNAL=
+OpenEXR_VERSION:INTERNAL=2.5.7
 //ADVANCED property for variable: PCRE2_LIBRARY_DEBUG
 PCRE2_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PCRE2_LIBRARY_RELEASE
@@ -5751,6 +6314,111 @@ PC_AVUTIL_libavutil_INCLUDEDIR:INTERNAL=
 PC_AVUTIL_libavutil_LIBDIR:INTERNAL=
 PC_AVUTIL_libavutil_PREFIX:INTERNAL=
 PC_AVUTIL_libavutil_VERSION:INTERNAL=
+PC_BROTLICOMMON_CFLAGS:INTERNAL=
+PC_BROTLICOMMON_CFLAGS_I:INTERNAL=
+PC_BROTLICOMMON_CFLAGS_OTHER:INTERNAL=
+PC_BROTLICOMMON_FOUND:INTERNAL=1
+PC_BROTLICOMMON_INCLUDEDIR:INTERNAL=/usr/include
+PC_BROTLICOMMON_INCLUDE_DIRS:INTERNAL=
+PC_BROTLICOMMON_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lbrotlicommon
+PC_BROTLICOMMON_LDFLAGS_OTHER:INTERNAL=
+PC_BROTLICOMMON_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+PC_BROTLICOMMON_LIBRARIES:INTERNAL=brotlicommon
+PC_BROTLICOMMON_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+PC_BROTLICOMMON_LIBS:INTERNAL=
+PC_BROTLICOMMON_LIBS_L:INTERNAL=
+PC_BROTLICOMMON_LIBS_OTHER:INTERNAL=
+PC_BROTLICOMMON_LIBS_PATHS:INTERNAL=
+PC_BROTLICOMMON_MODULE_NAME:INTERNAL=libbrotlicommon
+PC_BROTLICOMMON_PREFIX:INTERNAL=/usr
+PC_BROTLICOMMON_STATIC_CFLAGS:INTERNAL=
+PC_BROTLICOMMON_STATIC_CFLAGS_I:INTERNAL=
+PC_BROTLICOMMON_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_BROTLICOMMON_STATIC_INCLUDE_DIRS:INTERNAL=
+PC_BROTLICOMMON_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lbrotlicommon
+PC_BROTLICOMMON_STATIC_LDFLAGS_OTHER:INTERNAL=
+PC_BROTLICOMMON_STATIC_LIBDIR:INTERNAL=
+PC_BROTLICOMMON_STATIC_LIBRARIES:INTERNAL=brotlicommon
+PC_BROTLICOMMON_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+PC_BROTLICOMMON_STATIC_LIBS:INTERNAL=
+PC_BROTLICOMMON_STATIC_LIBS_L:INTERNAL=
+PC_BROTLICOMMON_STATIC_LIBS_OTHER:INTERNAL=
+PC_BROTLICOMMON_STATIC_LIBS_PATHS:INTERNAL=
+PC_BROTLICOMMON_VERSION:INTERNAL=1.0.9
+PC_BROTLICOMMON_libbrotlicommon_INCLUDEDIR:INTERNAL=
+PC_BROTLICOMMON_libbrotlicommon_LIBDIR:INTERNAL=
+PC_BROTLICOMMON_libbrotlicommon_PREFIX:INTERNAL=
+PC_BROTLICOMMON_libbrotlicommon_VERSION:INTERNAL=
+PC_BROTLIDEC_CFLAGS:INTERNAL=
+PC_BROTLIDEC_CFLAGS_I:INTERNAL=
+PC_BROTLIDEC_CFLAGS_OTHER:INTERNAL=
+PC_BROTLIDEC_FOUND:INTERNAL=1
+PC_BROTLIDEC_INCLUDEDIR:INTERNAL=/usr/include
+PC_BROTLIDEC_INCLUDE_DIRS:INTERNAL=
+PC_BROTLIDEC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lbrotlidec
+PC_BROTLIDEC_LDFLAGS_OTHER:INTERNAL=
+PC_BROTLIDEC_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+PC_BROTLIDEC_LIBRARIES:INTERNAL=brotlidec
+PC_BROTLIDEC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+PC_BROTLIDEC_LIBS:INTERNAL=
+PC_BROTLIDEC_LIBS_L:INTERNAL=
+PC_BROTLIDEC_LIBS_OTHER:INTERNAL=
+PC_BROTLIDEC_LIBS_PATHS:INTERNAL=
+PC_BROTLIDEC_MODULE_NAME:INTERNAL=libbrotlidec
+PC_BROTLIDEC_PREFIX:INTERNAL=/usr
+PC_BROTLIDEC_STATIC_CFLAGS:INTERNAL=
+PC_BROTLIDEC_STATIC_CFLAGS_I:INTERNAL=
+PC_BROTLIDEC_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_BROTLIDEC_STATIC_INCLUDE_DIRS:INTERNAL=
+PC_BROTLIDEC_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lbrotlidec;-lbrotlicommon
+PC_BROTLIDEC_STATIC_LDFLAGS_OTHER:INTERNAL=
+PC_BROTLIDEC_STATIC_LIBDIR:INTERNAL=
+PC_BROTLIDEC_STATIC_LIBRARIES:INTERNAL=brotlidec;brotlicommon
+PC_BROTLIDEC_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+PC_BROTLIDEC_STATIC_LIBS:INTERNAL=
+PC_BROTLIDEC_STATIC_LIBS_L:INTERNAL=
+PC_BROTLIDEC_STATIC_LIBS_OTHER:INTERNAL=
+PC_BROTLIDEC_STATIC_LIBS_PATHS:INTERNAL=
+PC_BROTLIDEC_VERSION:INTERNAL=1.0.9
+PC_BROTLIDEC_libbrotlidec_INCLUDEDIR:INTERNAL=
+PC_BROTLIDEC_libbrotlidec_LIBDIR:INTERNAL=
+PC_BROTLIDEC_libbrotlidec_PREFIX:INTERNAL=
+PC_BROTLIDEC_libbrotlidec_VERSION:INTERNAL=
+PC_BROTLIENC_CFLAGS:INTERNAL=
+PC_BROTLIENC_CFLAGS_I:INTERNAL=
+PC_BROTLIENC_CFLAGS_OTHER:INTERNAL=
+PC_BROTLIENC_FOUND:INTERNAL=1
+PC_BROTLIENC_INCLUDEDIR:INTERNAL=/usr/include
+PC_BROTLIENC_INCLUDE_DIRS:INTERNAL=
+PC_BROTLIENC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lbrotlienc
+PC_BROTLIENC_LDFLAGS_OTHER:INTERNAL=
+PC_BROTLIENC_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+PC_BROTLIENC_LIBRARIES:INTERNAL=brotlienc
+PC_BROTLIENC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+PC_BROTLIENC_LIBS:INTERNAL=
+PC_BROTLIENC_LIBS_L:INTERNAL=
+PC_BROTLIENC_LIBS_OTHER:INTERNAL=
+PC_BROTLIENC_LIBS_PATHS:INTERNAL=
+PC_BROTLIENC_MODULE_NAME:INTERNAL=libbrotlienc
+PC_BROTLIENC_PREFIX:INTERNAL=/usr
+PC_BROTLIENC_STATIC_CFLAGS:INTERNAL=
+PC_BROTLIENC_STATIC_CFLAGS_I:INTERNAL=
+PC_BROTLIENC_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_BROTLIENC_STATIC_INCLUDE_DIRS:INTERNAL=
+PC_BROTLIENC_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lbrotlienc;-lbrotlicommon
+PC_BROTLIENC_STATIC_LDFLAGS_OTHER:INTERNAL=
+PC_BROTLIENC_STATIC_LIBDIR:INTERNAL=
+PC_BROTLIENC_STATIC_LIBRARIES:INTERNAL=brotlienc;brotlicommon
+PC_BROTLIENC_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+PC_BROTLIENC_STATIC_LIBS:INTERNAL=
+PC_BROTLIENC_STATIC_LIBS_L:INTERNAL=
+PC_BROTLIENC_STATIC_LIBS_OTHER:INTERNAL=
+PC_BROTLIENC_STATIC_LIBS_PATHS:INTERNAL=
+PC_BROTLIENC_VERSION:INTERNAL=1.0.9
+PC_BROTLIENC_libbrotlienc_INCLUDEDIR:INTERNAL=
+PC_BROTLIENC_libbrotlienc_LIBDIR:INTERNAL=
+PC_BROTLIENC_libbrotlienc_PREFIX:INTERNAL=
+PC_BROTLIENC_libbrotlienc_VERSION:INTERNAL=
 PC_DBUS1_CFLAGS:INTERNAL=-I/usr/include/dbus-1.0;-I/usr/lib/x86_64-linux-gnu/dbus-1.0/include
 PC_DBUS1_CFLAGS_I:INTERNAL=
 PC_DBUS1_CFLAGS_OTHER:INTERNAL=
@@ -5856,6 +6524,35 @@ PC_GLIB2_glib-2.0_INCLUDEDIR:INTERNAL=
 PC_GLIB2_glib-2.0_LIBDIR:INTERNAL=
 PC_GLIB2_glib-2.0_PREFIX:INTERNAL=
 PC_GLIB2_glib-2.0_VERSION:INTERNAL=
+PC_GLUT_CFLAGS:INTERNAL=
+PC_GLUT_CFLAGS_I:INTERNAL=
+PC_GLUT_CFLAGS_OTHER:INTERNAL=
+PC_GLUT_FOUND:INTERNAL=
+PC_GLUT_INCLUDEDIR:INTERNAL=
+PC_GLUT_LIBDIR:INTERNAL=
+PC_GLUT_LIBS:INTERNAL=
+PC_GLUT_LIBS_L:INTERNAL=
+PC_GLUT_LIBS_OTHER:INTERNAL=
+PC_GLUT_LIBS_PATHS:INTERNAL=
+PC_GLUT_MODULE_NAME:INTERNAL=
+PC_GLUT_PREFIX:INTERNAL=
+PC_GLUT_STATIC_CFLAGS:INTERNAL=
+PC_GLUT_STATIC_CFLAGS_I:INTERNAL=
+PC_GLUT_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_GLUT_STATIC_LIBDIR:INTERNAL=
+PC_GLUT_STATIC_LIBS:INTERNAL=
+PC_GLUT_STATIC_LIBS_L:INTERNAL=
+PC_GLUT_STATIC_LIBS_OTHER:INTERNAL=
+PC_GLUT_STATIC_LIBS_PATHS:INTERNAL=
+PC_GLUT_VERSION:INTERNAL=
+PC_GLUT_freeglut_INCLUDEDIR:INTERNAL=
+PC_GLUT_freeglut_LIBDIR:INTERNAL=
+PC_GLUT_freeglut_PREFIX:INTERNAL=
+PC_GLUT_freeglut_VERSION:INTERNAL=
+PC_GLUT_glut_INCLUDEDIR:INTERNAL=
+PC_GLUT_glut_LIBDIR:INTERNAL=
+PC_GLUT_glut_PREFIX:INTERNAL=
+PC_GLUT_glut_VERSION:INTERNAL=
 PC_GOBJECT_CFLAGS:INTERNAL=-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
 PC_GOBJECT_CFLAGS_I:INTERNAL=
 PC_GOBJECT_CFLAGS_OTHER:INTERNAL=
@@ -5980,6 +6677,31 @@ PC_HARFBUZZ_harfbuzz_INCLUDEDIR:INTERNAL=
 PC_HARFBUZZ_harfbuzz_LIBDIR:INTERNAL=
 PC_HARFBUZZ_harfbuzz_PREFIX:INTERNAL=
 PC_HARFBUZZ_harfbuzz_VERSION:INTERNAL=
+PC_HWY_CFLAGS:INTERNAL=
+PC_HWY_CFLAGS_I:INTERNAL=
+PC_HWY_CFLAGS_OTHER:INTERNAL=
+PC_HWY_FOUND:INTERNAL=
+PC_HWY_INCLUDEDIR:INTERNAL=
+PC_HWY_LIBDIR:INTERNAL=
+PC_HWY_LIBS:INTERNAL=
+PC_HWY_LIBS_L:INTERNAL=
+PC_HWY_LIBS_OTHER:INTERNAL=
+PC_HWY_LIBS_PATHS:INTERNAL=
+PC_HWY_MODULE_NAME:INTERNAL=
+PC_HWY_PREFIX:INTERNAL=
+PC_HWY_STATIC_CFLAGS:INTERNAL=
+PC_HWY_STATIC_CFLAGS_I:INTERNAL=
+PC_HWY_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_HWY_STATIC_LIBDIR:INTERNAL=
+PC_HWY_STATIC_LIBS:INTERNAL=
+PC_HWY_STATIC_LIBS_L:INTERNAL=
+PC_HWY_STATIC_LIBS_OTHER:INTERNAL=
+PC_HWY_STATIC_LIBS_PATHS:INTERNAL=
+PC_HWY_VERSION:INTERNAL=
+PC_HWY_libhwy_INCLUDEDIR:INTERNAL=
+PC_HWY_libhwy_LIBDIR:INTERNAL=
+PC_HWY_libhwy_PREFIX:INTERNAL=
+PC_HWY_libhwy_VERSION:INTERNAL=
 PC_PCRE2_CFLAGS:INTERNAL=
 PC_PCRE2_CFLAGS_I:INTERNAL=
 PC_PCRE2_CFLAGS_OTHER:INTERNAL=
@@ -8868,6 +9590,10 @@ SIZEOF_STRUCT_SOCKADDR_STORAGE:INTERNAL=128
 SIZEOF_TIME_T:INTERNAL=8
 //CHECK_TYPE_SIZE: __int64 unknown
 SIZEOF___INT64:INTERNAL=
+//Test SJPEG_HAVE_FLAG___ARM_NEON__
+SJPEG_HAVE_FLAG___ARM_NEON__:INTERNAL=
+//Test SJPEG_HAVE_FLAG___SSE2__
+SJPEG_HAVE_FLAG___SSE2__:INTERNAL=1
 //ADVANCED property for variable: SNDFILE_INCLUDE_DIR
 SNDFILE_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SNDFILE_LIBRARY
@@ -8898,6 +9624,31 @@ SWSCALE_VERSION-ADVANCED:INTERNAL=1
 Slog2_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Slog2_LIBRARY
 Slog2_LIBRARY-ADVANCED:INTERNAL=1
+TCMallocMinimalVersionCheck_CFLAGS:INTERNAL=
+TCMallocMinimalVersionCheck_CFLAGS_I:INTERNAL=
+TCMallocMinimalVersionCheck_CFLAGS_OTHER:INTERNAL=
+TCMallocMinimalVersionCheck_FOUND:INTERNAL=
+TCMallocMinimalVersionCheck_INCLUDEDIR:INTERNAL=
+TCMallocMinimalVersionCheck_LIBDIR:INTERNAL=
+TCMallocMinimalVersionCheck_LIBS:INTERNAL=
+TCMallocMinimalVersionCheck_LIBS_L:INTERNAL=
+TCMallocMinimalVersionCheck_LIBS_OTHER:INTERNAL=
+TCMallocMinimalVersionCheck_LIBS_PATHS:INTERNAL=
+TCMallocMinimalVersionCheck_MODULE_NAME:INTERNAL=
+TCMallocMinimalVersionCheck_PREFIX:INTERNAL=
+TCMallocMinimalVersionCheck_STATIC_CFLAGS:INTERNAL=
+TCMallocMinimalVersionCheck_STATIC_CFLAGS_I:INTERNAL=
+TCMallocMinimalVersionCheck_STATIC_CFLAGS_OTHER:INTERNAL=
+TCMallocMinimalVersionCheck_STATIC_LIBDIR:INTERNAL=
+TCMallocMinimalVersionCheck_STATIC_LIBS:INTERNAL=
+TCMallocMinimalVersionCheck_STATIC_LIBS_L:INTERNAL=
+TCMallocMinimalVersionCheck_STATIC_LIBS_OTHER:INTERNAL=
+TCMallocMinimalVersionCheck_STATIC_LIBS_PATHS:INTERNAL=
+TCMallocMinimalVersionCheck_VERSION:INTERNAL=
+TCMallocMinimalVersionCheck_libtcmalloc_minimal_INCLUDEDIR:INTERNAL=
+TCMallocMinimalVersionCheck_libtcmalloc_minimal_LIBDIR:INTERNAL=
+TCMallocMinimalVersionCheck_libtcmalloc_minimal_PREFIX:INTERNAL=
+TCMallocMinimalVersionCheck_libtcmalloc_minimal_VERSION:INTERNAL=
 //Result of TRY_COMPILE
 TEST_X86SIMD_avx512vbmi2:INTERNAL=TRUE
 //Result of TRY_COMPILE
@@ -9131,6 +9882,41 @@ Vulkan_INCLUDE_DIR-ADVANCED:INTERNAL=1
 Vulkan_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: WARNINGS_AS_ERRORS
 WARNINGS_AS_ERRORS-ADVANCED:INTERNAL=1
+WEBKIT2GTK_CFLAGS:INTERNAL=-pthread;-I/usr/include/webkitgtk-4.0;-I/usr/include/gtk-3.0;-I/usr/include/at-spi2-atk/2.0;-I/usr/include/at-spi-2.0;-I/usr/include/dbus-1.0;-I/usr/lib/x86_64-linux-gnu/dbus-1.0/include;-I/usr/include/gtk-3.0;-I/usr/include/gio-unix-2.0;-I/usr/include/cairo;-I/usr/include/pango-1.0;-I/usr/include/harfbuzz;-I/usr/include/pango-1.0;-I/usr/include/fribidi;-I/usr/include/harfbuzz;-I/usr/include/atk-1.0;-I/usr/include/cairo;-I/usr/include/pixman-1;-I/usr/include/uuid;-I/usr/include/freetype2;-I/usr/include/gdk-pixbuf-2.0;-I/usr/include/libpng16;-I/usr/include/x86_64-linux-gnu;-I/usr/include/libsoup-2.4;-I/usr/include/libxml2;-I/usr/include/libmount;-I/usr/include/blkid;-I/usr/include/webkitgtk-4.0;-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+WEBKIT2GTK_CFLAGS_I:INTERNAL=
+WEBKIT2GTK_CFLAGS_OTHER:INTERNAL=-pthread
+WEBKIT2GTK_FOUND:INTERNAL=1
+WEBKIT2GTK_INCLUDEDIR:INTERNAL=/usr/include
+WEBKIT2GTK_INCLUDE_DIRS:INTERNAL=/usr/include/webkitgtk-4.0;/usr/include/gtk-3.0;/usr/include/at-spi2-atk/2.0;/usr/include/at-spi-2.0;/usr/include/dbus-1.0;/usr/lib/x86_64-linux-gnu/dbus-1.0/include;/usr/include/gtk-3.0;/usr/include/gio-unix-2.0;/usr/include/cairo;/usr/include/pango-1.0;/usr/include/harfbuzz;/usr/include/pango-1.0;/usr/include/fribidi;/usr/include/harfbuzz;/usr/include/atk-1.0;/usr/include/cairo;/usr/include/pixman-1;/usr/include/uuid;/usr/include/freetype2;/usr/include/gdk-pixbuf-2.0;/usr/include/libpng16;/usr/include/x86_64-linux-gnu;/usr/include/libsoup-2.4;/usr/include/libxml2;/usr/include/libmount;/usr/include/blkid;/usr/include/webkitgtk-4.0;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include
+WEBKIT2GTK_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lwebkit2gtk-4.0;-lgtk-3;-lgdk-3;-lpangocairo-1.0;-lpango-1.0;-lharfbuzz;-latk-1.0;-lcairo-gobject;-lcairo;-lgdk_pixbuf-2.0;-lsoup-2.4;-Wl,--export-dynamic;-lgmodule-2.0;-pthread;-lgio-2.0;-ljavascriptcoregtk-4.0;-lgobject-2.0;-lglib-2.0
+WEBKIT2GTK_LDFLAGS_OTHER:INTERNAL=-Wl,--export-dynamic;-pthread
+WEBKIT2GTK_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+WEBKIT2GTK_LIBRARIES:INTERNAL=webkit2gtk-4.0;gtk-3;gdk-3;pangocairo-1.0;pango-1.0;harfbuzz;atk-1.0;cairo-gobject;cairo;gdk_pixbuf-2.0;soup-2.4;gmodule-2.0;gio-2.0;javascriptcoregtk-4.0;gobject-2.0;glib-2.0
+WEBKIT2GTK_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+WEBKIT2GTK_LIBS:INTERNAL=
+WEBKIT2GTK_LIBS_L:INTERNAL=
+WEBKIT2GTK_LIBS_OTHER:INTERNAL=
+WEBKIT2GTK_LIBS_PATHS:INTERNAL=
+WEBKIT2GTK_MODULE_NAME:INTERNAL=webkit2gtk-4.0
+WEBKIT2GTK_PREFIX:INTERNAL=/usr
+WEBKIT2GTK_STATIC_CFLAGS:INTERNAL=-pthread;-I/usr/include/webkitgtk-4.0;-I/usr/include/gtk-3.0;-I/usr/include/at-spi2-atk/2.0;-I/usr/include/at-spi-2.0;-I/usr/include/dbus-1.0;-I/usr/lib/x86_64-linux-gnu/dbus-1.0/include;-I/usr/include/gtk-3.0;-I/usr/include/gio-unix-2.0;-I/usr/include/cairo;-I/usr/include/pango-1.0;-I/usr/include/harfbuzz;-I/usr/include/pango-1.0;-I/usr/include/fribidi;-I/usr/include/harfbuzz;-I/usr/include/atk-1.0;-I/usr/include/cairo;-I/usr/include/pixman-1;-I/usr/include/uuid;-I/usr/include/freetype2;-I/usr/include/gdk-pixbuf-2.0;-I/usr/include/libpng16;-I/usr/include/x86_64-linux-gnu;-I/usr/include/libsoup-2.4;-I/usr/include/libxml2;-I/usr/include/libmount;-I/usr/include/blkid;-I/usr/include/webkitgtk-4.0;-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+WEBKIT2GTK_STATIC_CFLAGS_I:INTERNAL=
+WEBKIT2GTK_STATIC_CFLAGS_OTHER:INTERNAL=-pthread
+WEBKIT2GTK_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/webkitgtk-4.0;/usr/include/gtk-3.0;/usr/include/at-spi2-atk/2.0;/usr/include/at-spi-2.0;/usr/include/dbus-1.0;/usr/lib/x86_64-linux-gnu/dbus-1.0/include;/usr/include/gtk-3.0;/usr/include/gio-unix-2.0;/usr/include/cairo;/usr/include/pango-1.0;/usr/include/harfbuzz;/usr/include/pango-1.0;/usr/include/fribidi;/usr/include/harfbuzz;/usr/include/atk-1.0;/usr/include/cairo;/usr/include/pixman-1;/usr/include/uuid;/usr/include/freetype2;/usr/include/gdk-pixbuf-2.0;/usr/include/libpng16;/usr/include/x86_64-linux-gnu;/usr/include/libsoup-2.4;/usr/include/libxml2;/usr/include/libmount;/usr/include/blkid;/usr/include/webkitgtk-4.0;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include
+WEBKIT2GTK_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-L/usr/lib/x86_64-linux-gnu/mit-krb5;-L/usr/lib/x86_64-linux-gnu;-L/usr/lib;-L/usr/lib/x86_64-linux-gnu;-lwebkit2gtk-4.0;-lgtk-3;-latk-bridge-2.0;-latspi;-lXtst;-ldbus-1;-lsystemd;-lgdk-3;-lXinerama;-lXi;-lXrandr;-lXcursor;-lXcomposite;-lXdamage;-lXfixes;-lxkbcommon;-lwayland-cursor;-lwayland-egl;-lwayland-client;-lm;-pthread;-lepoxy;-ldl;-lGL;-lEGL;-lpangocairo-1.0;-lm;-lpangoft2-1.0;-lm;-lharfbuzz-gobject;-lpango-1.0;-lm;-lfribidi;-lthai;-ldatrie;-lXft;-lharfbuzz;-lm;-lgraphite2;-latk-1.0;-lcairo-gobject;-lcairo;-lz;-lpixman-1;-lfontconfig;-luuid;-lexpat;-lm;-lfreetype;-lxcb-shm;-lxcb-render;-lXrender;-lXext;-lX11;-lpthread;-lxcb;-lXau;-lXdmcp;-lgdk_pixbuf-2.0;-lm;-lpng16;-lm;-lz;-lm;-ljpeg;-ltiff;-lwebp;-lzstd;-llzma;-ljbig;-ljpeg;-ldeflate;-lz;-lm;-lsoup-2.4;-Wl,-Bsymbolic-functions;-flto=auto;-Wl,-z,relro;-lgssapi_krb5;-lkrb5;-lk5crypto;-lcom_err;-lxml2;-licui18n;-licuuc;-licudata;-lz;-llzma;-lm;-lsqlite3;-lm;-lz;-lpsl;-lbrotlidec;-lbrotlicommon;-Wl,--export-dynamic;-lgio-2.0;-lgmodule-2.0;-pthread;-lz;-lmount;-ldl;-lblkid;-lselinux;-lsepol;-lpcre2-8;-ljavascriptcoregtk-4.0;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lm;-lpcre
+WEBKIT2GTK_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-Wl,-Bsymbolic-functions;-flto=auto;-Wl,-z,relro;-Wl,--export-dynamic;-pthread
+WEBKIT2GTK_STATIC_LIBDIR:INTERNAL=
+WEBKIT2GTK_STATIC_LIBRARIES:INTERNAL=webkit2gtk-4.0;gtk-3;atk-bridge-2.0;atspi;Xtst;dbus-1;systemd;gdk-3;Xinerama;Xi;Xrandr;Xcursor;Xcomposite;Xdamage;Xfixes;xkbcommon;wayland-cursor;wayland-egl;wayland-client;m;epoxy;dl;GL;EGL;pangocairo-1.0;m;pangoft2-1.0;m;harfbuzz-gobject;pango-1.0;m;fribidi;thai;datrie;Xft;harfbuzz;m;graphite2;atk-1.0;cairo-gobject;cairo;z;pixman-1;fontconfig;uuid;expat;m;freetype;xcb-shm;xcb-render;Xrender;Xext;X11;pthread;xcb;Xau;Xdmcp;gdk_pixbuf-2.0;m;png16;m;z;m;jpeg;tiff;webp;zstd;lzma;jbig;jpeg;deflate;z;m;soup-2.4;gssapi_krb5;krb5;k5crypto;com_err;xml2;icui18n;icuuc;icudata;z;lzma;m;sqlite3;m;z;psl;brotlidec;brotlicommon;gio-2.0;gmodule-2.0;z;mount;dl;blkid;selinux;sepol;pcre2-8;javascriptcoregtk-4.0;gobject-2.0;ffi;glib-2.0;m;pcre
+WEBKIT2GTK_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu;/usr/lib/x86_64-linux-gnu/mit-krb5;/usr/lib/x86_64-linux-gnu;/usr/lib;/usr/lib/x86_64-linux-gnu
+WEBKIT2GTK_STATIC_LIBS:INTERNAL=
+WEBKIT2GTK_STATIC_LIBS_L:INTERNAL=
+WEBKIT2GTK_STATIC_LIBS_OTHER:INTERNAL=
+WEBKIT2GTK_STATIC_LIBS_PATHS:INTERNAL=
+WEBKIT2GTK_VERSION:INTERNAL=2.38.6
+WEBKIT2GTK_webkit2gtk-4.0_INCLUDEDIR:INTERNAL=
+WEBKIT2GTK_webkit2gtk-4.0_LIBDIR:INTERNAL=
+WEBKIT2GTK_webkit2gtk-4.0_PREFIX:INTERNAL=
+WEBKIT2GTK_webkit2gtk-4.0_VERSION:INTERNAL=
 //ADVANCED property for variable: Wayland_Client_INCLUDE_DIR
 Wayland_Client_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Wayland_Client_LIBRARY
@@ -9147,6 +9933,41 @@ Wayland_Egl_LIBRARY-ADVANCED:INTERNAL=1
 Wayland_Server_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Wayland_Server_LIBRARY
 Wayland_Server_LIBRARY-ADVANCED:INTERNAL=1
+WebP_CFLAGS:INTERNAL=
+WebP_CFLAGS_I:INTERNAL=
+WebP_CFLAGS_OTHER:INTERNAL=
+WebP_FOUND:INTERNAL=1
+WebP_INCLUDEDIR:INTERNAL=/usr/include
+WebP_INCLUDE_DIRS:INTERNAL=
+WebP_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lwebp
+WebP_LDFLAGS_OTHER:INTERNAL=
+WebP_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+WebP_LIBRARIES:INTERNAL=webp
+WebP_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+WebP_LIBS:INTERNAL=
+WebP_LIBS_L:INTERNAL=
+WebP_LIBS_OTHER:INTERNAL=
+WebP_LIBS_PATHS:INTERNAL=
+WebP_MODULE_NAME:INTERNAL=libwebp
+WebP_PREFIX:INTERNAL=/usr
+WebP_STATIC_CFLAGS:INTERNAL=
+WebP_STATIC_CFLAGS_I:INTERNAL=
+WebP_STATIC_CFLAGS_OTHER:INTERNAL=
+WebP_STATIC_INCLUDE_DIRS:INTERNAL=
+WebP_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lwebp;-lm
+WebP_STATIC_LDFLAGS_OTHER:INTERNAL=
+WebP_STATIC_LIBDIR:INTERNAL=
+WebP_STATIC_LIBRARIES:INTERNAL=webp;m
+WebP_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+WebP_STATIC_LIBS:INTERNAL=
+WebP_STATIC_LIBS_L:INTERNAL=
+WebP_STATIC_LIBS_OTHER:INTERNAL=
+WebP_STATIC_LIBS_PATHS:INTERNAL=
+WebP_VERSION:INTERNAL=1.2.2
+WebP_libwebp_INCLUDEDIR:INTERNAL=
+WebP_libwebp_LIBDIR:INTERNAL=
+WebP_libwebp_PREFIX:INTERNAL=
+WebP_libwebp_VERSION:INTERNAL=
 //ADVANCED property for variable: X11_ICE_INCLUDE_PATH
 X11_ICE_INCLUDE_PATH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_ICE_LIB
@@ -9675,7 +10496,12 @@ _OPENSSL_openssl_INCLUDEDIR:INTERNAL=
 _OPENSSL_openssl_LIBDIR:INTERNAL=
 _OPENSSL_openssl_PREFIX:INTERNAL=
 _OPENSSL_openssl_VERSION:INTERNAL=
+__pkg_config_arguments_AVIF:INTERNAL=IMPORTED_TARGET;libavif
 __pkg_config_arguments_Libudev:INTERNAL=IMPORTED_TARGET;libudev
+__pkg_config_arguments_OpenEXR:INTERNAL=IMPORTED_TARGET;OpenEXR
+__pkg_config_arguments_PC_BROTLICOMMON:INTERNAL=libbrotlicommon
+__pkg_config_arguments_PC_BROTLIDEC:INTERNAL=libbrotlidec
+__pkg_config_arguments_PC_BROTLIENC:INTERNAL=libbrotlienc
 __pkg_config_arguments_PC_DBUS1:INTERNAL=QUIET;dbus-1
 __pkg_config_arguments_PC_GIO:INTERNAL=QUIET;gio-2.0
 __pkg_config_arguments_PC_GLIB2:INTERNAL=QUIET;glib-2.0
@@ -9692,12 +10518,15 @@ __pkg_config_arguments_PKG_Wayland_Server:INTERNAL=QUIET;wayland-server
 __pkg_config_arguments_PKG_XCB_XCB:INTERNAL=QUIET;xcb
 __pkg_config_arguments_PKG_XKB:INTERNAL=QUIET;xkbcommon
 __pkg_config_arguments_PKG_gbm:INTERNAL=QUIET;gbm
+__pkg_config_arguments_WEBKIT2GTK:INTERNAL=REQUIRED;IMPORTED_TARGET;webkit2gtk-4.0
+__pkg_config_arguments_WebP:INTERNAL=IMPORTED_TARGET;libwebp
 __pkg_config_arguments_XRender:INTERNAL=IMPORTED_TARGET;xrender
 __pkg_config_arguments__OPENSSL:INTERNAL=QUIET;openssl
 __pkg_config_arguments_libbrotlicommon:INTERNAL=QUIET;IMPORTED_TARGET;libbrotlicommon
 __pkg_config_arguments_libbrotlidec:INTERNAL=QUIET;IMPORTED_TARGET;libbrotlidec
 __pkg_config_arguments_libbrotlienc:INTERNAL=QUIET;IMPORTED_TARGET;libbrotlienc
 __pkg_config_checked_ATSPI2:INTERNAL=1
+__pkg_config_checked_AVIF:INTERNAL=1
 __pkg_config_checked_DirectFB:INTERNAL=1
 __pkg_config_checked_GTK3:INTERNAL=1
 __pkg_config_checked_Libb2:INTERNAL=1
@@ -9705,17 +10534,23 @@ __pkg_config_checked_Libproxy:INTERNAL=1
 __pkg_config_checked_Libsystemd:INTERNAL=1
 __pkg_config_checked_Libudev:INTERNAL=1
 __pkg_config_checked_Mtdev:INTERNAL=1
+__pkg_config_checked_OpenEXR:INTERNAL=1
 __pkg_config_checked_PC_AVCODEC:INTERNAL=1
 __pkg_config_checked_PC_AVDEVICE:INTERNAL=1
 __pkg_config_checked_PC_AVFORMAT:INTERNAL=1
 __pkg_config_checked_PC_AVUTIL:INTERNAL=1
+__pkg_config_checked_PC_BROTLICOMMON:INTERNAL=1
+__pkg_config_checked_PC_BROTLIDEC:INTERNAL=1
+__pkg_config_checked_PC_BROTLIENC:INTERNAL=1
 __pkg_config_checked_PC_DBUS1:INTERNAL=1
 __pkg_config_checked_PC_GIO:INTERNAL=1
 __pkg_config_checked_PC_GLIB2:INTERNAL=1
+__pkg_config_checked_PC_GLUT:INTERNAL=1
 __pkg_config_checked_PC_GOBJECT:INTERNAL=1
 __pkg_config_checked_PC_GSSAPI:INTERNAL=1
 __pkg_config_checked_PC_GTHREAD2:INTERNAL=1
 __pkg_config_checked_PC_HARFBUZZ:INTERNAL=1
+__pkg_config_checked_PC_HWY:INTERNAL=1
 __pkg_config_checked_PC_PCRE2:INTERNAL=1
 __pkg_config_checked_PC_POSTPROC:INTERNAL=1
 __pkg_config_checked_PC_SWRESAMPLE:INTERNAL=1
@@ -9769,7 +10604,10 @@ __pkg_config_checked_PKG_XCB_XV:INTERNAL=1
 __pkg_config_checked_PKG_XCB_XVMC:INTERNAL=1
 __pkg_config_checked_PKG_XKB:INTERNAL=1
 __pkg_config_checked_PKG_gbm:INTERNAL=1
+__pkg_config_checked_TCMallocMinimalVersionCheck:INTERNAL=1
 __pkg_config_checked_Tslib:INTERNAL=1
+__pkg_config_checked_WEBKIT2GTK:INTERNAL=1
+__pkg_config_checked_WebP:INTERNAL=1
 __pkg_config_checked_XKB_COMMON_X11:INTERNAL=1
 __pkg_config_checked_XRender:INTERNAL=1
 __pkg_config_checked__OPENSSL:INTERNAL=1
@@ -9887,8 +10725,28 @@ libbrotlienc_libbrotlienc_INCLUDEDIR:INTERNAL=
 libbrotlienc_libbrotlienc_LIBDIR:INTERNAL=
 libbrotlienc_libbrotlienc_PREFIX:INTERNAL=
 libbrotlienc_libbrotlienc_VERSION:INTERNAL=
+//ADVANCED property for variable: pkgcfg_lib_AVIF_avif
+pkgcfg_lib_AVIF_avif-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_Libudev_udev
 pkgcfg_lib_Libudev_udev-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_OpenEXR_Half-2_5
+pkgcfg_lib_OpenEXR_Half-2_5-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_OpenEXR_Iex-2_5
+pkgcfg_lib_OpenEXR_Iex-2_5-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_OpenEXR_IexMath-2_5
+pkgcfg_lib_OpenEXR_IexMath-2_5-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_OpenEXR_IlmImf-2_5
+pkgcfg_lib_OpenEXR_IlmImf-2_5-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_OpenEXR_IlmThread-2_5
+pkgcfg_lib_OpenEXR_IlmThread-2_5-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_OpenEXR_Imath-2_5
+pkgcfg_lib_OpenEXR_Imath-2_5-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_PC_BROTLICOMMON_brotlicommon
+pkgcfg_lib_PC_BROTLICOMMON_brotlicommon-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_PC_BROTLIDEC_brotlidec
+pkgcfg_lib_PC_BROTLIDEC_brotlidec-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_PC_BROTLIENC_brotlienc
+pkgcfg_lib_PC_BROTLIENC_brotlienc-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_PC_DBUS1_dbus-1
 pkgcfg_lib_PC_DBUS1_dbus-1-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_PC_GIO_gio-2.0
@@ -9933,6 +10791,40 @@ pkgcfg_lib_PKG_XCB_XCB_xcb-ADVANCED:INTERNAL=1
 pkgcfg_lib_PKG_XKB_xkbcommon-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_PKG_gbm_gbm
 pkgcfg_lib_PKG_gbm_gbm-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_WEBKIT2GTK_atk-1.0
+pkgcfg_lib_WEBKIT2GTK_atk-1.0-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_WEBKIT2GTK_cairo
+pkgcfg_lib_WEBKIT2GTK_cairo-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_WEBKIT2GTK_cairo-gobject
+pkgcfg_lib_WEBKIT2GTK_cairo-gobject-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_WEBKIT2GTK_gdk-3
+pkgcfg_lib_WEBKIT2GTK_gdk-3-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_WEBKIT2GTK_gdk_pixbuf-2.0
+pkgcfg_lib_WEBKIT2GTK_gdk_pixbuf-2.0-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_WEBKIT2GTK_gio-2.0
+pkgcfg_lib_WEBKIT2GTK_gio-2.0-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_WEBKIT2GTK_glib-2.0
+pkgcfg_lib_WEBKIT2GTK_glib-2.0-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_WEBKIT2GTK_gmodule-2.0
+pkgcfg_lib_WEBKIT2GTK_gmodule-2.0-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_WEBKIT2GTK_gobject-2.0
+pkgcfg_lib_WEBKIT2GTK_gobject-2.0-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_WEBKIT2GTK_gtk-3
+pkgcfg_lib_WEBKIT2GTK_gtk-3-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_WEBKIT2GTK_harfbuzz
+pkgcfg_lib_WEBKIT2GTK_harfbuzz-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_WEBKIT2GTK_javascriptcoregtk-4.0
+pkgcfg_lib_WEBKIT2GTK_javascriptcoregtk-4.0-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_WEBKIT2GTK_pango-1.0
+pkgcfg_lib_WEBKIT2GTK_pango-1.0-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_WEBKIT2GTK_pangocairo-1.0
+pkgcfg_lib_WEBKIT2GTK_pangocairo-1.0-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_WEBKIT2GTK_soup-2.4
+pkgcfg_lib_WEBKIT2GTK_soup-2.4-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_WEBKIT2GTK_webkit2gtk-4.0
+pkgcfg_lib_WEBKIT2GTK_webkit2gtk-4.0-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_WebP_webp
+pkgcfg_lib_WebP_webp-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_XRender_X11
 pkgcfg_lib_XRender_X11-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_XRender_Xrender

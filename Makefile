@@ -195,6 +195,19 @@ MyApp/fast:
 .PHONY : MyApp/fast
 
 #=============================================================================
+# Target rules for targets named browser_build
+
+# Build rule for target.
+browser_build: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 browser_build
+.PHONY : browser_build
+
+# fast build rule for target.
+browser_build/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/browser_build.dir/build.make CMakeFiles/browser_build.dir/build
+.PHONY : browser_build/fast
+
+#=============================================================================
 # Target rules for targets named tidy-static
 
 # Build rule for target.
@@ -234,6 +247,19 @@ tidy/fast:
 .PHONY : tidy/fast
 
 #=============================================================================
+# Target rules for targets named man
+
+# Build rule for target.
+man: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 man
+.PHONY : man
+
+# fast build rule for target.
+man/fast:
+	$(MAKE) $(MAKESILENT) -f extern/libtidy/CMakeFiles/man.dir/build.make extern/libtidy/CMakeFiles/man.dir/build
+.PHONY : man/fast
+
+#=============================================================================
 # Target rules for targets named curl_uninstall
 
 # Build rule for target.
@@ -271,19 +297,6 @@ curl: cmake_check_build_system
 curl/fast:
 	$(MAKE) $(MAKESILENT) -f extern/curl/src/CMakeFiles/curl.dir/build.make extern/curl/src/CMakeFiles/curl.dir/build
 .PHONY : curl/fast
-
-#=============================================================================
-# Target rules for targets named EVENTS
-
-# Build rule for target.
-EVENTS: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 EVENTS
-.PHONY : EVENTS
-
-# fast build rule for target.
-EVENTS/fast:
-	$(MAKE) $(MAKESILENT) -f src/render/CMakeFiles/EVENTS.dir/build.make src/render/CMakeFiles/EVENTS.dir/build
-.PHONY : EVENTS/fast
 
 #=============================================================================
 # Target rules for targets named RENDER
@@ -375,9 +388,10 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
+	@echo "... browser_build"
 	@echo "... curl_uninstall"
+	@echo "... man"
 	@echo "... AppData"
-	@echo "... EVENTS"
 	@echo "... MyApp"
 	@echo "... RENDER"
 	@echo "... TAB"

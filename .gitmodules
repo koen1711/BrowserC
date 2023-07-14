@@ -7,9 +7,6 @@
 [submodule "extern/curl"]
 	path = extern/curl
 	url = https://github.com/curl/curl.git
-[submodule "extern/webkit"]
-	path = extern/webkit
-	url = https://github.com/WebKit/WebKit.git
 [submodule "extern/blink"]
 	path = extern/blink
 	url = https://chromium.googlesource.com/chromium/src/+/master/third_party/blink/

@@ -45,13 +45,15 @@ add_library(Curl STATIC IMPORTED)
 set_target_properties(Curl PROPERTIES IMPORTED_LOCATION ${CMAKE_BINARY_DIR}/libcurl.a)
 add_custom_target(browser_build ALL DEPENDS browserui)
 target_link_libraries(MyApp PRIVATE
+    JavascriptHandler
+    Curl
     PkgConfig::WEBKIT2GTK
     RENDER
     AppData
     TABMANAGER
     TAB
     #EVENTS
-    Curl
+
     ssl
     crypto
     ${CMAKE_SOURCE_DIR}/extern/libtidy/build/cmake/libtidy.so

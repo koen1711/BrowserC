@@ -12,7 +12,7 @@ class App {
         void Run();
 
     private:
-        GtkWidget* webiew_;
+        GtkWidget* webView_;
         GtkWidget* window_;
         Renderer* renderer_;
         EventHandler* eventHandler_;

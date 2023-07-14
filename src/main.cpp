@@ -1,8 +1,9 @@
 #include "render/App.h"
 #include <fstream>
+#include <string>
+
 
 int main(int argc, char* argv[]) {
-    
     std::string firstRun;
 
     firstRun = "true";
@@ -12,7 +13,7 @@ int main(int argc, char* argv[]) {
     if (file == NULL) {
         firstRun = "true";
     } else {
-        firstRun = "false";
+        firstRun = "true";
         fclose(file);
     }
 

@@ -1,0 +1,296 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "build/tidy"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"install",
+			"target_link_libraries",
+			"add_definitions",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"extern/libtidy/CMakeLists.txt",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 462,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 479,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 463,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 274,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 255,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 256,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 148,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 290,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 132,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 319,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 306,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 320,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 23,
+				"parent" : 13
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 345,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -Wall  -D_REENTRANT -DNDEBUG -O2 -fdiagnostics-color=always"
+				},
+				{
+					"fragment" : "-DTIDY_STATIC"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 4,
+					"define" : "HAVE_CONFIG_H"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "LIBTIDY_VERSION=\"5.9.20\""
+				},
+				{
+					"backtrace" : 6,
+					"define" : "RELEASE_DATE=\"2022/01/25\""
+				},
+				{
+					"backtrace" : 7,
+					"define" : "SUPPORT_CONSOLE_APP=1"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "SUPPORT_GETPWNAM=1"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "SUPPORT_LOCALIZATIONS=1"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "TIDY_CONFIG_FILE=\"/etc/tidy.conf\""
+				},
+				{
+					"backtrace" : 11,
+					"define" : "TIDY_ENABLE_CONFIG_FILES"
+				},
+				{
+					"backtrace" : 12,
+					"define" : "TIDY_USER_CONFIG_FILE=\"~/.tidyrc\""
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 14,
+					"path" : "/home/koen/Documents/GitHub/BrowserC/extern/libtidy/include"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/koen/Documents/GitHub/BrowserC/extern/curl/include"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/usr/include/webkitgtk-4.0"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/koen/Documents/GitHub/BrowserC/extern/glib/include"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/koen/Documents/GitHub/BrowserC/extern/atk-1.0/include"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/koen/Documents/GitHub/BrowserC/extern/gtk-3.0/include"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/koen/Documents/GitHub/BrowserC/extern/pango/include"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/koen/Documents/GitHub/BrowserC/extern/harfbuzz/include"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/koen/Documents/GitHub/BrowserC/extern/cairo/include"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/koen/Documents/GitHub/BrowserC/extern/gdk-pixbuf/include"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/koen/Documents/GitHub/BrowserC/extern/libsoup-3.0/include"
+				},
+				{
+					"backtrace" : 15,
+					"path" : "/home/koen/Documents/GitHub/BrowserC/extern/libtidy/src"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "tidy-static::@a33c7b0623417c126d2e"
+		}
+	],
+	"id" : "tidy::@a33c7b0623417c126d2e",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "bin"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-Wall  -D_REENTRANT -DNDEBUG -O2",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-rdynamic",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "../../build/libtidy.a",
+				"role" : "libraries"
+			}
+		],
+		"language" : "C"
+	},
+	"name" : "tidy",
+	"nameOnDisk" : "tidy",
+	"paths" : 
+	{
+		"build" : "extern/libtidy",
+		"source" : "extern/libtidy"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "extern/libtidy/console/tidy.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

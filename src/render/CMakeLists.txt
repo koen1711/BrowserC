@@ -7,3 +7,5 @@
 add_library(RENDER
     App.cpp
 )
+
+target_sources(RENDER PRIVATE ../javascript/JavascriptHandler.cpp)

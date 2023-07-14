@@ -1,0 +1,376 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						2,
+						6
+					]
+				},
+				{
+					"build" : "extern/libtidy",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-extern.libtidy-Release-a2e864533ed94cf33063.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "extern/libtidy",
+					"targetIndexes" : 
+					[
+						10,
+						11,
+						12,
+						13
+					]
+				},
+				{
+					"build" : "extern/curl",
+					"childIndexes" : 
+					[
+						3,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-extern.curl-Release-83fee3c2903138dd84f2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "extern/curl",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "extern/curl/lib",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-extern.curl.lib-Release-19fc85e8206ebfb93e1d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 2,
+					"source" : "extern/curl/lib",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "extern/curl/src",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-extern.curl.src-Release-75ecd326836b3f20fa77.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 2,
+					"source" : "extern/curl/src",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						6,
+						7,
+						8,
+						9
+					],
+					"jsonFile" : "directory-src-Release-b6cf2213fc5053b67c22.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src"
+				},
+				{
+					"build" : "src/javascript",
+					"jsonFile" : "directory-src.javascript-Release-03d24781b2c464026282.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 0,
+					"source" : "src/javascript",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "src/render",
+					"jsonFile" : "directory-src.render-Release-d480f5378d47143daba2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 0,
+					"source" : "src/render",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "src/datamanager",
+					"jsonFile" : "directory-src.datamanager-Release-79b04d0f32f31bf1358f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 0,
+					"source" : "src/datamanager",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "src/tabs",
+					"childIndexes" : 
+					[
+						10
+					],
+					"jsonFile" : "directory-src.tabs-Release-51352c692faaddb62134.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 0,
+					"source" : "src/tabs",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "src/tabs/tab",
+					"jsonFile" : "directory-src.tabs.tab-Release-80e0d88a34a313e376f5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 9,
+					"projectIndex" : 0,
+					"source" : "src/tabs/tab",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					],
+					"name" : "browser",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "tidy",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						10,
+						11,
+						12,
+						13
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2,
+						3,
+						4
+					],
+					"name" : "CURL",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						7,
+						8,
+						9
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 8,
+					"id" : "AppData::@9322aa94825f929af65e",
+					"jsonFile" : "target-AppData-Release-4c322f2aaa2113e1afe9.json",
+					"name" : "AppData",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "JavascriptHandler::@2b23b504b10f1c90f3c1",
+					"jsonFile" : "target-JavascriptHandler-Release-a3e74c4da14ecabb2a87.json",
+					"name" : "JavascriptHandler",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MyApp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MyApp-Release-b3ad3bafdb45a3894b20.json",
+					"name" : "MyApp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "RENDER::@e50e1ac4f031f1d89846",
+					"jsonFile" : "target-RENDER-Release-75e028c1c5a2c131412e.json",
+					"name" : "RENDER",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "TAB::@f5e29eca624cce6426f8",
+					"jsonFile" : "target-TAB-Release-41f669849d84ee44bfeb.json",
+					"name" : "TAB",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "TABMANAGER::@a5a1f14e932ed31227e9",
+					"jsonFile" : "target-TABMANAGER-Release-872b5f2cae52d8b70c70.json",
+					"name" : "TABMANAGER",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "browser_build::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-browser_build-Release-e146707e5ef56d7834fc.json",
+					"name" : "browser_build",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "curl::@6fd25a256c8b0d680d94",
+					"jsonFile" : "target-curl-Release-a3c500ff8247d332277f.json",
+					"name" : "curl",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "curl_uninstall::@fc16a9219d2339d8b93b",
+					"jsonFile" : "target-curl_uninstall-Release-7ab3bd43927ed68f5090.json",
+					"name" : "curl_uninstall",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "libcurl::@1f7f7e7b6ce47363a229",
+					"jsonFile" : "target-libcurl-Release-4bfadf2cde24ba0abfad.json",
+					"name" : "libcurl",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "man::@a33c7b0623417c126d2e",
+					"jsonFile" : "target-man-Release-138f5af4b666fe995d45.json",
+					"name" : "man",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "tidy::@a33c7b0623417c126d2e",
+					"jsonFile" : "target-tidy-Release-ee2508586922c98f8cf7.json",
+					"name" : "tidy",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "tidy-share::@a33c7b0623417c126d2e",
+					"jsonFile" : "target-tidy-share-Release-a56eba2e886debc575b7.json",
+					"name" : "tidy-share",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "tidy-static::@a33c7b0623417c126d2e",
+					"jsonFile" : "target-tidy-static-Release-7c8063251a433164b976.json",
+					"name" : "tidy-static",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/koen/Documents/GitHub/BrowserC",
+		"source" : "/home/koen/Documents/GitHub/BrowserC"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

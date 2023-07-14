@@ -12,4 +12,4 @@
 	url = https://github.com/WebKit/WebKit.git
 [submodule "extern/blink"]
 	path = extern/blink
-	url = https://chromium.googlesource.com/chromium/blink.git
+	url = https://chromium.googlesource.com/chromium/src/+/master/third_party/blink/
